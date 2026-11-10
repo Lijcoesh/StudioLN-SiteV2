@@ -49,4 +49,5 @@ Dingen die makkelijk vergeten worden maar juridisch, ethisch of qua toegankelijk
 
 _Noteer hier tijdens het werk punten die vóór oplevering nog geregeld moeten worden. Leeg = niets bekend, niet = alles gedaan; loop de lijst hierboven altijd volledig na._
 
-- (nog niets)
+- Over mij: placeholderfoto en lorem ipsum vervangen door Luca's eigen foto en tekst (zie `PRODUCT.md`).
+- Contactformulier: endpoint in de dashboard-API bestaat nog niet; formulier pas live met werkend endpoint, consent/privacylink en privacyverklaring op de site.

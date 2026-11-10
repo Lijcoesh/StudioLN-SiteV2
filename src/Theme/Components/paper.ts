@@ -1,7 +1,5 @@
 import type { Theme } from '@mui/material/styles';
 
-import { softShadow } from 'src/Theme/shadow';
-
 type Overrides = NonNullable<Theme['components']>;
 
 export function overrideMuiPaper(theme: Theme): Overrides['MuiPaper'] {
@@ -15,9 +13,6 @@ export function overrideMuiPaper(theme: Theme): Overrides['MuiPaper'] {
             },
             outlined: {
                 border: `1px solid ${theme.palette.divider}`,
-            },
-            elevation1: {
-                boxShadow: softShadow,
             },
         },
     };

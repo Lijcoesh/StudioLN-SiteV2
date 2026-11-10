@@ -1,0 +1,133 @@
+{
+  "title": "Kies de wereld voor de StudioLN-site (nieuwe hand)",
+  "question": "De dobbelsteen koos ‘Op maat getekend’. Houd die, kies een alternatief, of gooi opnieuw.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Op maat getekend",
+      "kicker": "THE ROLL",
+      "lineage": "De Nederlandse bouwtekening: maatvoering, een tekeninghoofd rechtsonder, revisiewolken",
+      "thesis": "Een website die je laat tekenen zoals je een verbouwing laat tekenen: op maat, met maatlijnen, en mijn naam en nummer in het tekeninghoofd.",
+      "palette": ["#132B4F", "#C4531A", "#F8DCC8", "#FFFFFF"],
+      "materials": ["navy tekeninkt op wit", "maatlijnen met pijlpunten", "tekeninghoofd als contactblok", "oranje revisiewolk"],
+      "viewport": "Links de kop in Bree Serif. Rechts een lijntekening van een vakmanssite als gevelaanzicht, met verwijslijnen in gewone taal: ‘je telefoonnummer, groot’, ‘foto’s van je werk’, ‘werkt op je telefoon’. Rechtsonder het tekeninghoofd met bellen, mailen en bericht als drie gelijke vakken.",
+      "risk": "Een bouwtekening kan koud en technisch voelen of als blauwdruk-cliché lezen. Daarom navy op wit (geen blauwdruk) en een tekening in gewone taal; het wordt een manier van tekenen, geen thema-kostuum.",
+      "raised": [
+        {"from": "challenger-raku", "raise": "Oranje is alleen voor wat je nu kunt doen en wat je aandacht verdient (de revisiewolk), verder nergens."},
+        {"from": "challenger-swiss", "raise": "Eén vast raster op elke pagina: secties verschillen in wat er getekend staat, nooit in een andere indeling."},
+        {"from": "challenger-cascade", "raise": "Wat je leest staat in volle inkt; maatlijnen en hulplijnen blijven op de achtergrond."},
+        {"from": "challenger-detector", "raise": "Lijndikte zegt hoe belangrijk iets is: een dikke contourlijn voor de hoofdzaak, een dunne maatlijn voor de toelichting."},
+        {"from": "challenger-arcade", "raise": "Alle maten zijn hele modules, zodat niets net naast het raster valt."}
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html"
+    },
+    {
+      "id": "model-pick",
+      "label": "Werkkleding",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "De marineblauwe werkjas met oranje contrastvlakken, stiknaden en een geborduurd logo",
+      "thesis": "De site draagt dezelfde kleding als de vakman: stevig marineblauw met oranje contrast, netjes gestikt, het logo op de borst.",
+      "palette": ["#132B4F", "#C4531A", "#F8DCC8", "#FFFFFF"],
+      "materials": ["marineblauw canvas", "oranje contrastvlak", "zichtbare stiknaad", "geweven label"],
+      "viewport": "Bovenaan een marineblauw veld met de kop in wit. Daaronder loopt een oranje contrastbaan met stiknaden met de drie contactwegen erin. Het LN-logo zit als geweven label op de borsthoogte van de pagina.",
+      "risk": "Dit ligt het dichtst bij wat je al kent: een marineblauw-met-oranje bovenkant komt dicht bij V1, en stiknaden kunnen snel goedkoop nagemaakt ogen.",
+      "html": ".impeccable/mocks/decision/model-pick.html"
+    },
+    {
+      "id": "challenger-brick",
+      "label": "Montagehandleiding",
+      "verdict": "competitive",
+      "lineage": "Montagehandleidingen: lijntekeningen van onderdelen, pijlen die laten zien waar iets komt, het nieuwe onderdeel in kleur",
+      "thesis": "Ik zet alle onderdelen voor je in elkaar: ontwerp, domein, hosting en e-mail klikken zichtbaar samen tot één website.",
+      "palette": ["#FFFFFF", "#132B4F", "#C4531A", "#F8DCC8"],
+      "materials": ["navy lijntekeningen", "pijlen", "het nieuwe onderdeel in oranje", "eerdere onderdelen grijs"],
+      "viewport": "De kop links. Rechts een opengewerkte tekening waarin domein, hosting, e-mail en ontwerp langs pijlen in één website schuiven. Onderaan ‘Hulp nodig? Bel, mail of stuur een bericht’, zoals de servicelijn op de achterkant van een handleiding.",
+      "case": "Vakmannen lezen dagelijks montagehandleidingen, dus de herkenning is groot en het mechanisme wordt duidelijk. Het leunt alleen op genummerde stappen, en die bekritiseert je eigen tekst.",
+      "risk": "Zonder stapnummers verliest de handleiding haar ruggengraat; met stapnummers botst hij met ‘01, 02, 03’ uit je Werkwijze-tekst.",
+      "html": ".impeccable/mocks/decision/challenger-brick.html",
+      "hero": "https://impeccable.style/worlds/cards/games-toys-physics-play-brick-build-instructions-hero.webp"
+    },
+    {
+      "id": "challenger-swiss",
+      "label": "Zwitserse posterwand",
+      "verdict": "declined",
+      "lineage": "Zwitserse concertaffiches op één raster",
+      "thesis": "Eén raster, elk affiche een eigen geometrie.",
+      "palette": ["#FFFFFF", "#111111", "#D52B1E"],
+      "materials": ["poster wit", "grotesk", "bogen en balken"],
+      "viewport": "Een wand van affiches op één raster.",
+      "case": "Is in feite de afgewezen Hollandse huisstijl in een ander jasje.",
+      "risk": "Koel en designerig voor deze doelgroep.",
+      "kept": "Eén vast raster, secties verschillen in motief.",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-swiss-grid-poster-wall-hero.webp"
+    },
+    {
+      "id": "challenger-raku",
+      "label": "Raku-stook",
+      "verdict": "declined",
+      "lineage": "Gloeiend keramiek in rook en bladeren",
+      "thesis": "Een gloeiende kom in roet en zilver.",
+      "palette": ["#141210", "#D9D6CF", "#E2621B"],
+      "materials": ["roet", "craquelé"],
+      "viewport": "Een gloeiende kom op zwart.",
+      "case": "Mooi, maar zegt niets over websites voor vakmannen.",
+      "risk": "Kunstzinnig waar nuchter nodig is.",
+      "kept": "Oranje alleen voor wat nu ‘heet’ is.",
+      "hero": "https://impeccable.style/worlds/cards/clay-ceramics-fracture-raku-smoke-flash-hero.webp"
+    },
+    {
+      "id": "challenger-cascade",
+      "label": "Tekenregen",
+      "verdict": "declined",
+      "lineage": "Vallende groene tekens op zwart",
+      "thesis": "Inhoud die uit vallende tekens opdoemt.",
+      "palette": ["#000000", "#9CFFB0"],
+      "materials": ["monospace", "fosfor"],
+      "viewport": "Groene tekenregen.",
+      "case": "Hacker-filmbeeld, vreemd voor de doelgroep.",
+      "risk": "Onleesbaar en gedateerd.",
+      "kept": "Wat je leest in volle inkt, de rest op de achtergrond.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-code-cascade-terminal-hero.webp"
+    },
+    {
+      "id": "challenger-detector",
+      "label": "Deeltjesdetector",
+      "verdict": "declined",
+      "lineage": "Botsingsbeeld uit een deeltjesversneller",
+      "thesis": "Sporen die uit één botsing krullen.",
+      "palette": ["#05070C", "#F2D21B", "#29C6E0", "#D8342B"],
+      "materials": ["ringen", "sporen"],
+      "viewport": "Een concentrisch botsingsbeeld.",
+      "case": "Wetenschappelijk en ver van de doelgroep.",
+      "risk": "Imponeert zonder iets uit te leggen.",
+      "kept": "Lijndikte zegt hoe belangrijk iets is.",
+      "hero": "https://impeccable.style/worlds/cards/scientific-notation-particle-detector-event-display-hero.webp"
+    },
+    {
+      "id": "challenger-arcade",
+      "label": "Arcadekast",
+      "verdict": "declined",
+      "lineage": "Pixelscherm met scanlijnen",
+      "thesis": "Dikke pixels die gloeien.",
+      "palette": ["#000000", "#FF3B3B", "#3BB3FF", "#FFD23B"],
+      "materials": ["pixels", "scanlijnen"],
+      "viewport": "Een gamescherm.",
+      "case": "Speels en retro, botst met het palet.",
+      "risk": "Gimmick.",
+      "kept": "Alles op hele modules, niets net naast het raster.",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-crt-arcade-pixel-glow-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "canon": true,
+  "canonCard": {
+    "label": "De standaard dienstverlenerssite",
+    "thesis": "Wat deze categorie altijd laat zien, tot in de puntjes uitgevoerd.",
+    "palette": ["#132B4F", "#FFFFFF", "#F8DCC8", "#C4531A"],
+    "materials": ["marineblauwe hero met foto", "dienstenblok", "afsluitende contactband"],
+    "viewport": "Een marineblauwe hero met de kop links en een foto van Luca rechts, daaronder de diensten en een contactband.",
+    "risk": "Dit is in feite V1, en die vond je te standaard.",
+    "html": ".impeccable/mocks/decision/canon.html"
+  },
+  "steer": true
+}

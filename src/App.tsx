@@ -1,5 +1,31 @@
-import { Typography } from '@mui/material';
+import { Route, Routes } from 'react-router';
+
+import Layout from 'src/Components/Layout/Layout';
+import { paths } from 'src/Config/navigation';
+import Home from 'src/Modules/Home/Scenes/Home/Home';
+import ComingSoon from 'src/Modules/Pages/Scenes/ComingSoon/ComingSoon';
 
 export default function App() {
-    return <Typography>Hallo ik ben Luca</Typography>;
+    return (
+        <Routes>
+            <Route element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path={paths.approach} element={<ComingSoon title="Werkwijze" />} />
+                <Route path={paths.pricing} element={<ComingSoon title="Prijzen" />} />
+                <Route path={paths.projects} element={<ComingSoon title="Projecten" />} />
+                <Route path={paths.about} element={<ComingSoon title="Over mij" />} />
+                <Route path={paths.contact} element={<ComingSoon title="Contact" />} />
+                <Route path={paths.privacy} element={<ComingSoon title="Privacyverklaring" />} />
+                <Route
+                    path="*"
+                    element={
+                        <ComingSoon
+                            title="Deze pagina bestaat niet"
+                            message="Misschien is de link verouderd of zit er een typfout in. Ga terug naar de homepagina, of bel of mail me gerust."
+                        />
+                    }
+                />
+            </Route>
+        </Routes>
+    );
 }

@@ -2,14 +2,15 @@ import type { PaletteOptions } from '@mui/material/styles';
 
 import {
     accent,
-    black,
-    darkAccent,
-    darkGrey,
+    accentHover,
     error,
-    lightAccent,
-    lightGrey,
-    offWhite,
+    graphite,
+    navy,
+    navyRaised,
+    onNavy,
+    stitchOnLight,
     success,
+    text,
     warning,
     white,
 } from 'src/colors';
@@ -17,22 +18,26 @@ import {
 const palette: PaletteOptions = {
     primary: {
         main: accent,
-        light: lightAccent,
-        dark: darkAccent,
+        dark: accentHover,
         contrastText: white,
+    },
+    secondary: {
+        main: navy,
+        light: navyRaised,
+        contrastText: onNavy,
     },
     error: { main: error },
     warning: { main: warning },
     success: { main: success },
     background: {
-        default: offWhite,
+        default: white,
         paper: white,
     },
     text: {
-        primary: black,
-        secondary: darkGrey,
+        primary: text,
+        secondary: graphite,
     },
-    divider: lightGrey,
+    divider: stitchOnLight,
 };
 
 export default palette;

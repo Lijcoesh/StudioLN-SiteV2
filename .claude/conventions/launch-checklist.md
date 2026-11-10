@@ -51,3 +51,4 @@ _Noteer hier tijdens het werk punten die vóór oplevering nog geregeld moeten w
 
 - Over mij: placeholderfoto en lorem ipsum vervangen door Luca's eigen foto en tekst (zie `PRODUCT.md`).
 - Contactformulier: endpoint in de dashboard-API bestaat nog niet; formulier pas live met werkend endpoint, consent/privacylink en privacyverklaring op de site.
+- Werkwijze, Prijzen, Projecten, Over mij, Contact en Privacyverklaring zijn nog tijdelijke pagina's ("Aan deze pagina werk ik nog"); de footer linkt al naar de privacyverklaring.

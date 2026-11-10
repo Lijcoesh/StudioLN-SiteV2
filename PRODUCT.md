@@ -16,7 +16,7 @@ Ze komen op de site om te beoordelen of StudioLN iets voor hen is: wat het oplev
 
 De eigen website van StudioLN, de eenmanszaak van Luca: websites op maat bouwen en hosten voor kleine ondernemers. De site laat zien wat StudioLN doet en kost, toont gemaakt werk, stelt Luca voor en levert contact op. Succes is een bezoeker die belt, mailt of het contactformulier invult.
 
-Pagina's: **Home**, **Werkwijze**, **Projecten** (overzicht plus een pagina per project), **Over mij** en **Contact** (besloten 10-11-2026).
+Pagina's: **Home**, **Werkwijze**, **Prijzen**, **Projecten** (overzicht plus een pagina per project), **Over mij** en **Contact** (besloten 10-11-2026). Gemaakt werk staat alleen op Projecten, niet op Home.
 
 Dit is V2. V1 (`F:\Development\StudioLN-Site`) is afgebouwd tot een nette maar te standaard dienstverlenerssite; daarom opnieuw (10-11-2026). Productfeiten uit V1 gaan mee, het ontwerp niet.
 
@@ -38,7 +38,7 @@ De site zelf is het bewijs: hij moet eruitzien als bewuste keuzes, niet als de A
 ## Capabilities and Constraints
 
 - **Werkwijze-pagina** (besloten 10-11-2026): draagt Luca's volledige tekst "Simpel, maar nooit standaard." (zie Evidence) plus het traject van eerste gesprek tot online. Het woord "AI" staat niet in het menu: een menu-item "AI" kan bij deze doelgroep wantrouwen wekken. De kern van de tekst komt in een paar zinnen op Home, met een verwijzing naar Werkwijze.
-- **Prijzen staan op de site** (besloten 10-11-2026, gelijk aan V1; bron: de catalogus in het dashboard, `PROJECT.md` §9). Bedragen excl. btw, en dat staat erbij.
+- **Prijzen staan op een eigen pagina Prijzen** (besloten 10-11-2026, bedragen gelijk aan V1; bron: de catalogus in het dashboard, `PROJECT.md` §9). Bedragen excl. btw, en dat staat erbij.
   - Website Basis (ontwerp en bouw): vanaf € 500 eenmalig
   - Installatie & domeinkoppeling: € 100 eenmalig
   - Zakelijke e-mail instellen: € 75; migreren: € 100; e-mailhosting: € 7,50 per maand
@@ -46,7 +46,7 @@ De site zelf is het bewijs: hij moet eruitzien als bewuste keuzes, niet als de A
   - Uurtarief voor aanpassingen en extra werk: € 35
   - Prijzen veranderen in het dashboard; de site volgt die, niet andersom.
 - **Projecten**: eerst een overzicht; de bezoeker klikt een project aan en krijgt dan een eigen pagina met wat er over dat project te vertellen is.
-- **Contact**: formulier plus e-mail en telefoon. Geen straatadres en geen plaats op de site.
+- **Contact**: formulier plus e-mail en telefoon, alle drie gelijkwaardig (geen ervan nadrukkelijker dan de andere; besloten 10-11-2026). Geen straatadres en geen plaats op de site.
 - **Taal**: Nederlands, ik-vorm.
 - **Hosting**: eigen VPS. GitHub Pages-preview pas na Luca's akkoord.
 - **Niet overgenomen uit V1**: het idee van een stijlkiezer (de site in meerdere stijlen tonen). Niet bouwen zonder nieuw akkoord.

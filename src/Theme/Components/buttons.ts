@@ -1,6 +1,6 @@
 import type { Theme } from '@mui/material/styles';
 
-import { borderRadius } from 'src/Theme/sizes';
+import { borderRadius, tapTarget } from 'src/Theme/sizes';
 
 type Overrides = NonNullable<Theme['components']>;
 
@@ -12,7 +12,8 @@ export function overrideMuiButton(theme: Theme): Overrides['MuiButton'] {
         styleOverrides: {
             root: {
                 borderRadius,
-                padding: theme.spacing(1, 2),
+                minHeight: tapTarget - 8,
+                padding: theme.spacing(1.25, 2.5),
             },
         },
     };

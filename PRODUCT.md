@@ -46,7 +46,7 @@ De site zelf is het bewijs: hij moet eruitzien als bewuste keuzes, niet als de A
   - Uurtarief voor aanpassingen en extra werk: € 35
   - Prijzen veranderen in het dashboard; de site volgt die, niet andersom.
 - **Projecten**: eerst een overzicht; de bezoeker klikt een project aan en krijgt dan een eigen pagina met wat er over dat project te vertellen is. Het overzicht staat (11-11-2026); tot de projectpagina's er zijn linkt elk project naar de live site (nieuw tabblad).
-- **Contact**: formulier plus e-mail en telefoon, alle drie gelijkwaardig (geen ervan nadrukkelijker dan de andere; besloten 10-11-2026). Geen straatadres en geen plaats op de site.
+- **Contact**: formulier plus e-mail en telefoon, alle drie gelijkwaardig (geen ervan nadrukkelijker dan de andere; besloten 10-11-2026). Geen straatadres en geen plaats op de site. Formuliervelden: naam, e-mailadres, telefoonnummer (niet verplicht) en bericht; niets meer. Belofte: "Je hoort binnen één werkdag van me" (besloten 11-11-2026). Het formulier wordt volledig gebouwd maar staat uit tot het endpoint werkt; tot dan alleen bellen en mailen. Opbouw "Het visitekaartje" op het perzik vlak, met het kaartje hangend aan een draad zoals bij de hangkaartje-optie (gekozen 11-11-2026).
 - **Taal**: Nederlands, ik-vorm.
 - **Hosting**: eigen VPS. GitHub Pages-preview pas na Luca's akkoord.
 - **Niet overgenomen uit V1**: het idee van een stijlkiezer (de site in meerdere stijlen tonen). Niet bouwen zonder nieuw akkoord.

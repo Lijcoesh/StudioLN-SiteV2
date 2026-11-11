@@ -1,0 +1,40 @@
+{
+  "title": "Contact",
+  "question": "De werkkleding-wereld ligt vast. Welke opbouw krijgt Contact: formulier (naam, e-mail, telefoon optioneel, bericht), bellen en mailen, alle drie gelijkwaardig, met 'binnen één werkdag'?",
+  "options": [
+    {
+      "id": "hangkaartje",
+      "label": "Het hangkaartje",
+      "kicker": "THE ROLL",
+      "thesis": "Op het perzik vlak links het formulier op ingenaaide labelstof, rechts een groot wit hangkaartje aan een oranje draad met bellen en mailen erop, even groot als het formulier.",
+      "palette": ["#132B4F", "#F8DCC8", "#FAF4EE", "#FFFFFF", "#C4531A"],
+      "materials": ["keper-canvas voor de opening", "labelstof met naden tussen de velden", "wit karton aan een slappe oranje draad, zoals de prijs op Home"],
+      "viewport": "Canvas met h1 'Bel, mail of stuur een bericht.' en de zin over één werkdag; daaronder op perzik het formulier links (6fr) en het hangkaartje rechts (5fr) met 'Bel 06 11 22 39 04' en 'Mail contact@studioln.nl' in Bree, elk een grote tikbare regel.",
+      "risk": "Het kaartje hangt los en scheef; dat moet als iets aantikbaars lezen, niet als versiering. Op de telefoon komt het kaartje boven het formulier.",
+      "html": ".impeccable/mocks/decision/contact-hangkaartje.html"
+    },
+    {
+      "id": "visitekaartje",
+      "label": "Het visitekaartje",
+      "thesis": "Alles op het canvas: links een groot geweven label als visitekaartje van Luca met bellen en mailen, rechts het formulier in een opgestikte perzik zak.",
+      "palette": ["#132B4F", "#FAF4EE", "#E9DDD0", "#F8DCC8", "#C4531A"],
+      "materials": ["keper-canvas over de hele pagina", "geribde crème labelstof met omgevouwen, gestikte uiteinden", "opgestikte zak van perzik stof met trensjes"],
+      "viewport": "Canvas met h1 links en daaronder het geweven visitekaartje (LN-logo, Luca, telefoon, e-mail, 'binnen één werkdag'), licht gekanteld; rechts de perzik zak met het formulier en de oranje verstuurknop.",
+      "risk": "Veel marineblauw; de zak met formulier is groter dan het kaartje, dus de gelijkwaardigheid moet uit de plek komen, niet uit de maat.",
+      "html": ".impeccable/mocks/decision/contact-visitekaartje.html"
+    },
+    {
+      "id": "werkbon",
+      "label": "De werkbon",
+      "thesis": "Het formulier is een werkbon op labelstof over de volle breedte; onderaan zit een rij afscheurstrookjes zoals op een briefje op het prikbord, met bellen en mailen.",
+      "palette": ["#F8DCC8", "#FAF4EE", "#132B4F", "#C4531A", "#8C7A6C"],
+      "materials": ["crème labelstof met ingestikte bovenrand", "gewone invulvelden in het raster van de bon", "geperforeerde naad met strookjes eronder"],
+      "viewport": "Canvas met h1 en de zin over één werkdag; daaronder op perzik de werkbon: kop met LN-logo en 'Bericht aan Luca', naam, e-mail en telefoon naast elkaar, het bericht eronder, oranje verstuurknop; onder een geperforeerde naad de strookjes 'Bel 06 11 22 39 04' en 'Mail contact@studioln.nl'.",
+      "risk": "Strookjes zijn kleiner dan de bon: bellen en mailen kunnen ondergeschikt lijken aan het formulier. Het idee 'afscheuren' mag niet als gimmick gaan bewegen.",
+      "html": ".impeccable/mocks/decision/contact-werkbon.html"
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "buildPath": { "value": "code" }
+}

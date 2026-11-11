@@ -176,6 +176,33 @@
         ],
         "createdAt": "2026-11-11T20:24:47.923Z",
         "reason": "Claude: closed decision-round sketch; Inter and tight pills belong to the deliberate AI-template specimen"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/contact-visitekaartje.html"
+        ],
+        "createdAt": "2026-11-11T21:13:11.080Z",
+        "reason": "Claude: DESIGN.md's documented stof-op-stof shadow (navy-deep, offset) under the woven label on canvas, not a chromatic glow"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/contact-hangkaartje.html"
+        ],
+        "createdAt": "2026-11-11T21:27:25.686Z",
+        "reason": "Claude: closed decision-round skeleton sketch; the build sets its own padding and is checked by the hook itself"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/contact-werkbon.html"
+        ],
+        "createdAt": "2026-11-11T21:27:27.182Z",
+        "reason": "Claude: closed decision-round skeleton sketch; the build sets its own padding and is checked by the hook itself"
       }
     ]
   }

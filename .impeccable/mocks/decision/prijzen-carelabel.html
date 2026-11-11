@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>Het wasvoorschrift</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap">
+<style>
+:root{--navy:#132B4F;--accent:#C4531A;--peach:#F8DCC8;--label:#FAF4EE;--fold:#E9DDD0;--ink:#16202E;--graphite:#4E5866;--sn:#7F93B3;--sl:#8C7A6C;--on:#FAF4EE}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;overflow:hidden;background:var(--peach);font:19px/1.65 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:var(--ink)}
+.canvas{background:var(--navy);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px)}
+header{height:96px;position:relative}
+.wrap{width:1240px;margin:0 auto;position:relative}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:96px}
+.wm{font:400 30px 'Bree Serif';color:var(--on)}
+nav{display:flex;gap:32px;font-weight:700;font-size:17px;color:var(--on)}
+nav span{padding:10px 0}
+nav .on{box-shadow:inset 0 -3px var(--accent)}
+/* de naad waar het label in zit */
+.hem{position:absolute;left:0;right:0;bottom:0;height:0;border-top:2px dashed var(--sn);bottom:10px}
+.grid{display:grid;grid-template-columns:5fr 6fr;gap:64px}
+.intro{padding-top:88px}
+h1{font:400 76px/1.02 'Bree Serif',Georgia,serif;color:var(--navy)}
+.lead{font-size:24px;line-height:1.5;margin-top:24px;max-width:30ch}
+.note{margin-top:28px;max-width:34ch;font-size:19px}
+.note a{font-weight:700;text-decoration:underline 2px var(--accent);text-underline-offset:.22em;color:var(--ink)}
+/* het wasvoorschrift: smal, lang, bovenin ingestikt */
+.care{position:relative;margin-top:-12px;width:600px;justify-self:center;background:var(--label);
+ background-image:repeating-linear-gradient(90deg,rgba(19,43,79,.035) 0 2px,transparent 2px 4px);
+ box-shadow:0 10px 24px rgba(14,34,64,.16),0 2px 4px rgba(14,34,64,.12);padding:56px 56px 40px;height:840px}
+.care:before{content:"";position:absolute;left:0;right:0;top:0;height:28px;background:var(--fold);border-bottom:2px dashed var(--sl)}
+.care .stitch{position:absolute;left:0;right:0;top:12px;border-top:2px dashed var(--sl)}
+.rub{font:400 30px/1.15 'Bree Serif';color:var(--navy);margin:8px 0 4px}
+.rub small{display:block;font:400 17px 'Atkinson Hyperlegible Next';color:var(--graphite);margin-top:4px}
+.pk{padding:18px 0;border-bottom:2px dashed rgba(140,122,108,.55)}
+.pk .t{display:flex;justify-content:space-between;align-items:baseline}
+.pk h3{font:400 26px 'Bree Serif';color:var(--navy)}
+.pk .p{font:400 34px 'Bree Serif';color:var(--navy);font-variant-numeric:tabular-nums}
+.pk ul{list-style:none;margin-top:6px}
+.pk li{display:flex;justify-content:space-between;font-size:17px;line-height:1.7}
+.pk li em{font-style:normal;color:var(--graphite);font-variant-numeric:tabular-nums}
+.pk .los{display:flex;justify-content:space-between;font-size:17px;color:var(--graphite);margin-top:4px}
+.sec{padding-top:22px}
+</style></head><body>
+<header class="canvas"><div class="wrap">
+ <div class="wm">StudioLN</div>
+ <nav><span>Werkwijze</span><span class="on">Prijzen</span><span>Projecten</span><span>Over mij</span><span>Contact</span></nav>
+</div><div class="hem"></div></header>
+<div class="wrap grid">
+ <div class="intro">
+  <h1>Wat het kost</h1>
+  <p class="lead">Een website, hosting en wat je er verder bij wilt, op één lijst.</p>
+  <p class="note">Alle bedragen zijn exclusief btw. Twijfel je wat je nodig hebt? <a>Bel of mail me</a>, dan zoeken we het samen uit.</p>
+ </div>
+ <div class="care"><div class="stitch"></div>
+  <div class="rub">Pakketten<small>per maand</small></div>
+  <div class="pk"><div class="t"><h3>Basis</h3><span class="p">€ 25</span></div>
+   <ul><li>Websitehosting<em>€ 25</em></li><li>Mail vanuit je contactformulier<em>inbegrepen</em></li></ul></div>
+  <div class="pk"><div class="t"><h3>Plus</h3><span class="p">€ 35</span></div>
+   <ul><li>Alles uit Basis<em>€ 25</em></li><li>Bestel- en bevestigingsmails<em>€ 10</em></li><li>Websitestatistieken<em>€ 7,50</em></li></ul>
+   <div class="los"><span>Los zou dit kosten</span><span>€ 42,50</span></div></div>
+  <div class="pk"><div class="t"><h3>Compleet</h3><span class="p">€ 49,50</span></div>
+   <ul><li>Alles uit Plus<em>€ 42,50</em></li><li>E-mailautomatisering<em>€ 15</em></li><li>1 uur aanpassingen<em>€ 35</em></li></ul>
+   <div class="los"><span>Los zou dit kosten</span><span>€ 92,50</span></div></div>
+  <div class="sec"><div class="rub">Eenmalig</div></div>
+ </div>
+</div>
+</body></html>

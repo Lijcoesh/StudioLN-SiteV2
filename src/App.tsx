@@ -4,6 +4,7 @@ import Layout from 'src/Components/Layout/Layout';
 import { paths } from 'src/Config/navigation';
 import Home from 'src/Modules/Home/Scenes/Home/Home';
 import ComingSoon from 'src/Modules/Pages/Scenes/ComingSoon/ComingSoon';
+import Pricing from 'src/Modules/Pricing/Scenes/Pricing/Pricing';
 
 export default function App() {
     return (
@@ -11,7 +12,7 @@ export default function App() {
             <Route element={<Layout />}>
                 <Route index element={<Home />} />
                 <Route path={paths.approach} element={<ComingSoon title="Werkwijze" />} />
-                <Route path={paths.pricing} element={<ComingSoon title="Prijzen" />} />
+                <Route path={paths.pricing} element={<Pricing />} />
                 <Route path={paths.projects} element={<ComingSoon title="Projecten" />} />
                 <Route path={paths.about} element={<ComingSoon title="Over mij" />} />
                 <Route path={paths.contact} element={<ComingSoon title="Contact" />} />

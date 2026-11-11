@@ -1,17 +1,12 @@
 import ArrowForwardOutlined from '@mui/icons-material/ArrowForwardOutlined';
-import ChatBubbleOutlineOutlined from '@mui/icons-material/ChatBubbleOutlineOutlined';
-import MailOutlined from '@mui/icons-material/MailOutlined';
-import PhoneOutlined from '@mui/icons-material/PhoneOutlined';
 import { Box, Link, List, ListItem, Typography } from '@mui/material';
-import type { ReactNode } from 'react';
 import { Link as RouterLink } from 'react-router';
 import { makeStyles } from 'tss-react/mui';
 
 import { accent, accentHover, white } from 'src/colors';
 import PageWidth from 'src/Components/PageWidth/PageWidth';
 import Seam from 'src/Components/Seam/Seam';
-import { email, emailHref, phoneDisplay, phoneHref } from 'src/Config/contact';
-import { paths } from 'src/Config/navigation';
+import { contactRoutes } from 'src/Config/contactRoutes';
 import { tapTarget } from 'src/Theme/sizes';
 
 interface IProps {
@@ -20,27 +15,6 @@ interface IProps {
     /** Toegankelijke naam van de lijst, uniek per pagina. */
     label: string;
 }
-
-interface ContactRoute {
-    key: string;
-    verb: string;
-    value?: string;
-    icon: ReactNode;
-    href?: string;
-    to?: string;
-}
-
-// Het werkwoord staat in dezelfde regel als de waarde: geen labeltje erboven.
-const routes: ContactRoute[] = [
-    { key: 'call', verb: 'Bel', value: phoneDisplay, icon: <PhoneOutlined />, href: phoneHref },
-    { key: 'mail', verb: 'Mail', value: email, icon: <MailOutlined />, href: emailHref },
-    {
-        key: 'message',
-        verb: 'Stuur een bericht',
-        icon: <ChatBubbleOutlineOutlined />,
-        to: paths.contact,
-    },
-];
 
 // De oranje contrastbaan van de werkjas: de enige plek waar acties wonen.
 // Drie gelijke vakken, gescheiden en omzoomd door stiknaden.
@@ -161,7 +135,7 @@ export default function ContactBand(props: IProps) {
             <Seam tone="accent" sew={sew} />
             <PageWidth>
                 <List aria-label={label} className={classes.list}>
-                    {routes.map((route, index) => {
+                    {contactRoutes.map((route, index) => {
                         const content = (
                             <Typography component="span" className={classes.routeText}>
                                 <Box component="span" className={classes.icon} aria-hidden>

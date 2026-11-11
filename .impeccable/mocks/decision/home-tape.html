@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>Op maat gemeten</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap">
+<style>
+:root{--navy:#132B4F;--accent:#C4531A;--peach:#F8DCC8;--soft:#FCEEE3;--label:#FAF4EE;--fold:#E9DDD0;--ink:#16202E;--graphite:#4E5866;--sl:#8C7A6C;--sa:#F6C9AC}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;overflow:hidden;background:#fff;font:19px/1.65 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:var(--ink)}
+.band{background:var(--accent);height:64px;position:relative}
+.band .seam{position:absolute;left:0;right:0;bottom:12px;border-top:2px dashed var(--sa)}
+/* het maatlint: verticaal, crème linnen met streepjes, zonder cijfers per sectie */
+.tape{position:absolute;left:100px;top:64px;bottom:0;width:64px;background:var(--label);
+ background-image:repeating-linear-gradient(0deg,var(--navy) 0 2px,transparent 2px 16px),repeating-linear-gradient(0deg,var(--navy) 0 3px,transparent 3px 80px);
+ background-size:18px 100%,34px 100%;background-repeat:repeat-y;box-shadow:0 10px 24px rgba(14,34,64,.18)}
+.tape:after{content:"";position:absolute;right:8px;top:0;bottom:0;border-left:2px dashed var(--sl)}
+.pin{position:absolute;left:122px;width:20px;height:20px;border-radius:50%;background:var(--accent);box-shadow:0 2px 4px rgba(14,34,64,.35)}
+.main{position:absolute;left:260px;right:100px;top:150px}
+h2{font:400 54px/1.08 'Bree Serif',Georgia,serif;color:var(--navy);max-width:16ch}
+.intro{font-size:23px;margin-top:20px;max-width:42ch}
+.list{margin-top:56px;width:760px}
+.item{display:grid;grid-template-columns:330px 1fr;gap:32px;align-items:baseline;padding:22px 0;border-top:2px dashed var(--sl)}
+.item:last-child{border-bottom:2px dashed var(--sl)}
+.item h3{font:400 34px/1.15 'Bree Serif';color:var(--navy)}
+.item p{font-size:18px;line-height:1.55}
+/* prijs vastgespeld in de rechtermarge, op het lint lijnt de speld uit */
+.price{position:absolute;right:100px;top:400px;width:280px;background:var(--peach);padding:34px 30px 28px;transform:rotate(-2deg)}
+.price:before{content:"";position:absolute;inset:8px;border:2px dashed var(--sl);pointer-events:none}
+.price .pp{position:absolute;top:-8px;left:50%;width:20px;height:20px;margin-left:-10px;border-radius:50%;background:var(--accent)}
+.price small{display:block;font-size:22px;color:var(--graphite)}
+.price strong{display:block;font:400 56px/1 'Bree Serif';color:var(--navy);margin:8px 0}
+.price a{display:inline-block;margin-top:12px;font-weight:700;font-size:22px;text-decoration:underline 2px var(--accent);text-underline-offset:.22em}
+</style></head><body>
+<div class="band"><div class="seam"></div></div>
+<div class="tape"></div>
+<span class="pin" style="top:168px"></span>
+<span class="pin" style="top:418px"></span>
+<div class="main">
+ <h2>Wat ik voor je maak en regel</h2>
+ <p class="intro">Alles bij één persoon. Geen helpdesk en geen doorverwijzen: je belt of mailt gewoon met mij.</p>
+ <div class="list">
+  <div class="item"><h3>Een website op maat</h3><p>Ontworpen rond jouw vak en jouw klanten. Werkt op de computer én de telefoon.</p></div>
+  <div class="item"><h3>Hosting en domein</h3><p>Op mijn eigen server in Amsterdam, domein gekoppeld.</p></div>
+  <div class="item"><h3>Zakelijke e-mail</h3><p>info@jouwbedrijf.nl, ingesteld of verhuisd.</p></div>
+  <div class="item"><h3>Aanpassingen achteraf</h3><p>Je belt, ik pas het aan.</p></div>
+ </div>
+</div>
+<div class="price"><span class="pp"></span><small>Een website vanaf</small><strong>€ 500</strong><small>excl. btw</small><a>Bekijk alle prijzen</a></div>
+</body></html>

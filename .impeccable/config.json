@@ -1,0 +1,20 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "atkinson hyperlegible next",
+        "createdAt": "2026-11-11T11:09:45.409Z",
+        "reason": "Claude: same family as DESIGN.md body font 'Atkinson Hyperlegible Next Variable' (Google Fonts name in decision sketches)"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "hyperlegible next",
+        "createdAt": "2026-11-11T11:09:45.988Z",
+        "reason": "Claude: same family as DESIGN.md body font"
+      }
+    ]
+  }
+}

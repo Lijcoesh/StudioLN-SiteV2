@@ -9,4 +9,5 @@ Herkomst en licentie van elke font, foto, illustratie en icoon. Werk dit bij zod
 | Iconen (telefoon, mail, bericht, pijl, menu) | `@mui/icons-material` (Material Icons van Google) | MIT (pakket), Apache License 2.0 (iconen) | nee |
 | `public/favicon.svg` en het LN-teken in `src/Components/LogoMark/` | huisstijl StudioLN, eigen ontwerp (bron: StudioLN-Dashboard) | eigendom StudioLN | nee |
 | `src/Resources/Textures/canvas-twill.svg` | zelf gemaakt (keperbinding van het canvas) | eigendom StudioLN | nee |
+| `src/Resources/Textures/label-rib-soft.svg` | zelf gemaakt (zachtere labelrib voor het binnenlabel) | eigendom StudioLN | nee |
 | `src/Resources/Images/portrait-placeholder.svg` | zelf gemaakt, **plaatshouder**: vervangen door Luca's foto vóór livegang | eigendom StudioLN | nee |

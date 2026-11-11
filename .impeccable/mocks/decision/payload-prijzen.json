@@ -1,0 +1,43 @@
+{
+  "title": "Prijzen",
+  "question": "De werkkleding-wereld ligt vast. Welke opbouw krijgt de pagina Prijzen?",
+  "options": [
+    {
+      "id": "carelabel",
+      "label": "Het wasvoorschrift",
+      "kicker": "THE ROLL",
+      "thesis": "Alle prijzen op één lang, smal label dat bovenin de naad is ingestikt en over de hele pagina naar beneden hangt, zoals het wasvoorschrift in een jas.",
+      "palette": ["#132B4F", "#F8DCC8", "#FAF4EE", "#E9DDD0", "#C4531A"],
+      "materials": ["geribde labelstof", "stiknaden tussen de rubrieken", "keper-canvas"],
+      "viewport": "Onder de header een perzik vlak: links de kop 'Wat het kost' met één zin over btw, rechts hangt het label uit de bovennaad. Bovenaan het label de drie pakketten onder elkaar, elk met wat erin zit en de prijs; verder naar beneden Eenmalig, Los per maand en Per uur.",
+      "risk": "Eén smalle kolom betekent lang scrollen, en pakketten onder elkaar zijn minder snel te vergelijken dan naast elkaar.",
+      "raised": [
+        { "from": "dienstregeling (uitdager)", "raise": "Elk bedrag staat rechts uitgelijnd in één strakke kolom met gelijke cijferbreedte, zodat je alleen omlaag hoeft te kijken." }
+      ],
+      "html": ".impeccable/mocks/decision/prijzen-carelabel.html"
+    },
+    {
+      "id": "sizechart",
+      "label": "De maattabel",
+      "thesis": "De pakketten staan naast elkaar als de maattabel die in kleding zit: drie kolommen, regels voor wat erin zit, een kruissteek waar het inbegrepen is.",
+      "palette": ["#FFFFFF", "#FAF4EE", "#132B4F", "#8C7A6C", "#C4531A"],
+      "materials": ["ingenaaid binnenlabel", "kruissteken", "stiknaden als tabelregels"],
+      "viewport": "Een kop over de volle breedte, daaronder één breed ingenaaid label als maattabel: Basis, Plus en Compleet als kolomkop met de maandprijs in Bree, links de diensten met hun losse bedrag, onderaan een regel 'los zou dit kosten'. Onder de vouw de eenmalige kosten en het uurtarief als labelregels.",
+      "risk": "Een vergelijkingstabel is wat elke prijspagina doet; label, steken en naden moeten het een eigen ding maken, geen softwaretabel.",
+      "html": ".impeccable/mocks/decision/prijzen-sizechart.html"
+    },
+    {
+      "id": "pockets",
+      "label": "In je zakken",
+      "thesis": "Het marineblauwe canvas van de header loopt door; eenmalig, per maand en per uur zitten in drie opgestikte zakken van verschillende maat, de pakketten steken als kaartjes uit de grootste.",
+      "palette": ["#132B4F", "#FCEEE3", "#FFFFFF", "#7F93B3", "#C4531A"],
+      "materials": ["keper-canvas", "opgestikte zakken van ongelijke maat", "hangkaartjes"],
+      "viewport": "Canvas over de volle breedte. Links een grote borstzak 'Per maand' met drie witte kaartjes (Basis, Plus, Compleet) die er half uitsteken, rechts een lagere zak 'Eenmalig' met vier regels, en een smalle pennenzak 'Per uur'.",
+      "risk": "Veel donker en het meest concept van de drie; Luca heeft thema-indelingen eerder afgewezen, en zakken kunnen als kaartjes in vermomming lezen.",
+      "html": ".impeccable/mocks/decision/prijzen-pockets.html"
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "buildPath": { "value": "code" }
+}

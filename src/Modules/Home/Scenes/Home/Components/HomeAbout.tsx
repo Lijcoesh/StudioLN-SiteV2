@@ -2,16 +2,17 @@ import { Box, Link, Typography } from '@mui/material';
 import { Link as RouterLink } from 'react-router';
 import { makeStyles } from 'tss-react/mui';
 
-import { navy, peachSoft, stitchOnLight } from 'src/colors';
+import { navy, peach, peachSoft, stitchOnLight } from 'src/colors';
 import PageWidth from 'src/Components/PageWidth/PageWidth';
 import { paths } from 'src/Config/navigation';
-import portraitPlaceholder from 'src/Resources/Images/portrait-placeholder.svg';
+import lucaPhoto from 'src/Resources/Images/luca.jpg';
 
-// Placeholderfoto en lorem ipsum op verzoek van Luca (10-11-2026), tot hij zijn eigen foto en tekst aanlevert.
-// Staat als openstaand punt in de launch-checklist.
+import NameTape from './NameTape';
+
+// De tekst is nog lorem ipsum tot Luca die aanlevert. Staat als openstaand punt in de launch-checklist.
 const useStyles = makeStyles()(theme => ({
     root: {
-        backgroundColor: peachSoft,
+        backgroundColor: peach,
         paddingBlock: theme.spacing(14),
         [theme.breakpoints.down('md')]: {
             paddingBlock: theme.spacing(9),
@@ -19,27 +20,34 @@ const useStyles = makeStyles()(theme => ({
     },
     grid: {
         display: 'grid',
-        gridTemplateColumns: 'minmax(0, 4fr) minmax(0, 7fr)',
+        gridTemplateColumns: 'minmax(0, 5fr) minmax(0, 6fr)',
         columnGap: theme.spacing(10),
         alignItems: 'center',
         [theme.breakpoints.down('md')]: {
             gridTemplateColumns: '1fr',
-            rowGap: theme.spacing(5),
+            rowGap: theme.spacing(7),
         },
     },
+    // De foto zit groot op een opgestikt stuk lichte zakstof, licht scheef aangezet. Over de
+    // onderhoek is een naamband gestikt.
     photoFrame: {
         position: 'relative',
-        maxWidth: 400,
+        maxWidth: 480,
+        padding: theme.spacing(2.5),
+        backgroundColor: peachSoft,
+        transform: 'rotate(-1.5deg)',
         '&::after': {
             content: '""',
             position: 'absolute',
-            inset: -12,
+            inset: 8,
             border: `2px dashed ${stitchOnLight}`,
             pointerEvents: 'none',
         },
         [theme.breakpoints.down('md')]: {
-            maxWidth: 300,
-            marginInline: theme.spacing(1.5),
+            maxWidth: 360,
+        },
+        [theme.breakpoints.down('sm')]: {
+            maxWidth: 'calc(100% - 24px)',
         },
     },
     photo: {
@@ -47,6 +55,13 @@ const useStyles = makeStyles()(theme => ({
         width: '100%',
         aspectRatio: '4 / 5',
         objectFit: 'cover',
+    },
+    nameTape: {
+        position: 'absolute',
+        zIndex: 1,
+        right: theme.spacing(-3),
+        bottom: theme.spacing(5),
+        transform: 'rotate(3deg)',
     },
     title: {
         color: navy,
@@ -73,10 +88,11 @@ export default function HomeAbout() {
                     <Box className={classes.photoFrame}>
                         <Box
                             component="img"
-                            src={portraitPlaceholder}
-                            alt="Plaatshouder: hier komt een foto van Luca"
+                            src={lucaPhoto}
+                            alt="Luca, staand in een tuin met lichtjes en een zonnescherm"
                             className={classes.photo}
                         />
+                        <NameTape name="Luca" className={classes.nameTape} />
                     </Box>
                     <Box>
                         <Typography variant="h2" id="about-title" className={classes.title}>

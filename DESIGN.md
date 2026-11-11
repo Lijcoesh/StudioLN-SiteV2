@@ -162,7 +162,7 @@ Huisstijlkleuren van StudioLN (marineblauw, oranje, perzik, wit), gedragen als w
 - **Signalen** (error, warning, success): altijd samen met icoon en tekst, nooit alleen kleur.
 
 ### Named Rules
-**The Contrastbaan Rule.** Oranje als vlak bestaat alleen waar de contactroutes staan: de contactbaan in de hero en de contactlap in de afsluiting. Elders verschijnt oranje alleen als draad (onderstreping, actieve streep, focusring, de draad waaraan het hangkaartje hangt), nooit als knop, kaart of achtergrond.
+**The Contrastbaan Rule.** Oranje als vlak bestaat alleen waar de contactroutes staan: de contactbaan in de hero en de contactlap in de afsluiting. Elders verschijnt oranje alleen als draad (onderstreping, actieve streep, focusring, de draad waaraan het hangkaartje hangt, de geborduurde naam op de naamband), nooit als knop, kaart of achtergrond.
 
 **The Draad-per-stof Rule.** Een naad krijgt de draadkleur van de stof waarop hij ligt: stitch-on-navy op canvas, stitch-on-light op perzik/wit/label, stitch-on-accent op de baan.
 
@@ -192,7 +192,7 @@ Huisstijlkleuren van StudioLN (marineblauw, oranje, perzik, wit), gedragen als w
 
 Paginabreedte 1240px inhoud (maximaal 1336px met marges), zijmarges 48px, 32px onder md, 20px onder sm. Spacing volgt de MUI-eenheid van 8px. Secties krijgen 112px verticaal (72px onder md); de hero 72px boven en 96px onder.
 
-Composities zijn asymmetrisch, maar niet elke sectie krijgt dezelfde vorm. Het 5fr / 6fr-raster (kolomafstand 64px) is de gedeelde as: de dienstensectie zet daarop kop links en intro rechts boven het binnenlabel; "Simpel, maar nooit standaard." staat als display-kop over de volle breedte op het canvas, met een naad bovenaan, en alleen de tekst eronder hangt in de 6fr-kolom. Over mij zet foto links en tekst rechts (4fr / 7fr). Onder md is alles één kolom. De hero zet kop en ondertitel links en het label rechts op borsthoogte; onder lg komt het label onder de kop.
+Composities zijn asymmetrisch, maar niet elke sectie krijgt dezelfde vorm. Het 5fr / 6fr-raster (kolomafstand 64px) is de gedeelde as: de dienstensectie zet daarop kop links en intro rechts boven het binnenlabel; "Simpel, maar nooit standaard." staat als display-kop over de volle breedte op het canvas, met een naad bovenaan, en alleen de tekst eronder hangt in de 6fr-kolom. Over mij zet de foto links en de tekst rechts op het 5fr / 6fr-raster. Onder md is alles één kolom. De hero zet kop en ondertitel links en het label rechts op borsthoogte; onder lg komt het label onder de kop.
 
 Het binnenlabel loopt over de volle inhoudsbreedte, met binnenruimte 52px boven, 72px opzij en 24px onder (44 / 40 / 16px onder md, 40 / 28 / 8px onder sm). Het perzik vlak eronder houdt onderaan ruimte vrij voor het hangkaartje (336px, 368px onder md). Het canvasmoment krijgt 128px verticaal (80px onder md).
 
@@ -204,7 +204,7 @@ De contactbaan loopt altijd over de volle breedte, met drie gelijke vakken op lg
 
 ## Elevation & Depth
 
-De site is vlak. Diepte bestaat alleen waar een los stuk stof of karton op een ander ligt: het geweven label op het canvas, het binnenlabel op het perzik vlak en het hangkaartje eronder. Wat vastgestikt is (de lap onder de foto) krijgt geen schaduw; daar dragen tint en naden de gelaagdheid.
+De site is vlak. Diepte bestaat alleen waar een los stuk stof of karton op een ander ligt: het geweven label op het canvas, het binnenlabel op het perzik vlak en het hangkaartje eronder. Wat vastgestikt is (de lap onder de foto, de naamband) krijgt geen schaduw; daar dragen tint en naden de gelaagdheid.
 
 ### Shadow Vocabulary
 - **Stof op stof** (`box-shadow: 0 10px 24px rgba(14,34,64,0.45), 0 2px 4px rgba(14,34,64,0.35)`): onder het geweven label op het canvas.
@@ -216,9 +216,9 @@ De site is vlak. Diepte bestaat alleen waar een los stuk stof of karton op een a
 
 ## Shapes
 
-Kleding heeft geen afgeronde kaarten: alle hoeken zijn vrijwel recht (2px), vlakken, labels en het kaartje volledig recht. Randen zijn nooit doorgetrokken lijnen maar stiknaden: 2px dik, steek 10px, tussenruimte 7px, ronde uiteinden. Losse stukken staan licht gekanteld: het hero-label (-4°, -2,5° onder lg), het hangkaartje (-4°, -3° onder md) en de lap onder de foto (-1,5°). Het binnenlabel ligt recht. Omgevouwen korte kanten zijn 12px op het hero-label en 16px op het binnenlabel. Afgerond zijn alleen het LN-logoblok uit de huisstijl en het geponste gaatje in het hangkaartje (14px rond, rand 2px in draadkleur).
+Kleding heeft geen afgeronde kaarten: alle hoeken zijn vrijwel recht (2px), vlakken, labels en het kaartje volledig recht. Randen zijn nooit doorgetrokken lijnen maar stiknaden: 2px dik, steek 10px, tussenruimte 7px, ronde uiteinden. Losse stukken staan licht gekanteld: het hero-label (-4°, -2,5° onder lg), het hangkaartje (-4°, -3° onder md), de lap onder de foto (-1,5°) en de naamband op die lap (+3°). Het binnenlabel ligt recht. Omgevouwen korte kanten zijn 12px op het hero-label en 16px op het binnenlabel. Afgerond zijn alleen het LN-logoblok uit de huisstijl en het geponste gaatje in het hangkaartje (14px rond, rand 2px in draadkleur).
 
-**The Naad Rule.** De enige getekende lijn op de site is een gestippelde stiknaad, en elke naad verbindt of begrenst een stuk stof: de baan boven en onder, tussen de routes, de uiteinden en de bovenrand van een label, de regels op het binnenlabel, de rand rond de foto, de bovenrand van het canvasmoment, de onderkant van de footer en de items in het menu. De draad van het hangkaartje is geen lijn maar garen: één doorlopende, slappe oranje draad.
+**The Naad Rule.** De enige getekende lijn op de site is een gestippelde stiknaad, en elke naad verbindt of begrenst een stuk stof: de baan boven en onder, tussen de routes, de uiteinden en de bovenrand van een label, de regels op het binnenlabel, de rand rond de foto en rond de naamband, de bovenrand van het canvasmoment, de onderkant van de footer en de items in het menu. De draad van het hangkaartje is geen lijn maar garen: één doorlopende, slappe oranje draad.
 
 ## Components
 
@@ -243,7 +243,7 @@ Een breed ingenaaid label op het perzik vlak, van dezelfde geribde crème stof a
 Een wit kartonnen kaartje (288px, 260px onder sm) dat aan de onderrand van het binnenlabel hangt, rechts op desktop en links onder md. Een slappe oranje draad (2px, ronde uiteinden, als SVG getekend) loopt door een geponst gaatje bovenin. Het kaartje hangt op -4° (-3° onder md) en zwaait bij hover of focus naar -1,5° (420ms, cubic-bezier(0.16, 1, 0.3, 1)); bij prefers-reduced-motion beweegt het niet. Inhoud: "Een website vanaf", het bedrag in de Price-stap, "excl. btw" en de tekstlink "Bekijk alle prijzen". Het hele kaartje is één link naar Prijzen; de onderstreping zakt mee bij hover en focus. Lichte stof-op-stof-schaduw.
 
 ### Fotolap
-De foto bij Over mij zit op een opgestikt stuk perzik stof (20px rand, foto 4:5), rondom gestikt op 8px van de rand en -1,5° gekanteld. Vastgestikt, dus zonder schaduw.
+De foto bij Over mij staat groot (tot 480px breed, 360px onder md, foto 4:5) op een opgestikt stuk perzik stof: 20px rand, rondom gestikt op 8px van de rand, -1,5° gekanteld. Over de rechteronderhoek is een naamband gestikt: een strook marineblauw keper-canvas met een naad rondom (stitch-on-navy, 6px van de rand), +3° gekanteld, met "Luca" in Bree Serif (2,75rem, 2,125rem onder sm) geborduurd in oranje draad. Lap en band zijn vastgestikt en hebben geen schaduw; de band is voor schermlezers verborgen omdat de naam al in de kop staat. Geen verdere decoratie: de persoon staat voorop.
 
 ### Links
 Tekstlinks zijn altijd onderstreept (2px, offset 0,22em) in werkjas-oranje en vet; bij hover zakt de streep naar 0,32em. Ze verwijzen door naar pagina's en dragen geen knopvorm.

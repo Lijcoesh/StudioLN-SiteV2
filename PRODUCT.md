@@ -37,7 +37,7 @@ De site zelf is het bewijs: hij moet eruitzien als bewuste keuzes, niet als de A
 
 ## Capabilities and Constraints
 
-- **Werkwijze-pagina** (besloten 10-11-2026): draagt Luca's volledige tekst "Simpel, maar nooit standaard." (zie Evidence) plus het traject van eerste gesprek tot online. Het woord "AI" staat niet in het menu: een menu-item "AI" kan bij deze doelgroep wantrouwen wekken. De kern van de tekst komt in een paar zinnen op Home, met een verwijzing naar Werkwijze.
+- **Werkwijze-pagina** (besloten 10-11-2026): draagt Luca's tekst "Simpel, maar nooit standaard." in de ingekorte V1-versie (zie Evidence), met een verzonnen voorbeeldsite die de patronen uit de tekst aanwijst (opbouw "De paskamer", gekozen 11-11-2026). Het traject van eerste gesprek tot online komt later op deze pagina, als Luca de stappen heeft vastgelegd (besloten 11-11-2026). Het woord "AI" staat niet in het menu: een menu-item "AI" kan bij deze doelgroep wantrouwen wekken. De kern van de tekst komt in een paar zinnen op Home, met een verwijzing naar Werkwijze.
 - **Prijzen staan op een eigen pagina Prijzen** (besloten 10-11-2026; bedragen bijgewerkt naar de dashboardcatalogus op 11-11-2026). Alleen bedragen excl. btw, en dat staat erbij.
   - Website Basis (ontwerp en bouw): € 500 eenmalig (geen "vanaf"; besloten 11-11-2026)
   - Installatie & domeinkoppeling: € 100 eenmalig
@@ -68,7 +68,7 @@ Herkenbare AI-designpatronen zijn het allerlaatste wat Luca wil. Naast wat zijn 
 
 ## Evidence on Hand
 
-- **Werkwijze-tekst** van Luca (origineel, opnieuw aangeleverd 10-11-2026). In V1 stond een met zijn akkoord ingekorte versie (`StudioLN-Site/src/Config/story.ts`); voor V2 is dit origineel het uitgangspunt:
+- **Werkwijze-tekst** van Luca (origineel, opnieuw aangeleverd 10-11-2026). In V1 stond een met zijn akkoord ingekorte versie (`StudioLN-Site/src/Config/story.ts`); op 11-11-2026 koos Luca die ingekorte versie voor de Werkwijze-pagina (letterlijk overnemen uit `story.ts`, niet herschrijven zonder te vragen). Het origineel ter referentie:
 
   > # Simpel, maar nooit standaard.
   >

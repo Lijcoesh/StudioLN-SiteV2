@@ -1,0 +1,40 @@
+{
+  "title": "Werkwijze",
+  "question": "De werkkleding-wereld ligt vast, net als je tekst en de kop van Home. Hoe laat de pagina de AI-designs zien waar je tekst over gaat?",
+  "options": [
+    {
+      "id": "lapjes",
+      "label": "De lapjesstrook",
+      "kicker": "THE ROLL",
+      "thesis": "Je tekst staat voorop als rustig stuk om te lezen; direct na 'Je kent het inmiddels wel' loopt één strook aan elkaar gestikte lapjes confectiestof over de breedte, elk lapje één patroon met de naam in gewone woorden eronder.",
+      "palette": ["#132B4F", "#F8DCC8", "#FFFFFF", "#C4531A", "#2A1B5C"],
+      "materials": ["keper-canvas voor de opening", "uitgeknipte lapjes paarse 'trendstof' met kartelrand", "kleine geweven naamlabeltjes per lapje"],
+      "viewport": "Canvas met dezelfde tweekleurige kop als Home over de volle breedte; daaronder links de eerste zin op lead-maat, rechts de twee andere intro-alinea's; onderaan de strook met vier lapjes: labeltje boven de kop, glazen kaart, 01/02/03, eindeloze pagina.",
+      "risk": "Losse uitsnedes laten de patronen zien, maar minder dat hele sites op elkaar lijken; op de telefoon wordt de strook een rij die je opzij veegt of vier lapjes onder elkaar.",
+      "html": ".impeccable/mocks/decision/werkwijze-lapjes.html"
+    },
+    {
+      "id": "paskamer",
+      "label": "De paskamer",
+      "thesis": "Eén verzonnen website hangt groot op het perzik vlak, met ernaast een lijstje van wat je ziet; tik een regel aan en een oranje rijgsteek omcirkelt dat patroon op het voorbeeld.",
+      "palette": ["#F8DCC8", "#132B4F", "#FAF4EE", "#C4531A", "#2A1B5C"],
+      "materials": ["los afdrukje van een nepsite met lichte schaduw", "geribde labelstof voor het lijstje, regels gescheiden door naden", "oranje rijgsteek als aanwijzing"],
+      "viewport": "Canvas met de kop links en de eerste intro-zin rechts; daaronder op perzik links het voorbeeld 'Nexora' (paarse nepsite, alleen het eerste scherm), rechts een geweven lijstje met vijf patronen; het eerste staat aan en is op het voorbeeld omcirkeld.",
+      "risk": "Werkt alleen als de bezoeker snapt dat hij moet tikken; daarom staat het eerste patroon al aan en is het lijstje ook zonder tikken leesbaar. Meer bouwwerk dan de andere twee.",
+      "html": ".impeccable/mocks/decision/werkwijze-paskamer.html"
+    },
+    {
+      "id": "uitvergroting",
+      "label": "Eén uitvergroting",
+      "thesis": "De pagina leest als een artikel; midden in de tekst ligt één groot afdrukje van een verzonnen website over de volle breedte, met hangkaartjes aan oranje draadjes die elk een patroon aanwijzen.",
+      "palette": ["#FFFFFF", "#132B4F", "#F8DCC8", "#C4531A", "#2A1B5C"],
+      "materials": ["wit als leesgrond", "los afdrukje, licht gekanteld met lichte schaduw", "witte hangkaartjes aan oranje draad, zoals de prijs op Home"],
+      "viewport": "Compacte canvasopening met de kop op één regel en de eerste zin; daaronder op wit de tweede alinea in een leeskolom, en dan het afdrukje over de volle breedte met vier hangkaartjes eraan.",
+      "risk": "Ligt het dichtst bij de V1-versie; op de telefoon wordt het afdrukje klein en verhuizen de kaartjes naar een lijstje eronder.",
+      "html": ".impeccable/mocks/decision/werkwijze-uitvergroting.html"
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "buildPath": { "value": "code" }
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>Eén uitvergroting</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Atkinson+Hyperlegible+Next:wght@400;700&family=Inter:wght@500;800&display=swap">
+<style>
+:root{--navy:#132B4F;--accent:#C4531A;--peach:#F8DCC8;--label:#FAF4EE;--fold:#E9DDD0;--ink:#16202E;--graphite:#4E5866;--sn:#7F93B3;--sl:#8C7A6C;--muted:#C3CDDD}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;overflow:hidden;font:19px/1.65 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:var(--ink);background:#fff}
+.canvas{background:var(--navy);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px),repeating-linear-gradient(-45deg,rgba(0,0,0,.08) 0 2px,transparent 2px 6px);height:328px}
+.wrap{width:1240px;margin:0 auto;position:relative}
+header{height:96px;position:relative}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+.brand{display:flex;align-items:center;gap:12px;font:400 30px 'Bree Serif';color:var(--label)}
+nav{display:flex;gap:36px;font-weight:700;font-size:17px;color:var(--label)}
+nav .on{box-shadow:inset 0 -3px var(--accent);padding-bottom:6px}
+.pas{position:absolute;left:0;right:0;border-top:2px dashed var(--sn)}
+h1{font:400 70px/1.02 'Bree Serif',Georgia,serif;color:var(--label);padding-top:48px}
+h1 span{color:var(--peach)}
+.canvas p{font-size:24px;line-height:1.5;color:var(--label);margin-top:20px;max-width:44ch}
+.col{max-width:62ch;margin-top:48px}
+/* afdrukje over de volle breedte */
+.print{position:relative;margin-top:40px;height:400px;background:#160E33;transform:rotate(-.6deg);box-shadow:0 10px 24px rgba(14,34,64,.16),0 2px 4px rgba(14,34,64,.12);overflow:hidden}
+.print:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 0%,rgba(124,108,240,.5),transparent 55%)}
+.bar{height:32px;background:var(--label);font-size:14px;color:var(--graphite);padding:5px 14px;position:relative}
+.f{position:absolute;font-family:Inter}
+.pill{left:48px;top:84px;border:1px solid #7C6CF0;border-radius:99px;padding:4px 12px;font-size:11px;letter-spacing:.14em;color:#B9AEFF}
+.h{left:48px;top:122px;font:800 50px/1.05 Inter;letter-spacing:-.03em;color:#fff}
+.h i{font-style:normal;background:linear-gradient(90deg,#7C6CF0,#E05AD8);-webkit-background-clip:text;color:transparent}
+.btn{left:48px;top:262px;width:170px;height:48px;border-radius:99px;background:linear-gradient(90deg,#7C6CF0,#E05AD8);box-shadow:0 0 30px rgba(224,90,216,.6)}
+.card{left:700px;width:470px;height:72px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18)}
+.card b{position:absolute;left:14px;top:14px;width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#7C6CF0,#B05AE0)}
+/* hangkaartjes aan oranje draad */
+.tag{position:absolute;background:#fff;padding:20px 18px 12px;font-weight:700;font-size:17px;line-height:1.3;color:var(--navy);width:200px;box-shadow:0 10px 24px rgba(14,34,64,.16),0 2px 4px rgba(14,34,64,.12)}
+.tag:before{content:"";position:absolute;top:7px;left:50%;margin-left:-6px;width:12px;height:12px;border-radius:50%;background:var(--label);border:2px solid var(--sl)}
+.thread{position:absolute;width:2px;background:var(--accent);border-radius:2px}
+</style></head><body>
+<div class="canvas">
+<header><div class="wrap">
+ <div class="brand"><svg width="40" height="40" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#FAF4EE"/><g transform="translate(6 6.97) scale(0.02176)"><path d="M0 0h175v652h445l136 178H0z" fill="#132B4F"/><path d="M244 0h148l352 444V0h175v830h-76L418 289v292H244z" fill="#C4531A"/></g></svg>StudioLN</div>
+ <nav><span class="on">Werkwijze</span><span>Prijzen</span><span>Projecten</span><span>Over mij</span><span>Contact</span></nav>
+</div><div class="pas" style="bottom:12px"></div><div class="pas" style="bottom:6px"></div></header>
+<div class="wrap">
+ <h1>Simpel, <span>maar nooit standaard.</span></h1>
+ <p>Laten we eerlijk zijn: steeds meer websites beginnen verdacht veel op elkaar te lijken.</p>
+</div>
+</div>
+<div class="wrap">
+ <p class="col">Een klein eyebrow-tekstje boven iedere kop, glazen kaarten met een subtiel blur-effect, onderdelen netjes genummerd met 01, 02 en 03 en alles op één eindeloos scrollende pagina. Je kent het inmiddels wel.</p>
+ <div class="print">
+  <div class="bar">nexora.nl</div>
+  <span class="f pill">✦ NIEUW: AI-GEDREVEN GROEI</span>
+  <div class="f h">Til jouw bedrijf naar<br>een <i>hoger niveau</i></div>
+  <span class="f btn"></span>
+  <span class="f card" style="top:84px"><b></b></span>
+  <span class="f card" style="top:172px"><b></b></span>
+  <span class="f card" style="top:260px"><b></b></span>
+ </div>
+ <span class="thread" style="left:150px;top:560px;height:70px;transform:rotate(-12deg)"></span>
+ <span class="tag" style="left:150px;top:612px;transform:rotate(-4deg)">Een labeltje boven de kop</span>
+ <span class="thread" style="left:520px;top:690px;height:46px;transform:rotate(8deg)"></span>
+ <span class="tag" style="left:470px;top:722px;transform:rotate(3deg)">Een kleurverloop in de kop</span>
+ <span class="thread" style="left:980px;top:520px;height:60px;transform:rotate(-6deg)"></span>
+ <span class="tag" style="left:1010px;top:560px;transform:rotate(-3deg)">Glazen kaarten</span>
+</div>
+</body></html>

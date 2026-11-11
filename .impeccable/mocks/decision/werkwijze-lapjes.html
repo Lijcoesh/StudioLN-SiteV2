@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>De lapjesstrook</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Atkinson+Hyperlegible+Next:wght@400;700&family=Inter:wght@500;800&display=swap">
+<style>
+:root{--navy:#132B4F;--accent:#C4531A;--peach:#F8DCC8;--label:#FAF4EE;--fold:#E9DDD0;--ink:#16202E;--graphite:#4E5866;--sn:#7F93B3;--sl:#8C7A6C;--muted:#C3CDDD}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;overflow:hidden;font:19px/1.65 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:var(--ink);
+ background:var(--navy);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px),repeating-linear-gradient(-45deg,rgba(0,0,0,.08) 0 2px,transparent 2px 6px)}
+.wrap{width:1240px;margin:0 auto;position:relative}
+header{height:96px;position:relative}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+.brand{display:flex;align-items:center;gap:12px;font:400 30px 'Bree Serif';color:var(--label)}
+nav{display:flex;gap:36px;font-weight:700;font-size:17px;color:var(--label)}
+nav .on{box-shadow:inset 0 -3px var(--accent);padding-bottom:6px}
+.pas{position:absolute;left:0;right:0;border-top:2px dashed var(--sn)}
+h1{font:400 84px/1.02 'Bree Serif',Georgia,serif;color:var(--label);letter-spacing:-.01em;margin-top:64px}
+h1 span{display:block;color:var(--peach)}
+.intro{display:grid;grid-template-columns:5fr 6fr;gap:64px;margin-top:44px;color:var(--label)}
+.lead{font-size:24px;line-height:1.5;max-width:22ch}
+.intro p+p{margin-top:14px}
+.body p{max-width:56ch;color:var(--muted)}
+.body p:first-child{color:var(--label)}
+/* strook lapjes: aan elkaar gestikt, kartelranden boven en onder */
+.strip{position:absolute;left:100px;right:100px;top:676px;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.patch{position:relative;height:168px;background:#22144A;overflow:hidden;
+ -webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/12px 100%;}
+.patch+.patch{border-left:2px dashed #8D7FC4}
+.patch:nth-child(2){background:#1B1F4F}.patch:nth-child(3){background:#2A1B5C}.patch:nth-child(4){background:#1E1748}
+.cap{position:absolute;left:24px;bottom:-26px;transform:translateY(100%) rotate(-1.5deg);background:var(--label);color:var(--navy);
+ font-weight:700;font-size:16px;padding:8px 16px;box-shadow:0 6px 14px rgba(14,34,64,.4)}
+.cap:before,.cap:after{content:"";position:absolute;top:0;bottom:0;width:8px;background:var(--fold)}
+.cap:before{left:0}.cap:after{right:0}
+.slot{position:relative}
+/* inhoud van de lapjes (verzonnen trendstof) */
+.pill{position:absolute;left:28px;top:30px;border:1px solid #7C6CF0;border-radius:99px;padding:4px 12px;font:500 11px Inter;letter-spacing:.14em;color:#B9AEFF}
+.gt{position:absolute;left:28px;top:66px;font:800 34px/1.05 Inter;letter-spacing:-.03em;color:#fff}
+.gt i{font-style:normal;background:linear-gradient(90deg,#7C6CF0,#E05AD8);-webkit-background-clip:text;color:transparent}
+.glass{position:absolute;left:34px;top:34px;width:240px;height:96px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);box-shadow:0 0 40px rgba(124,108,240,.35)}
+.glass b{position:absolute;left:18px;top:24px;width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#7C6CF0,#B05AE0)}
+.glass s{position:absolute;left:80px;top:30px;width:120px;height:12px;border-radius:6px;background:#fff;opacity:.85}
+.glass u{position:absolute;left:80px;top:54px;width:90px;height:8px;border-radius:4px;background:#fff;opacity:.4}
+.nums{position:absolute;left:30px;top:44px;display:flex;gap:30px;font:800 40px Inter;color:#8E7CFF}
+.nums small{display:block;font:500 13px Inter;color:#fff;margin-top:6px}
+.long{position:absolute;left:50%;top:18px;width:120px;margin-left:-60px;display:grid;gap:8px}
+.long div{height:22px;border-radius:6px;background:rgba(255,255,255,.12)}
+.long div:nth-child(odd){background:rgba(142,124,255,.35)}
+.fade{position:absolute;left:0;right:0;bottom:0;height:60px;background:linear-gradient(transparent,#1E1748)}
+</style></head><body>
+<header><div class="wrap">
+ <div class="brand"><svg width="40" height="40" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#FAF4EE"/><g transform="translate(6 6.97) scale(0.02176)"><path d="M0 0h175v652h445l136 178H0z" fill="#132B4F"/><path d="M244 0h148l352 444V0h175v830h-76L418 289v292H244z" fill="#C4531A"/></g></svg>StudioLN</div>
+ <nav><span class="on">Werkwijze</span><span>Prijzen</span><span>Projecten</span><span>Over mij</span><span>Contact</span></nav>
+</div><div class="pas" style="bottom:12px"></div><div class="pas" style="bottom:6px"></div></header>
+<main class="wrap">
+ <h1>Simpel,<span>maar nooit standaard.</span></h1>
+ <div class="intro">
+  <p class="lead">Laten we eerlijk zijn: steeds meer websites beginnen verdacht veel op elkaar te lijken.</p>
+  <div class="body">
+   <p>Een klein eyebrow-tekstje boven iedere kop, glazen kaarten met een subtiel blur-effect, onderdelen netjes genummerd met 01, 02 en 03 en alles op één eindeloos scrollende pagina. Je kent het inmiddels wel.</p>
+   <p>Het lijkt soms alsof er één ongeschreven handleiding bestaat voor hoe een moderne website eruit moet zien.</p>
+  </div>
+ </div>
+</main>
+<div class="strip">
+ <div class="slot"><div class="patch"><span class="pill">✦ NIEUW: AI-GEDREVEN</span><div class="gt">Groei naar een<br><i>hoger niveau</i></div></div><span class="cap">Een labeltje boven de kop</span></div>
+ <div class="slot"><div class="patch"><div class="glass"><b></b><s></s><u></u></div></div><span class="cap">Glazen kaarten</span></div>
+ <div class="slot"><div class="patch"><div class="nums"><span>01<small>Kennismaken</small></span><span>02<small>Ontwerpen</small></span><span>03<small>Lanceren</small></span></div></div><span class="cap">Alles genummerd</span></div>
+ <div class="slot"><div class="patch"><div class="long"><div></div><div></div><div></div><div></div><div></div><div></div></div><div class="fade"></div></div><span class="cap">Eén eindeloze pagina</span></div>
+</div>
+</body></html>

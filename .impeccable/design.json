@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-11T18:00:00Z",
+  "generatedAt": "2026-11-11T20:00:00Z",
   "title": "Design System: StudioLN",
   "extensions": {
     "colorMeta": {
@@ -139,6 +139,66 @@
         "displayName": "Draad op oranje",
         "canonical": "#F6C9AC"
       },
+      "project-tint-kamerbreed": {
+        "role": "neutral",
+        "displayName": "Klantstof Kamerbreed",
+        "canonical": "#DDD9C4"
+      },
+      "project-tint-stefvanzanten": {
+        "role": "neutral",
+        "displayName": "Klantstof Stef van Zanten",
+        "canonical": "#E6DCF3"
+      },
+      "project-tint-placeholder": {
+        "role": "neutral",
+        "displayName": "Klantstof plaatshouder",
+        "canonical": "#E9DDD0"
+      },
+      "slop-ground": {
+        "role": "neutral",
+        "displayName": "Trendstof grond",
+        "canonical": "#170F36",
+        "tonalRamp": [
+          "#0B0720",
+          "#170F36",
+          "#2A1B5C",
+          "#4A3A9A",
+          "#7C6CF0",
+          "#B9AEFF",
+          "#DCD6FF",
+          "#F4F2FF"
+        ]
+      },
+      "slop-raised": {
+        "role": "neutral",
+        "displayName": "Trendstof verhoogd",
+        "canonical": "#2A1B5C"
+      },
+      "slop-violet": {
+        "role": "neutral",
+        "displayName": "Trendstof violet",
+        "canonical": "#7C6CF0"
+      },
+      "slop-pink": {
+        "role": "neutral",
+        "displayName": "Trendstof roze",
+        "canonical": "#E05AD8"
+      },
+      "slop-lavender": {
+        "role": "neutral",
+        "displayName": "Trendstof lavendel",
+        "canonical": "#B9AEFF"
+      },
+      "slop-text": {
+        "role": "neutral",
+        "displayName": "Trendstof tekst",
+        "canonical": "#F4F2FF"
+      },
+      "slop-muted": {
+        "role": "neutral",
+        "displayName": "Trendstof bijtekst",
+        "canonical": "#B3ADD6"
+      },
       "error": {
         "role": "neutral",
         "displayName": "Signaal fout",
@@ -166,7 +226,7 @@
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Regeltitels op het binnenlabel (h3); koppen van zakken en maattabel; bedragen in de zakken."
+        "purpose": "Regeltitels op het binnenlabel (h3); koppen van zakken, maattabel en het lijstje in de paskamer; bedragen in de zakken; nadrukzin en slotzin van het verhaal op Werkwijze."
       },
       "title-small": {
         "displayName": "Title small",
@@ -174,7 +234,7 @@
       },
       "lead": {
         "displayName": "Lead",
-        "purpose": "Eén ondertitel onder display- of afsluitkop."
+        "purpose": "Eén ondertitel onder display- of afsluitkop; op Werkwijze drie lead-alinea's als één kolom onder de kop (max 44ch)."
       },
       "body": {
         "displayName": "Body",
@@ -214,12 +274,17 @@
       {
         "name": "ease-out-expo",
         "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "Naad dichtstikken, hover van contactroutes, pijlverschuiving, zwaaien van het hangkaartje."
+        "purpose": "Naad dichtstikken, rijgsteek dichtstikken, hover van contactroutes, pijlverschuiving, zwaaien van het hangkaartje, verschuiven van het afdrukje in een projectstrook."
       },
       {
         "name": "seam-sew",
         "value": "clip-path inset(0 100% 0 0) -> inset(0) 1700ms, 350ms delay",
         "purpose": "Het enige laadmoment: de naden van de hero-contactbaan stikken zich dicht bij het laden. Uit bij prefers-reduced-motion."
+      },
+      {
+        "name": "tacking-sew",
+        "value": "clip-path inset(-12px 100% -12px -12px) -> inset(-12px) 640ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "De rijgsteek in de paskamer stikt zich dicht om het gekozen patroon, bij elke keuze (ook het eerste patroon dat bij het openen aanstaat). Uit bij prefers-reduced-motion."
       },
       {
         "name": "route-hover",
@@ -235,6 +300,16 @@
         "name": "tag-sway",
         "value": "rotate(-4deg) -> rotate(-1.5deg), 420ms cubic-bezier(0.16, 1, 0.3, 1)",
         "purpose": "Hangkaartje zwaait bij hover of focus. Uit bij prefers-reduced-motion."
+      },
+      {
+        "name": "pattern-choice",
+        "value": "color en text-decoration-color 180ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Ringetje en onderstreping van een regel in het lijstje van de paskamer."
+      },
+      {
+        "name": "print-lift",
+        "value": "translateY(-6px) 220ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Het afdrukje in een projectstrook schuift omhoog bij hover. Uit bij prefers-reduced-motion."
       }
     ],
     "breakpoints": [
@@ -271,6 +346,14 @@
       "position": "sticky, top 0, z-index appBar",
       "yoke": "twee naden in stitch-on-navy over de volle breedte, 6px uit elkaar, 6px boven de onderkant",
       "scrollPaddingTop": "headerhoogte + 16px"
+    },
+    "tackingStitch": {
+      "color": "accent",
+      "width": "3px",
+      "dasharray": "17 8 12 8 20 8 14 8",
+      "linecap": "round",
+      "tilt": "-1.2deg",
+      "inset": "0.55em boven/onder, 0.75em opzij; krap: 0.12em boven/onder"
     }
   },
   "components": [
@@ -339,6 +422,30 @@
       "css": ".ds-xs { display: inline-flex; align-items: center; margin: 16px; padding: 12px; background: #FAF4EE; } .ds-xs svg { display: block; overflow: visible; } .ds-xs-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }"
     },
     {
+      "name": "Projectstrook",
+      "kind": "card",
+      "refersTo": "project-strip",
+      "description": "Eén project als strook stof: klantlap met het screenshot als los afdrukje binnen de naden, geribde labelstof met naam, twee zinnen en de link; naad rondom en over de verbinding, lichte stof-op-stof-schaduw.",
+      "html": "<div class=\"ds-strip-ground\"><a class=\"ds-strip\" href=\"#\"><span class=\"ds-strip-lap\"><span class=\"ds-strip-print\"><span class=\"ds-strip-bar\">kamerbreed.nl</span><span class=\"ds-strip-shot\"></span></span></span><span class=\"ds-strip-text\"><span class=\"ds-strip-name\">Kamerbreed Interieur</span><span class=\"ds-strip-line\">Interieurbouw op maat.</span><span class=\"ds-strip-made\">Ik maakte een website die het vakwerk laat zien.</span><span class=\"ds-strip-link\">Bekijk kamerbreed.nl</span></span></a></div>",
+      "css": ".ds-strip-ground { background: #F8DCC8; padding: 48px; } .ds-strip { position: relative; display: grid; grid-template-columns: minmax(0,7fr) minmax(0,5fr); color: #16202E; text-decoration: none; box-shadow: 0 10px 24px rgba(14,34,64,0.16), 0 2px 4px rgba(14,34,64,0.12); } .ds-strip::before { content: ''; position: absolute; inset: 8px; border: 2px dashed #8C7A6C; pointer-events: none; } .ds-strip:focus-visible { outline: 3px solid #C4531A; outline-offset: 3px; } .ds-strip-lap { background: #DDD9C4; padding: 48px; border-right: 2px dashed #8C7A6C; } .ds-strip-print { display: block; background: #FAF4EE; box-shadow: 0 10px 24px rgba(14,34,64,0.16), 0 2px 4px rgba(14,34,64,0.12); transform: rotate(-1deg); transition: transform 220ms cubic-bezier(0.16,1,0.3,1); } .ds-strip:hover .ds-strip-print { transform: rotate(-1deg) translateY(-6px); } @media (prefers-reduced-motion: reduce) { .ds-strip-print { transition: none; } } .ds-strip-bar { display: flex; align-items: center; height: 36px; padding-inline: 16px; color: #4E5866; font-size: 0.9375rem; } .ds-strip-shot { display: block; aspect-ratio: 1200 / 750; background: #E9DDD0; } .ds-strip-text { display: flex; flex-direction: column; gap: 8px; justify-content: center; padding: 48px; background: #FAF4EE; } .ds-strip-name { font-family: 'Bree Serif', Georgia, serif; font-size: 2.125rem; line-height: 1.1; color: #132B4F; } .ds-strip-line { max-width: 40ch; } .ds-strip-made { max-width: 40ch; color: #4E5866; } .ds-strip-link { margin-top: 8px; font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: #C4531A; text-underline-offset: 0.22em; }"
+    },
+    {
+      "name": "Paskamer-lijstje",
+      "kind": "custom",
+      "refersTo": "fitting-room-label",
+      "description": "Het lijstje naast de sjabloonsite: ingenaaide labelstof met naden tussen de regels; elke regel een schakelknop met een gestippeld ringetje, het gekozen patroon in werkjas-oranje met onderstreping.",
+      "html": "<div class=\"ds-room-ground\"><div class=\"ds-room\"><span class=\"ds-room-top\"></span><h2 class=\"ds-room-title\">Wat je hier ziet</h2><ul class=\"ds-room-list\"><li><button class=\"ds-choice\" aria-pressed=\"true\"><svg class=\"ds-mark ds-mark-on\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-dasharray=\"7 4\" stroke-linecap=\"round\"/><circle cx=\"12\" cy=\"12\" r=\"3.5\" fill=\"currentColor\"/></svg><span class=\"ds-choice-text\">Een labeltje boven de kop</span></button></li><li><button class=\"ds-choice\" aria-pressed=\"false\"><svg class=\"ds-mark\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"4 4\" stroke-linecap=\"round\"/></svg><span class=\"ds-choice-text\">Een kleurverloop in de kop</span></button></li><li><button class=\"ds-choice\" aria-pressed=\"false\"><svg class=\"ds-mark\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"4 4\" stroke-linecap=\"round\"/></svg><span class=\"ds-choice-text\">Een gloeiende knop</span></button></li></ul></div></div>",
+      "css": ".ds-room-ground { background: #F8DCC8; padding: 48px; } .ds-room { position: relative; max-width: 460px; background: #FAF4EE; padding: 44px 48px 12px; box-shadow: 0 10px 24px rgba(14,34,64,0.16), 0 2px 4px rgba(14,34,64,0.12); } .ds-room::before, .ds-room::after { content: ''; position: absolute; top: 0; bottom: 0; width: 16px; background: #E9DDD0; } .ds-room::before { left: 0; border-right: 2px dashed #8C7A6C; } .ds-room::after { right: 0; border-left: 2px dashed #8C7A6C; } .ds-room-top { position: absolute; top: 14px; left: 16px; right: 16px; border-top: 2px dashed #8C7A6C; } .ds-room-title { margin: 0; padding-bottom: 16px; border-bottom: 2px dashed #8C7A6C; font-family: 'Bree Serif', Georgia, serif; font-weight: 400; font-size: 1.875rem; line-height: 1.15; color: #132B4F; } .ds-room-list { list-style: none; margin: 0; padding: 0; } .ds-room-list li + li { border-top: 2px dashed #8C7A6C; } .ds-choice { display: flex; align-items: center; gap: 16px; width: 100%; min-height: 60px; padding: 10px 0; border: 0; background: none; text-align: left; font: 700 1.1875rem/1.35 'Atkinson Hyperlegible Next Variable', system-ui, sans-serif; color: #16202E; cursor: pointer; } .ds-choice:focus-visible { outline: 3px solid #C4531A; outline-offset: 3px; } .ds-mark { flex-shrink: 0; width: 24px; height: 24px; color: #8C7A6C; transition: color 180ms cubic-bezier(0.16,1,0.3,1); } .ds-choice:hover .ds-mark { color: #132B4F; } .ds-choice .ds-mark-on, .ds-choice:hover .ds-mark-on { color: #C4531A; } .ds-choice-text { text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: transparent; text-underline-offset: 0.22em; transition: text-decoration-color 180ms cubic-bezier(0.16,1,0.3,1); } .ds-choice[aria-pressed='true'] .ds-choice-text { text-decoration-color: #C4531A; }"
+    },
+    {
+      "name": "Rijgsteek",
+      "kind": "custom",
+      "refersTo": "tacking-stitch",
+      "description": "Met de hand gelegde lus van oranje draad om het gekozen patroon: ongelijke steken, iets scheef, overloop bij het sluiten; stikt zich bij elke keuze dicht van links naar rechts, niet bij prefers-reduced-motion.",
+      "html": "<div class=\"ds-tack-ground\"><span class=\"ds-tack-target\">Een labeltje boven de kop<svg class=\"ds-tack\" viewBox=\"0 0 300 60\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path d=\"M 32 3 L 274 0 Q 302 0 301 26 L 299 34 Q 299 61 271 60 L 26 62 Q -1 61 1 34 L 2 28 Q 2 5 28 6 L 72 9\" fill=\"none\" stroke=\"#C4531A\" stroke-width=\"3\" stroke-dasharray=\"17 8 12 8 20 8 14 8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" vector-effect=\"non-scaling-stroke\"/></svg></span></div>",
+      "css": ".ds-tack-ground { background: #FAF4EE; padding: 48px; } .ds-tack-target { position: relative; display: inline-block; font: 700 1.1875rem 'Atkinson Hyperlegible Next Variable', system-ui, sans-serif; color: #16202E; } .ds-tack { position: absolute; top: -0.55em; left: -0.75em; width: calc(100% + 1.5em); height: calc(100% + 1.1em); overflow: visible; pointer-events: none; transform: rotate(-1.2deg); clip-path: inset(-12px 100% -12px -12px); animation: ds-tack-sew 640ms cubic-bezier(0.16,1,0.3,1) forwards; } @keyframes ds-tack-sew { to { clip-path: inset(-12px); } } @media (prefers-reduced-motion: reduce) { .ds-tack { clip-path: none; animation: none; } }"
+    },
+    {
       "name": "Tekstlink",
       "kind": "custom",
       "refersTo": "link",
@@ -365,7 +472,7 @@
   ],
   "narrative": {
     "northStar": "Werkkleding",
-    "overview": "De site draagt dezelfde kleding als zijn bezoeker: een stevige marineblauwe werkjas met oranje contrastvlakken, zichtbaar gestikt, met het logo als geweven label. Alles wat je ziet is stof, naad of label. Marineblauw canvas met een fijne keperbinding is de grond van de zware delen (header, hero, de opening van Prijzen, afsluiting, footer); perzik en wit zijn de lichte vlakken daartussen; één oranje contrastbaan draagt de acties.\n\nDe dichtheid is rustig en ruim: grote Bree Serif-koppen, een op leesbaarheid ontworpen tekstletter op 19px, brede secties (112px verticaal). Vormen zijn vrijwel recht (2px), diepte bestaat alleen waar stof over stof ligt. Lijnen zijn altijd stiknaden: gestippeld, met ronde steekuiteinden, en elke naad verbindt of begrenst een stuk stof.\n\nDe site weigert het standaard dienstverlenerssjabloon (hero met foto, icoonkaartjes, CTA-band) en elk AI-recept: geen eyebrows, geen glas, geen nummering, geen gradients, geen glans.",
+    "overview": "De site draagt dezelfde kleding als zijn bezoeker: een stevige marineblauwe werkjas met oranje contrastvlakken, zichtbaar gestikt, met het logo als geweven label. Alles wat je ziet is stof, naad of label. Marineblauw canvas met een fijne keperbinding is de grond van de zware delen (header, hero, de opening van Prijzen, afsluiting, footer); perzik en wit zijn de lichte vlakken daartussen; één oranje contrastbaan draagt de acties.\n\nDe dichtheid is rustig en ruim: grote Bree Serif-koppen, een op leesbaarheid ontworpen tekstletter op 19px, brede secties (112px verticaal). Vormen zijn vrijwel recht (2px), diepte bestaat alleen waar stof over stof ligt. Lijnen zijn altijd stiknaden: gestippeld, met ronde steekuiteinden, en elke naad verbindt of begrenst een stuk stof.\n\nDe site weigert het standaard dienstverlenerssjabloon (hero met foto, icoonkaartjes, CTA-band) en elk AI-recept: geen eyebrows, geen glas, geen nummering, geen gradients, geen glans. Alleen in de paskamer op Werkwijze hangt dat recept, als verzonnen voorbeeld in eigen stof, om het aan te wijzen.",
     "keyCharacteristics": [
       "Marineblauw keper-canvas als grond voor header, hero, afsluiting en footer; de header blijft staan en eindigt in een dubbele pasnaad.",
       "Oranje is de enige drager van acties: de contrastbaan met drie gelijke contactroutes in de hero, en een vastgestikte oranje lap met dezelfde routes in de afsluiting.",
@@ -374,17 +481,22 @@
       "Een breed ingenaaid binnenlabel op perzik met wat er in de website zit, met de prijs als wit hangkaartje aan een oranje draad; op Prijzen is hetzelfde label de maattabel van de pakketten, met kruissteken waar iets inbegrepen is.",
       "Opgestikte zakken van perzik stof voor losse prijzen.",
       "Bree Serif voor koppen, Atkinson Hyperlegible Next voor tekst.",
-      "Eén laadmoment: de naad van de contactbaan stikt zich dicht bij het laden. Verder beweegt alleen wat je aanraakt."
+      "Eén laadmoment: de naad van de contactbaan stikt zich dicht bij het laden. Verder beweegt alleen wat je aanraakt; de enige andere steek die zich dichtstikt is de oranje rijgsteek in de paskamer, om het patroon dat aanstaat."
     ],
     "rules": [
       {
         "name": "The Contrastbaan Rule",
-        "body": "Oranje als vlak bestaat alleen waar de contactroutes staan: de contactbaan in de hero en de contactlap in de afsluiting. Elders verschijnt oranje alleen als draad (onderstreping, actieve streep, focusring, de draad waaraan het hangkaartje hangt, de geborduurde naam op de naamband), nooit als knop, kaart of achtergrond.",
+        "body": "Oranje als vlak bestaat alleen waar de contactroutes staan: de contactbaan in de hero en de contactlap in de afsluiting. Elders verschijnt oranje alleen als draad (onderstreping, actieve streep, focusring, de draad waaraan het hangkaartje hangt, de geborduurde naam op de naamband, de rijgsteek en het actieve teken in het lijstje van de paskamer), nooit als knop, kaart of achtergrond.",
         "section": "colors"
       },
       {
         "name": "The Draad-per-stof Rule",
         "body": "Een naad krijgt de draadkleur van de stof waarop hij ligt: stitch-on-navy op canvas, stitch-on-light op perzik/wit/label, stitch-on-accent op de baan.",
+        "section": "colors"
+      },
+      {
+        "name": "The Vreemde-stof Rule",
+        "body": "Kleurverloop, gloed, glas en blur, ronde pillen, een labeltje boven de kop, nummering en de systeemletter bestaan alleen binnen de verzonnen sjabloonsite in de paskamer, in de slop-kleuren. Daar zijn ze het voorbeeld dat de tekst aanwijst, geen huisstijl: niets ervan verlaat het afdrukje, en de verboden in Do's and Don'ts gelden voor de rest van de site onverkort.",
         "section": "colors"
       },
       {
@@ -399,12 +511,12 @@
       },
       {
         "name": "The Stof-op-stof Rule",
-        "body": "Een schaduw betekent dat een los stuk stof of karton op een ander ligt: de labels, de maattabel, het hangkaartje en de vaste header die over de pagina schuift. Op canvas de zware variant, op een licht vlak de lichte; de header draagt altijd de lichte. Geen schaduw op vastgestikte lappen en zakken, vlakken, knoppen, de contactbaan of de contactlap.",
+        "body": "Een schaduw betekent dat een los stuk stof of karton op een ander ligt: de labels, de maattabel, het hangkaartje en de vaste header die over de pagina schuift. Op canvas de zware variant, op een licht vlak de lichte; de header draagt altijd de lichte. Geen schaduw op vastgestikte lappen en zakken, vlakken, knoppen, de contactbaan of de contactlap. Op Projecten ligt elke projectstrook los op het perzik vlak en het screenshot als los afdrukje op de lap: beide de lichte variant. Op Werkwijze liggen het afdrukje van de sjabloonsite en het lijstje op labelstof los op het perzik vlak: ook de lichte variant.",
         "section": "elevation"
       },
       {
         "name": "The Naad Rule",
-        "body": "De enige getekende lijn op de site is een gestippelde stiknaad, en elke naad verbindt of begrenst een stuk stof: de baan boven en onder, tussen de routes, de uiteinden en de bovenrand van een label, de regels op het binnenlabel, de rand rond de foto en rond de naamband, de bovenrand van het canvasmoment, de dubbele pasnaad onder de header, de rand en de zoom van de zakken, de regels van de maattabel, de onderkant van de footer en de items in het menu. De draad van het hangkaartje is geen lijn maar garen: één doorlopende, slappe oranje draad. Ook trensjes en kruissteken zijn garen, geen lijn.",
+        "body": "De enige getekende lijn op de site is een gestippelde stiknaad, en elke naad verbindt of begrenst een stuk stof: de baan boven en onder, tussen de routes, de uiteinden en de bovenrand van een label, de regels op het binnenlabel, de rand rond de foto en rond de naamband, de bovenrand van het canvasmoment, de dubbele pasnaad onder de header, de rand en de zoom van de zakken, de regels van de maattabel en van het lijstje in de paskamer, de onderkant van de footer en de items in het menu. De draad van het hangkaartje is geen lijn maar garen: één doorlopende, slappe oranje draad. Ook trensjes, kruissteken, de oranje rijgsteek en het ringetje voor elke regel in het lijstje van de paskamer zijn garen, geen lijn.",
         "section": "shapes"
       }
     ],
@@ -414,7 +526,9 @@
       "**Do** houd aansluitende canvasvelden op een hoogte die een veelvoud van 8px is.",
       "**Do** zet een opsomming van wat de klant krijgt op een ingenaaid label: geribde crème stof, omgeslagen gestikte korte kanten, regels gescheiden door naden. Een vergelijking van pakketten wordt op dat label een echte tabel met kruissteken.",
       "**Do** zet losse prijzen in opgestikte zakken: perzik stof, rondom gestikt, zoomnaad en trensjes, licht gekanteld, zonder schaduw.",
-      "**Do** laat de naad van de contactbaan alleen in de hero dichtstikken, en sla dat over bij prefers-reduced-motion; ook het zwaaien van het hangkaartje staat dan uit.",
+      "**Do** toon gemaakt werk als projectstrook: klantlap met het screenshot binnen de naden, labelstof met naam, twee zinnen en de link; klantkleur alleen op die lap.",
+      "**Do** laat de naad van de contactbaan alleen in de hero dichtstikken, en sla dat over bij prefers-reduced-motion; ook het zwaaien van het hangkaartje en het dichtstikken van de rijgsteek staan dan uit.",
+      "**Do** laat een sjabloonpatroon alleen zien als verzonnen voorbeeld in de paskamer: een los afdrukje met de balk \"Verzonnen voorbeeld\", ernaast in gewone woorden wat je ziet, en de oranje rijgsteek om het gekozen patroon.",
       "**Do** wissel de sectievorm af: de 5fr / 6fr-as mag terugkomen, maar niet elke sectie als kop links, tekst rechts.",
       "**Do** houd hoeken op 2px en Bree Serif op gewicht 400."
     ],
@@ -428,7 +542,8 @@
       "**Don't** trek doorlopende sierlijnen of dividers; een lijn is een naad die stof verbindt of begrenst, of hij is er niet.",
       "**Don't** geef iets een schaduw tenzij een los stuk stof of karton op een ander ligt; gebruik op lichte vlakken de lichte variant.",
       "**Don't** gebruik oranje als vlak buiten de contactbaan en de contactlap.",
-      "**Don't** zet badges, een \"populair\"-pakket of doorgestreepte prijzen in een prijsvergelijking."
+      "**Don't** zet badges, een \"populair\"-pakket of doorgestreepte prijzen in een prijsvergelijking.",
+      "**Don't** gebruik de slop-kleuren, kleurverloop, gloed, glas, ronde pillen of de systeemletter buiten de sjabloonsite in de paskamer."
     ]
   }
 }

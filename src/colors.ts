@@ -35,6 +35,24 @@ export const projectTintKamerbreed = '#DDD9C4';
 export const projectTintStefVanZanten = '#E6DCF3';
 export const projectTintPlaceholder = labelFold;
 
+// De verzonnen sjabloonsite op Werkwijze: de "trendstof" die Luca's tekst bekritiseert. Alleen in
+// dat voorbeeld; kleurverloop, gloed en glas komen verder nergens op de site.
+export const slopGround = '#170F36';
+export const slopRaised = '#2A1B5C';
+export const slopViolet = '#7C6CF0';
+export const slopPink = '#E05AD8';
+export const slopLavender = '#B9AEFF';
+export const slopText = '#F4F2FF';
+export const slopMuted = '#B3ADD6';
+// Hetzelfde recept in een licht jasje: de "nette" vakmansite die bezoekers bij concurrenten zien.
+export const slopLightGround = '#FBFCFD';
+export const slopLightInk = '#14202B';
+export const slopLightMuted = '#5B6875';
+export const slopLightLine = '#E3E8EE';
+export const slopEmerald = '#10B981';
+export const slopEmeraldDeep = '#047857';
+export const slopBlue = '#3B82F6';
+
 // Signalen (altijd samen met icoon en tekst, nooit alleen kleur)
 export const error = '#B0132F';
 export const warning = '#7A5A00';

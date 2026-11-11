@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>De paskamer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Atkinson+Hyperlegible+Next:wght@400;700&family=Inter:wght@500;800&display=swap">
+<style>
+:root{--navy:#132B4F;--accent:#C4531A;--peach:#F8DCC8;--label:#FAF4EE;--fold:#E9DDD0;--ink:#16202E;--graphite:#4E5866;--sn:#7F93B3;--sl:#8C7A6C;--muted:#C3CDDD}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;overflow:hidden;font:19px/1.65 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:var(--ink);background:var(--peach)}
+.canvas{background:var(--navy);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px),repeating-linear-gradient(-45deg,rgba(0,0,0,.08) 0 2px,transparent 2px 6px);height:392px}
+.wrap{width:1240px;margin:0 auto;position:relative}
+header{height:96px;position:relative}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+.brand{display:flex;align-items:center;gap:12px;font:400 30px 'Bree Serif';color:var(--label)}
+nav{display:flex;gap:36px;font-weight:700;font-size:17px;color:var(--label)}
+nav .on{box-shadow:inset 0 -3px var(--accent);padding-bottom:6px}
+.pas{position:absolute;left:0;right:0;border-top:2px dashed var(--sn)}
+.open{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:end;padding-top:56px}
+h1{font:400 76px/1.02 'Bree Serif',Georgia,serif;color:var(--label)}
+h1 span{display:block;color:var(--peach)}
+.open p{font-size:24px;line-height:1.5;color:var(--label);max-width:34ch;padding-bottom:6px}
+.room{display:grid;grid-template-columns:7fr 5fr;gap:64px;margin-top:64px}
+/* afdrukje van de nepsite */
+.print{position:relative;height:430px;background:#160E33;transform:rotate(-.8deg);box-shadow:0 10px 24px rgba(14,34,64,.16),0 2px 4px rgba(14,34,64,.12);overflow:hidden}
+.print:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 10%,rgba(124,108,240,.45),transparent 55%)}
+.bar{height:32px;background:var(--label);font-size:14px;color:var(--graphite);padding:5px 14px;position:relative}
+.f{position:absolute;font-family:Inter}
+.logo{left:28px;top:52px;font:800 18px Inter;color:#fff}
+.pill{left:28px;top:98px;border:1px solid #7C6CF0;border-radius:99px;padding:4px 12px;font-size:11px;letter-spacing:.14em;color:#B9AEFF}
+.h{left:28px;top:134px;font:800 40px/1.05 Inter;letter-spacing:-.03em;color:#fff}
+.h i{font-style:normal;background:linear-gradient(90deg,#7C6CF0,#E05AD8);-webkit-background-clip:text;color:transparent}
+.btn{left:28px;top:246px;width:150px;height:44px;border-radius:99px;background:linear-gradient(90deg,#7C6CF0,#E05AD8);box-shadow:0 0 30px rgba(224,90,216,.6)}
+.card{right:28px;width:250px;height:64px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18)}
+.card b{position:absolute;left:12px;top:12px;width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#7C6CF0,#B05AE0)}
+.nums{left:28px;top:330px;display:flex;gap:46px;font:800 34px Inter;color:#8E7CFF}
+/* rijgsteek om het actieve patroon */
+.ring{position:absolute;left:12px;top:86px;width:228px;height:48px;border:3px dashed var(--accent);border-radius:50%;transform:rotate(-3deg)}
+.caption{margin-top:20px;font-size:17px;color:var(--graphite)}
+/* lijstje op labelstof */
+.list{position:relative;background:var(--label);padding:30px 40px 12px;box-shadow:0 10px 24px rgba(14,34,64,.16),0 2px 4px rgba(14,34,64,.12);align-self:start}
+.list:before,.list:after{content:"";position:absolute;top:0;bottom:0;width:14px;background:var(--fold)}
+.list:before{left:0;border-right:2px dashed var(--sl)}.list:after{right:0;border-left:2px dashed var(--sl)}
+.list h2{font:400 28px/1.15 'Bree Serif';color:var(--navy);padding-bottom:14px;border-bottom:2px dashed var(--sl)}
+.item{display:flex;align-items:center;gap:14px;min-height:60px;font-weight:700;border-bottom:2px dashed rgba(140,122,108,.5)}
+.item:last-child{border-bottom:0}
+.item i{width:18px;height:18px;border:2px dashed var(--sl);border-radius:50%}
+.item.on i{border:3px solid var(--accent)}
+.item.on span{text-decoration:underline 2px var(--accent);text-underline-offset:.22em}
+</style></head><body>
+<div class="canvas">
+<header><div class="wrap">
+ <div class="brand"><svg width="40" height="40" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#FAF4EE"/><g transform="translate(6 6.97) scale(0.02176)"><path d="M0 0h175v652h445l136 178H0z" fill="#132B4F"/><path d="M244 0h148l352 444V0h175v830h-76L418 289v292H244z" fill="#C4531A"/></g></svg>StudioLN</div>
+ <nav><span class="on">Werkwijze</span><span>Prijzen</span><span>Projecten</span><span>Over mij</span><span>Contact</span></nav>
+</div><div class="pas" style="bottom:12px"></div><div class="pas" style="bottom:6px"></div></header>
+<div class="wrap open">
+ <h1>Simpel,<span>maar nooit standaard.</span></h1>
+ <p>Laten we eerlijk zijn: steeds meer websites beginnen verdacht veel op elkaar te lijken.</p>
+</div>
+</div>
+<div class="wrap room">
+ <div>
+  <div class="print">
+   <div class="bar">nexora.nl</div>
+   <span class="f logo">✦ Nexora</span>
+   <span class="f pill">✦ NIEUW: AI-GEDREVEN GROEI</span>
+   <div class="f h">Til jouw bedrijf<br>naar een <i>hoger niveau</i></div>
+   <span class="f btn"></span>
+   <span class="f card" style="top:110px"><b></b></span>
+   <span class="f card" style="top:190px"><b></b></span>
+   <span class="f card" style="top:270px"><b></b></span>
+   <div class="f nums"><span>01</span><span>02</span><span>03</span></div>
+   <span class="ring"></span>
+  </div>
+  <p class="caption">Een verzonnen website. Je komt hem overal tegen.</p>
+ </div>
+ <div class="list">
+  <h2>Wat je hier ziet</h2>
+  <div class="item on"><i></i><span>Een labeltje boven de kop</span></div>
+  <div class="item"><i></i><span>Een kleurverloop in de kop</span></div>
+  <div class="item"><i></i><span>Een gloeiende knop</span></div>
+  <div class="item"><i></i><span>Glazen kaarten met icoontjes</span></div>
+  <div class="item"><i></i><span>Alles genummerd: 01, 02, 03</span></div>
+ </div>
+</div>
+</body></html>

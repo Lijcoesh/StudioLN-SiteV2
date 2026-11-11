@@ -14,6 +14,168 @@
         "value": "hyperlegible next",
         "createdAt": "2026-11-11T11:09:45.988Z",
         "reason": "Claude: same family as DESIGN.md body font"
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-lapjes.html"
+        ],
+        "createdAt": "2026-11-11T20:20:05.655Z",
+        "reason": "Claude: decision sketch deliberately depicts the AI-template patterns Luca's Werkwijze text criticizes (nepsite-voorbeeld)"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-lapjes.html"
+        ],
+        "createdAt": "2026-11-11T20:20:06.566Z",
+        "reason": "Claude: decision sketch deliberately depicts the AI-template patterns Luca's Werkwijze text criticizes (nepsite-voorbeeld)"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-lapjes.html"
+        ],
+        "createdAt": "2026-11-11T20:20:06.830Z",
+        "reason": "Claude: decision sketch deliberately depicts the AI-template patterns Luca's Werkwijze text criticizes (nepsite-voorbeeld)"
+      },
+      {
+        "rule": "gray-on-color",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-lapjes.html"
+        ],
+        "createdAt": "2026-11-11T20:20:07.090Z",
+        "reason": "Claude: decision sketch deliberately depicts the AI-template patterns Luca's Werkwijze text criticizes (nepsite-voorbeeld)"
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-paskamer.html"
+        ],
+        "createdAt": "2026-11-11T20:20:07.355Z",
+        "reason": "Claude: decision sketch deliberately depicts the AI-template patterns Luca's Werkwijze text criticizes (nepsite-voorbeeld)"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-paskamer.html"
+        ],
+        "createdAt": "2026-11-11T20:20:07.619Z",
+        "reason": "Claude: decision sketch deliberately depicts the AI-template patterns Luca's Werkwijze text criticizes (nepsite-voorbeeld)"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-paskamer.html"
+        ],
+        "createdAt": "2026-11-11T20:20:07.907Z",
+        "reason": "Claude: decision sketch deliberately depicts the AI-template patterns Luca's Werkwijze text criticizes (nepsite-voorbeeld)"
+      },
+      {
+        "rule": "gray-on-color",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-paskamer.html"
+        ],
+        "createdAt": "2026-11-11T20:20:08.166Z",
+        "reason": "Claude: decision sketch deliberately depicts the AI-template patterns Luca's Werkwijze text criticizes (nepsite-voorbeeld)"
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-uitvergroting.html"
+        ],
+        "createdAt": "2026-11-11T20:20:08.433Z",
+        "reason": "Claude: decision sketch deliberately depicts the AI-template patterns Luca's Werkwijze text criticizes (nepsite-voorbeeld)"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-uitvergroting.html"
+        ],
+        "createdAt": "2026-11-11T20:20:08.695Z",
+        "reason": "Claude: decision sketch deliberately depicts the AI-template patterns Luca's Werkwijze text criticizes (nepsite-voorbeeld)"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-uitvergroting.html"
+        ],
+        "createdAt": "2026-11-11T20:20:08.970Z",
+        "reason": "Claude: decision sketch deliberately depicts the AI-template patterns Luca's Werkwijze text criticizes (nepsite-voorbeeld)"
+      },
+      {
+        "rule": "gray-on-color",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-uitvergroting.html"
+        ],
+        "createdAt": "2026-11-11T20:20:09.230Z",
+        "reason": "Claude: decision sketch deliberately depicts the AI-template patterns Luca's Werkwijze text criticizes (nepsite-voorbeeld)"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-lapjes.html"
+        ],
+        "createdAt": "2026-11-11T20:24:46.574Z",
+        "reason": "Claude: closed decision-round sketch; Inter and tight pills belong to the deliberate AI-template specimen"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-lapjes.html"
+        ],
+        "createdAt": "2026-11-11T20:24:46.825Z",
+        "reason": "Claude: closed decision-round sketch; Inter and tight pills belong to the deliberate AI-template specimen"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-paskamer.html"
+        ],
+        "createdAt": "2026-11-11T20:24:47.098Z",
+        "reason": "Claude: closed decision-round sketch; Inter and tight pills belong to the deliberate AI-template specimen"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-paskamer.html"
+        ],
+        "createdAt": "2026-11-11T20:24:47.360Z",
+        "reason": "Claude: closed decision-round sketch; Inter and tight pills belong to the deliberate AI-template specimen"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-uitvergroting.html"
+        ],
+        "createdAt": "2026-11-11T20:24:47.643Z",
+        "reason": "Claude: closed decision-round sketch; Inter and tight pills belong to the deliberate AI-template specimen"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/werkwijze-uitvergroting.html"
+        ],
+        "createdAt": "2026-11-11T20:24:47.923Z",
+        "reason": "Claude: closed decision-round sketch; Inter and tight pills belong to the deliberate AI-template specimen"
       }
     ]
   }

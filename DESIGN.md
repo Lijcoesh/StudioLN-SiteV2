@@ -106,6 +106,14 @@ components:
     backgroundColor: "{colors.label}"
     textColor: "{colors.navy}"
     padding: "26px 38px"
+  pocket:
+    backgroundColor: "{colors.peach}"
+    textColor: "{colors.text}"
+    padding: "56px 40px 32px"
+  size-chart:
+    backgroundColor: "{colors.label}"
+    textColor: "{colors.text}"
+    padding: "52px 72px 24px"
   button-outlined-on-navy:
     textColor: "{colors.on-navy}"
     rounded: "{rounded.garment}"
@@ -119,18 +127,19 @@ components:
 
 **Creative North Star: "Werkkleding"**
 
-De site draagt dezelfde kleding als zijn bezoeker: een stevige marineblauwe werkjas met oranje contrastvlakken, zichtbaar gestikt, met het logo als geweven label. Alles wat je ziet is stof, naad of label. Marineblauw canvas met een fijne keperbinding is de grond van de zware delen (header, hero, afsluiting, footer); perzik en wit zijn de lichte vlakken daartussen; één oranje contrastbaan draagt de acties.
+De site draagt dezelfde kleding als zijn bezoeker: een stevige marineblauwe werkjas met oranje contrastvlakken, zichtbaar gestikt, met het logo als geweven label. Alles wat je ziet is stof, naad of label. Marineblauw canvas met een fijne keperbinding is de grond van de zware delen (header, hero, de opening van Prijzen, afsluiting, footer); perzik en wit zijn de lichte vlakken daartussen; één oranje contrastbaan draagt de acties.
 
 De dichtheid is rustig en ruim: grote Bree Serif-koppen, een op leesbaarheid ontworpen tekstletter op 19px, brede secties (112px verticaal). Vormen zijn vrijwel recht (2px), diepte bestaat alleen waar stof over stof ligt. Lijnen zijn altijd stiknaden: gestippeld, met ronde steekuiteinden, en elke naad verbindt of begrenst een stuk stof.
 
 De site weigert het standaard dienstverlenerssjabloon (hero met foto, icoonkaartjes, CTA-band) en elk AI-recept: geen eyebrows, geen glas, geen nummering, geen gradients, geen glans.
 
 **Key Characteristics:**
-- Marineblauw keper-canvas als grond voor hero, afsluiting en footer.
+- Marineblauw keper-canvas als grond voor header, hero, afsluiting en footer; de header blijft staan en eindigt in een dubbele pasnaad.
 - Oranje is de enige drager van acties: de contrastbaan met drie gelijke contactroutes in de hero, en een vastgestikte oranje lap met dezelfde routes in de afsluiting.
 - Gestippelde stiknaden als enige lijnen.
 - Geweven crème label met omgevouwen, gestikte uiteinden als herkenningsteken.
-- Een breed ingenaaid binnenlabel op perzik met wat er in de website zit, met de prijs als wit hangkaartje aan een oranje draad.
+- Een breed ingenaaid binnenlabel op perzik met wat er in de website zit, met de prijs als wit hangkaartje aan een oranje draad; op Prijzen is hetzelfde label de maattabel van de pakketten, met kruissteken waar iets inbegrepen is.
+- Opgestikte zakken van perzik stof voor losse prijzen.
 - Bree Serif voor koppen, Atkinson Hyperlegible Next voor tekst.
 - Eén laadmoment: de naad van de contactbaan stikt zich dicht bij het laden. Verder beweegt alleen wat je aanraakt.
 
@@ -145,20 +154,20 @@ Huisstijlkleuren van StudioLN (marineblauw, oranje, perzik, wit), gedragen als w
 ### Secondary
 - **Werkjas-marineblauw** (navy): canvasgrond onder de keperbinding; kleur van koppen op lichte vlakken; tekstselectie.
 - **Diep marineblauw** (navy-deep): alleen als schaduwkleur van stof op stof.
-- **Opgehaald marineblauw** (navy-raised): scrollbalkduim.
+- **Opgehaald marineblauw** (navy-raised): scrollbalkduim en de onderste draad van de kruissteek in de maattabel.
 
 ### Tertiary
-- **Perzik paneel** (peach): de grond onder het binnenlabel en het Over mij-vlak, het gaatje in het hangkaartje, en de tweede zin van de tweekleurige koppen op het canvas (hero en "Simpel, maar nooit standaard.").
+- **Perzik paneel** (peach): de grond onder het binnenlabel, de maattabel en het Over mij-vlak, de stof van de zakken op het canvas van Prijzen, het gaatje in het hangkaartje, en de tweede zin van de tweekleurige koppen op het canvas (hero en "Simpel, maar nooit standaard.").
 - **Zakstof** (peach-soft): de opgestikte lap onder de foto bij Over mij en de scrollbalkbaan.
 
 ### Neutral
 - **Wit** (white): standaard paginagrond, tekst op oranje en het karton van het hangkaartje.
-- **Labelcrème** (label): het geweven label en het binnenlabel, tekst op marineblauw (als on-navy), skiplink.
+- **Labelcrème** (label): het geweven label, het binnenlabel en de maattabel, tekst op marineblauw (als on-navy), skiplink; in de kruissteek de smalle rand waar de bovenste draad over de onderste ligt.
 - **Labelvouw** (label-fold): de omgevouwen uiteinden van beide labels.
 - **Inkt** (text): lopende tekst op lichte vlakken.
-- **Grafiet** (graphite): secundaire tekst, de onderregel van het label, de makersregel op het binnenlabel en de kleine regels op het hangkaartje.
+- **Grafiet** (graphite): secundaire tekst, de onderregel van het label, de makersregel op het binnenlabel, de kleine regels op het hangkaartje, toelichtingen en eenheden in zakken en maattabel, de "Los per maand"-kolom, de prikgaatjes van de kruissteek en de losse steek voor niet inbegrepen.
 - **Mistblauw** (on-navy-muted): ondertitels en bijtekst op het canvas.
-- **Draadkleuren** (stitch-on-navy, stitch-on-light, stitch-on-accent): alleen voor stiknaden en trensjes, één per ondergrond. Ook de hoverstreep in de navigatie gebruikt de draadkleur op marineblauw.
+- **Draadkleuren** (stitch-on-navy, stitch-on-light, stitch-on-accent): alleen voor stiknaden en trensjes, één per ondergrond. Ook de hoverstreep in de navigatie gebruikt de draadkleur op marineblauw, en de lichte twijnlijn over het marineblauwe garen van de kruissteek.
 - **Signalen** (error, warning, success): altijd samen met icoon en tekst, nooit alleen kleur.
 
 ### Named Rules
@@ -176,11 +185,11 @@ Huisstijlkleuren van StudioLN (marineblauw, oranje, perzik, wit), gedragen als w
 ### Hierarchy
 - **Display** (400, clamp 2,75-5,5rem, 1,02): de paginakop. De hero zet het maximum op 5rem zodat beide zinnen vanaf md elk op één regel staan; de tweede zin in perzik.
 - **Headline** (400, clamp 2,125-3,375rem, 1,08): sectiekoppen, navy op licht en on-navy op canvas, vaak smal gehouden (11-18ch). Een sectiekop mag als groot moment de display-maten dragen (een h2 in de h1-stijl), zoals "Simpel, maar nooit standaard." op het canvas, met de tweede zin in perzik net als in de hero.
-- **Title** (400, clamp 1,5-1,875rem, 1,15): de regeltitels op het binnenlabel. De naam op het binnenlabel staat op 1,875rem; de contactroutes gebruiken Bree Serif op 1,375-1,625rem.
-- **Price** (400, 3,25rem, 1): het bedrag op het hangkaartje, in navy, met "Een website vanaf" en "excl. btw" in grafiet op 1,0625rem eromheen.
+- **Title** (400, clamp 1,5-1,875rem, 1,15): de regeltitels op het binnenlabel, de koppen van de zakken en van de maattabel (h2 in deze stijl), en de bedragen in de zakken. De naam op het binnenlabel staat op 1,875rem; de contactroutes gebruiken Bree Serif op 1,375-1,625rem.
+- **Price** (400, 3,25rem, 1): het bedrag op het hangkaartje, in navy, met "Een website vanaf" en "excl. btw" in grafiet op 1,0625rem eromheen. In de kolomkoppen van de maattabel staat de pakketprijs kleiner in Bree Serif (clamp 1,375-2,75rem, 1), onder de pakketnaam (clamp 1,25-1,875rem) en boven "per maand" in grafiet. Bedragen staan als "€ 25", met centen alleen waar ze er zijn ("€ 49,50").
 - **Title small** (400, 1,375rem, 1,2): kolomkoppen in de footer.
 - **Lead** (400, clamp 1,25-1,5rem, 1,5): één ondertitel onder een display- of afsluitkop, max 38-40ch.
-- **Body** (400, 1,1875rem, 1,65): lopende tekst, max 58ch; intro's 44ch.
+- **Body** (400, 1,1875rem, 1,65): lopende tekst, max 58ch; intro's 44ch. Namen van regels in zakken en maattabel staan in body op 700.
 - **Label** (700, 1,0625rem): knoppen en navigatielinks, geen hoofdletters, geen letterspatiëring.
 
 ### Named Rules
@@ -192,33 +201,35 @@ Huisstijlkleuren van StudioLN (marineblauw, oranje, perzik, wit), gedragen als w
 
 Paginabreedte 1240px inhoud (maximaal 1336px met marges), zijmarges 48px, 32px onder md, 20px onder sm. Spacing volgt de MUI-eenheid van 8px. Secties krijgen 112px verticaal (72px onder md); de hero 72px boven en 96px onder.
 
-Composities zijn asymmetrisch, maar niet elke sectie krijgt dezelfde vorm. Het 5fr / 6fr-raster (kolomafstand 64px) is de gedeelde as: de dienstensectie zet daarop kop links en intro rechts boven het binnenlabel; "Simpel, maar nooit standaard." staat als display-kop over de volle breedte op het canvas, met een naad bovenaan, en alleen de tekst eronder hangt in de 6fr-kolom. Over mij zet de foto links en de tekst rechts op het 5fr / 6fr-raster. Onder md is alles één kolom. De hero zet kop en ondertitel links en het label rechts op borsthoogte; onder lg komt het label onder de kop.
+Composities zijn asymmetrisch, maar niet elke sectie krijgt dezelfde vorm. Het 5fr / 6fr-raster (kolomafstand 64px) is de gedeelde as: de dienstensectie zet daarop kop links en intro rechts boven het binnenlabel; "Simpel, maar nooit standaard." staat als display-kop over de volle breedte op het canvas, met een naad bovenaan, en de tekst eronder (lead-maat, max 44ch) deelt de linkerkant van de kop. Over mij zet de foto links en de tekst rechts op het 5fr / 6fr-raster. Onder md is alles één kolom. De hero zet kop en ondertitel links en het label rechts op borsthoogte; onder lg komt het label onder de kop.
 
 Het binnenlabel loopt over de volle inhoudsbreedte, met binnenruimte 52px boven, 72px opzij en 24px onder (44 / 40 / 16px onder md, 40 / 28 / 8px onder sm). Het perzik vlak eronder houdt onderaan ruimte vrij voor het hangkaartje (336px, 368px onder md). Het canvasmoment krijgt 128px verticaal (80px onder md).
 
-Canvasvelden die op elkaar aansluiten houden vaste hoogtes op een veelvoud van 8px (header 96px, 80px onder md), zodat de 8px-kepertegel naadloos doorloopt.
+Canvasvelden die op elkaar aansluiten houden vaste hoogtes op een veelvoud van 8px (header 96px, 80px onder md), zodat de 8px-kepertegel naadloos doorloopt. Dat blijft gelden nu de header vast bovenaan staat: de pasnaad ligt binnen die hoogte. Ankers en toetsenbordfocus houden de headerhoogte plus 16px vrij (scroll-padding). Onder de footer loopt het canvas door in plaats van een witte band.
 
-De afsluiting zet kop en ondertitel links en de contactlap rechts op het 5fr / 6fr-raster, verticaal gecentreerd; onder lg komt de lap onder de kop, over de volle inhoudsbreedte. Onder de afsluiting begrenst een naad op canvas (binnen de paginabreedte) de overgang naar de footer.
+Prijzen volgt het ritme canvas, perzik, canvas. Bovenaan op het canvas de h1 met één lead-zin (max 44ch) en daaronder twee zakken op een 7fr / 5fr-raster (kolomafstand 64px), de tweede 80px lager; onder md onder elkaar met 48px ertussen. Het canvas krijgt 80px boven en 112px onder (56 / 72px onder md). Daarna het perzik vlak (112px verticaal, 72px onder md) met de maattabel over de volle inhoudsbreedte, met dezelfde binnenruimte als het binnenlabel (onder sm 40 / 24 / 8px). Dan de afsluiting op canvas.
+
+De afsluiting is één gedeelde sectie aan het eind van elke pagina (nu Home en Prijzen), met per pagina een eigen kop en ondertitel. Ze zet kop en ondertitel links en de contactlap rechts op het 5fr / 6fr-raster, verticaal gecentreerd; onder lg komt de lap onder de kop, over de volle inhoudsbreedte. Onder de afsluiting begrenst een naad op canvas (binnen de paginabreedte) de overgang naar de footer.
 
 De contactbaan loopt altijd over de volle breedte, met drie gelijke vakken op lg en groter en onder lg drie vakken onder elkaar, elk over de volle breedte en gescheiden door een horizontale naad. Aanklikbare vakken zijn minimaal 56px hoog; contactroutes 112px (98px gestapeld).
 
 ## Elevation & Depth
 
-De site is vlak. Diepte bestaat alleen waar een los stuk stof of karton op een ander ligt: het geweven label op het canvas, het binnenlabel op het perzik vlak en het hangkaartje eronder. Wat vastgestikt is (de lap onder de foto, de naamband) krijgt geen schaduw; daar dragen tint en naden de gelaagdheid.
+De site is vlak. Diepte bestaat alleen waar een los stuk stof of karton op een ander ligt: het geweven label op het canvas, het binnenlabel en de maattabel op het perzik vlak, het hangkaartje eronder, en de vaste header die tijdens het scrollen over de pagina ligt. Wat vastgestikt is (de lap onder de foto, de naamband, de zakken op Prijzen) krijgt geen schaduw; daar dragen tint en naden de gelaagdheid.
 
 ### Shadow Vocabulary
 - **Stof op stof** (`box-shadow: 0 10px 24px rgba(14,34,64,0.45), 0 2px 4px rgba(14,34,64,0.35)`): onder het geweven label op het canvas.
-- **Stof op licht** (`box-shadow: 0 10px 24px rgba(14,34,64,0.16), 0 2px 4px rgba(14,34,64,0.12)`): dezelfde schaduw op een licht vlak, onder het binnenlabel en het hangkaartje op perzik.
+- **Stof op licht** (`box-shadow: 0 10px 24px rgba(14,34,64,0.16), 0 2px 4px rgba(14,34,64,0.12)`): dezelfde schaduw op een licht vlak, onder het binnenlabel, de maattabel en het hangkaartje op perzik. Ook onder de vaste header, op elke ondergrond: boven canvas maakt de pasnaad hem zichtbaar, de schaduw blijft smal.
 - **Zacht** (`box-shadow: 0 1px 2px rgba(14,34,64,0.12)`): gemapt op MUI-elevation 1-4; Paper staat standaard op 0, dus in de huidige build niet zichtbaar.
 
 ### Named Rules
-**The Stof-op-stof Rule.** Een schaduw betekent dat een los stuk stof of karton op een ander ligt: de labels en het hangkaartje. Op canvas de zware variant, op een licht vlak de lichte. Geen schaduw op vastgestikte lappen, vlakken, knoppen, de contactbaan of de contactlap.
+**The Stof-op-stof Rule.** Een schaduw betekent dat een los stuk stof of karton op een ander ligt: de labels, de maattabel, het hangkaartje en de vaste header die over de pagina schuift. Op canvas de zware variant, op een licht vlak de lichte; de header draagt altijd de lichte. Geen schaduw op vastgestikte lappen en zakken, vlakken, knoppen, de contactbaan of de contactlap.
 
 ## Shapes
 
-Kleding heeft geen afgeronde kaarten: alle hoeken zijn vrijwel recht (2px), vlakken, labels en het kaartje volledig recht. Randen zijn nooit doorgetrokken lijnen maar stiknaden: 2px dik, steek 10px, tussenruimte 7px, ronde uiteinden. Losse stukken staan licht gekanteld: het hero-label (-4°, -2,5° onder lg), het hangkaartje (-4°, -3° onder md), de lap onder de foto (-1,5°) en de naamband op die lap (+3°). Het binnenlabel ligt recht. Omgevouwen korte kanten zijn 12px op het hero-label en 16px op het binnenlabel. Afgerond zijn alleen het LN-logoblok uit de huisstijl en het geponste gaatje in het hangkaartje (14px rond, rand 2px in draadkleur).
+Kleding heeft geen afgeronde kaarten: alle hoeken zijn vrijwel recht (2px), vlakken, labels en het kaartje volledig recht. Randen zijn nooit doorgetrokken lijnen maar stiknaden: 2px dik, steek 10px, tussenruimte 7px, ronde uiteinden. Losse stukken staan licht gekanteld: het hero-label (-4°, -2,5° onder lg), het hangkaartje (-4°, -3° onder md), de lap onder de foto (-1,5°), de naamband op die lap (+3°) en de zakken op Prijzen (-1° en +1,2°, ±0,6° onder md). Het binnenlabel en de maattabel liggen recht. Omgevouwen korte kanten zijn 12px op het hero-label en 16px op het binnenlabel. Afgerond zijn alleen het LN-logoblok uit de huisstijl en het geponste gaatje in het hangkaartje (14px rond, rand 2px in draadkleur).
 
-**The Naad Rule.** De enige getekende lijn op de site is een gestippelde stiknaad, en elke naad verbindt of begrenst een stuk stof: de baan boven en onder, tussen de routes, de uiteinden en de bovenrand van een label, de regels op het binnenlabel, de rand rond de foto en rond de naamband, de bovenrand van het canvasmoment, de onderkant van de footer en de items in het menu. De draad van het hangkaartje is geen lijn maar garen: één doorlopende, slappe oranje draad.
+**The Naad Rule.** De enige getekende lijn op de site is een gestippelde stiknaad, en elke naad verbindt of begrenst een stuk stof: de baan boven en onder, tussen de routes, de uiteinden en de bovenrand van een label, de regels op het binnenlabel, de rand rond de foto en rond de naamband, de bovenrand van het canvasmoment, de dubbele pasnaad onder de header, de rand en de zoom van de zakken, de regels van de maattabel, de onderkant van de footer en de items in het menu. De draad van het hangkaartje is geen lijn maar garen: één doorlopende, slappe oranje draad. Ook trensjes en kruissteken zijn garen, geen lijn.
 
 ## Components
 
@@ -226,12 +237,12 @@ Kleding heeft geen afgeronde kaarten: alle hoeken zijn vrijwel recht (2px), vlak
 Het signatuurelement en de enige drager van acties. Een oranje band over de volle breedte met een naad boven en onder, en drie gelijke routes: Bel (tel-link), Mail (mailto), Stuur een bericht (naar Contact). Elke route: omlijnd icoon, werkwoord plus waarde in Bree Serif, een pijl. Hover: de route kleurt naar accent-hover en de pijl schuift 6px op (220ms, cubic-bezier(0.16, 1, 0.3, 1)); focus: ring 6px naar binnen. Tussen de routes een verticale naad, gestapeld een horizontale. Staat alleen in de hero; de afsluiting gebruikt de contactlap.
 
 ### Contactlap
-De afsluiting herhaalt de baan niet, maar zet dezelfde drie routes op een oranje lap naast de kop: recht, zonder schaduw, rondom vastgestikt met een naad in stitch-on-accent op 8px van de rand. De routes staan onder elkaar, gescheiden door naden die van zijnaad tot zijnaad lopen; per route icoon, werkwoord plus waarde in Bree Serif (clamp 1,375-1,75rem) en de pijl rechts uitgelijnd. Hover en focus als bij de baan (accent-hover, pijl 6px, ring 6px naar binnen). Elke route minimaal 98px hoog. Geen laadanimatie.
+De afsluiting (één gedeelde sectie, op Home en Prijzen) herhaalt de baan niet, maar zet dezelfde drie routes op een oranje lap naast de kop: recht, zonder schaduw, rondom vastgestikt met een naad in stitch-on-accent op 8px van de rand. De routes staan onder elkaar, gescheiden door naden die van zijnaad tot zijnaad lopen; per route icoon, werkwoord plus waarde in Bree Serif (clamp 1,375-1,75rem) en de pijl rechts uitgelijnd. Hover en focus als bij de baan (accent-hover, pijl 6px, ring 6px naar binnen). Elke route minimaal 98px hoog. Geen laadanimatie.
 
 **Beweging:** in de hero stikken de naden van de baan zich één keer dicht bij het laden (clip van links naar rechts, 1700ms, 350ms vertraging, cubic-bezier(0.16, 1, 0.3, 1)). Bij prefers-reduced-motion staat de naad er meteen. Dit is het enige laadmoment van de wereld; verder beweegt alleen wat je aanraakt (contactroute, tekstlink, hangkaartje).
 
 ### Canvasveld
-Marineblauw met een 8px keperbindingtegel (lichte en donkere diagonalen op lage dekking), tekst in on-navy, en `data-surface="dark"` zodat de focusring wit wordt. Grond voor header, hero, afsluiting, footer en het mobiele menu.
+Marineblauw met een 8px keperbindingtegel (lichte en donkere diagonalen op lage dekking), tekst in on-navy, en `data-surface="dark"` zodat de focusring wit wordt. Grond voor header, hero, de opening van Prijzen, afsluiting, footer en het mobiele menu.
 
 ### Geweven label
 Een geribde crème band (4×6px ribtextuur) met LN-logo, naam in Bree Serif en de regel "websites op maat" in grafiet. De korte kanten zijn 12px omgevouwen (label-fold), met een naad erdoor; alleen daar vastgestikt. Licht gekanteld, met de stof-op-stof-schaduw. Puur herkenning: verborgen voor schermlezers.
@@ -245,11 +256,20 @@ Een wit kartonnen kaartje (288px, 260px onder sm) dat aan de onderrand van het b
 ### Fotolap
 De foto bij Over mij staat groot (tot 480px breed, 360px onder md, foto 4:5) op een opgestikt stuk zakstof (peach-soft) op het perzik vlak: 20px rand, rondom gestikt op 8px van de rand, -1,5° gekanteld. Over de rechteronderhoek is een naamband gestikt: een strook marineblauw keper-canvas met een naad rondom (stitch-on-navy, 6px van de rand), +3° gekanteld, met "Luca" in Bree Serif (2,75rem, 2,125rem onder sm) geborduurd in oranje draad. Lap en band zijn vastgestikt en hebben geen schaduw; de band is voor schermlezers verborgen omdat de naam al in de kop staat. Geen verdere decoratie: de persoon staat voorop.
 
+### Zak
+Een opgestikte zak van perzik stof op het canvas, voor losse prijzen (Eenmalig, Los erbij). Rondom gestikt op 8px van de rand, met een tweede zoomnaad 14px onder de bovenste naad, aan de opening. Op beide bovenhoeken een trensje: een korte, dichte zigzagsteek (8×24px) in stitch-on-light dwars over de zoom. Licht gekanteld en van ongelijke maat (7fr / 5fr), vastgestikt en dus zonder schaduw. Binnenruimte 56 / 40 / 32px (52 / 24 / 20px onder sm). Inhoud: kop in de Title-stijl in navy, één zin in grafiet, dan regels gescheiden door naden (minimaal 56px hoog): naam (700), toelichting in grafiet en rechts het bedrag in Bree Serif op de Title-maat, met een eenheid ("per uur", "per maand") in grafiet eronder. Onder sm loopt de toelichting onder het bedrag door.
+
+### Maattabel
+Het binnenlabel als maattabel van de pakketten: dezelfde geribde crème stof, ingestikte bovenrand, 16px omgeslagen korte kanten en lichte stof-op-stof-schaduw. Kop: LN-logo (44px), "Pakketten per maand" in de Title-stijl en "excl. btw" in grafiet, afgesloten met een naad. Daaronder een echte tabel: de dienst (naam 700 plus toelichting in grafiet, max 40ch), een kolom "Los per maand" in grafiet, en drie maten Basis, Plus en Compleet met naam en prijs in Bree Serif. Tabelregels zijn naden. Onderaan een feitelijke regel "Los zou dit per maand kosten" met per pakket het opgetelde losse bedrag, in grafiet, zonder naad eronder. Geen badges, geen aanbevolen pakket, geen doorgestreepte prijzen. Onder sm wordt elke regel een raster van drie kolommen, gelijk aan de drie maten: de dienst over twee kolommen met het losse bedrag ("los € 25") rechts, daaronder de drie tekens; de kopregel met de maten blijft tijdens het scrollen direct onder de vaste header staan (80px).
+
+### Kruissteek
+Het teken in de maattabel (26px). Inbegrepen: twee draden marineblauw garen (4px, ronde uiteinden) die elkaar kruisen, de onderste in navy-raised, de bovenste in navy met een smalle rand in labelkleur waar hij over de onderste ligt; over elke draad een lichte gestippelde twijnlijn in stitch-on-navy, en een prikgaatje in grafiet aan elk uiteinde. Niet inbegrepen: één korte grafiet steek tussen twee prikgaatjes. Voor schermlezers "Inbegrepen" of "Niet inbegrepen". Er staat geen uitlegregel bij.
+
 ### Links
 Tekstlinks zijn altijd onderstreept (2px, offset 0,22em) in werkjas-oranje en vet; bij hover zakt de streep naar 0,32em. Ze verwijzen door naar pagina's en dragen geen knopvorm.
 
 ### Navigation
-Header op canvas: woordmerk links, links rechts in 700 op 1,0625rem, minimaal 48px hoog. Hover: streep van 3px in draadkleur op marineblauw; actieve pagina: oranje streep. Onder md een omlijnde Menu-knop (2px rand in draadkleur, 2px hoeken) die een canvaslade van rechts opent met Bree Serif-links op 2rem, gescheiden door naden, en onderaan bellen en mailen.
+Header op canvas, vast bovenaan tijdens het scrollen (boven de inhoud, met de lichte stof-op-stof-schaduw), 96px hoog (80px onder md). De onderrand is de pasnaad: twee naden in stitch-on-navy over de volle schermbreedte, 6px uit elkaar en 6px boven de onderkant, op elke pagina. Woordmerk links, links rechts in 700 op 1,0625rem, minimaal 48px hoog. Hover: streep van 3px in draadkleur op marineblauw; actieve pagina: oranje streep. Onder md een omlijnde Menu-knop (2px rand in draadkleur, 2px hoeken) die een canvaslade van rechts opent met Bree Serif-links op 2rem, gescheiden door naden, en onderaan bellen en mailen.
 
 ### Buttons
 Alleen de omlijnde knop op canvas (menu openen/sluiten): geen elevatie, 2px hoeken, minimaal 48px hoog. Er bestaat geen gevulde knop; acties lopen via de contactbaan en de contactlap.
@@ -263,7 +283,8 @@ Ring van 3px in werkjas-oranje met 3px afstand; op canvas in on-navy.
 - **Do** zet elke contactactie op oranje: in de contactbaan (hero) of de contactlap (afsluiting), met de drie routes altijd gelijkwaardig.
 - **Do** teken elke lijn als stiknaad (2px, steek 10px, tussenruimte 7px, ronde uiteinden) in de draadkleur van de onderliggende stof.
 - **Do** houd aansluitende canvasvelden op een hoogte die een veelvoud van 8px is.
-- **Do** zet een opsomming van wat de klant krijgt op een ingenaaid label: geribde crème stof, omgeslagen gestikte korte kanten, regels gescheiden door naden.
+- **Do** zet een opsomming van wat de klant krijgt op een ingenaaid label: geribde crème stof, omgeslagen gestikte korte kanten, regels gescheiden door naden. Een vergelijking van pakketten wordt op dat label een echte tabel met kruissteken.
+- **Do** zet losse prijzen in opgestikte zakken: perzik stof, rondom gestikt, zoomnaad en trensjes, licht gekanteld, zonder schaduw.
 - **Do** laat de naad van de contactbaan alleen in de hero dichtstikken, en sla dat over bij prefers-reduced-motion; ook het zwaaien van het hangkaartje staat dan uit.
 - **Do** wissel de sectievorm af: de 5fr / 6fr-as mag terugkomen, maar niet elke sectie als kop links, tekst rechts.
 - **Do** houd hoeken op 2px en Bree Serif op gewicht 400.
@@ -278,3 +299,4 @@ Ring van 3px in werkjas-oranje met 3px afstand; op canvas in on-navy.
 - **Don't** trek doorlopende sierlijnen of dividers; een lijn is een naad die stof verbindt of begrenst, of hij is er niet.
 - **Don't** geef iets een schaduw tenzij een los stuk stof of karton op een ander ligt; gebruik op lichte vlakken de lichte variant.
 - **Don't** gebruik oranje als vlak buiten de contactbaan en de contactlap.
+- **Don't** zet badges, een "populair"-pakket of doorgestreepte prijzen in een prijsvergelijking.

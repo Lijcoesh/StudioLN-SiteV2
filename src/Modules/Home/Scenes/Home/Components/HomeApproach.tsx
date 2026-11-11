@@ -9,7 +9,8 @@ import Seam from 'src/Components/Seam/Seam';
 import { paths } from 'src/Config/navigation';
 
 // De kern van Luca's tekst "Simpel, maar nooit standaard." als groot moment op het canvas,
-// met dezelfde tweekleurige kop als de hero. De volledige tekst staat op Werkwijze.
+// met dezelfde tweekleurige kop als de hero. Kop en tekst delen één linkerkant; de tekst
+// staat op lead-maat zodat hij bij de kop hoort. De volledige tekst staat op Werkwijze.
 const useStyles = makeStyles()(theme => ({
     field: {
         position: 'relative',
@@ -32,29 +33,19 @@ const useStyles = makeStyles()(theme => ({
         display: 'block',
         color: peach,
     },
-    // Tekst hangt aan dezelfde 6fr-kolom als de intro boven het binnenlabel
-    body: {
-        display: 'grid',
-        gridTemplateColumns: 'minmax(0, 5fr) minmax(0, 6fr)',
-        columnGap: theme.spacing(8),
-        marginTop: theme.spacing(7),
-        [theme.breakpoints.down('md')]: {
-            gridTemplateColumns: '1fr',
-            marginTop: theme.spacing(5),
-        },
-    },
     text: {
-        gridColumn: 2,
         display: 'grid',
         gap: theme.spacing(2.5),
-        maxWidth: '52ch',
+        maxWidth: '44ch',
+        marginTop: theme.spacing(6),
+        color: onNavy,
         [theme.breakpoints.down('md')]: {
-            gridColumn: 1,
+            marginTop: theme.spacing(4),
         },
     },
     link: {
         justifySelf: 'start',
-        marginTop: theme.spacing(1),
+        marginTop: theme.spacing(1.5),
     },
 }));
 
@@ -76,21 +67,19 @@ export default function HomeApproach() {
                         maar nooit standaard.
                     </Box>
                 </Typography>
-                <Box className={classes.body}>
-                    <Box className={classes.text}>
-                        <Typography>
-                            Veel websites lijken tegenwoordig verdacht veel op elkaar, alsof ze uit
-                            hetzelfde sjabloon komen. Bij StudioLN doe ik dat liever anders.
-                        </Typography>
-                        <Typography>
-                            Ik gebruik AI als hulpmiddel. Daardoor werk ik sneller en blijven mijn
-                            prijzen betaalbaar. Maar de keuzes in je website maak ik zelf: in vorm,
-                            kleur en indeling, voor jouw zaak en jouw klanten.
-                        </Typography>
-                        <Link component={RouterLink} to={paths.approach} className={classes.link}>
-                            Lees hoe ik werk
-                        </Link>
-                    </Box>
+                <Box className={classes.text}>
+                    <Typography variant="subtitle1">
+                        Veel websites lijken tegenwoordig verdacht veel op elkaar, alsof ze uit
+                        hetzelfde sjabloon komen. Bij StudioLN doe ik dat liever anders.
+                    </Typography>
+                    <Typography variant="subtitle1">
+                        Ik gebruik AI als hulpmiddel. Daardoor werk ik sneller en blijven mijn
+                        prijzen betaalbaar. Maar de keuzes in je website maak ik zelf: in vorm,
+                        kleur en indeling, voor jouw zaak en jouw klanten.
+                    </Typography>
+                    <Link component={RouterLink} to={paths.approach} className={classes.link}>
+                        Lees hoe ik werk
+                    </Link>
                 </Box>
             </PageWidth>
         </CanvasField>

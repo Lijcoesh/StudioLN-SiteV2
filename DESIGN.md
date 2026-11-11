@@ -148,8 +148,8 @@ Huisstijlkleuren van StudioLN (marineblauw, oranje, perzik, wit), gedragen als w
 - **Opgehaald marineblauw** (navy-raised): scrollbalkduim.
 
 ### Tertiary
-- **Perzik paneel** (peach): de grond onder het binnenlabel, de opgestikte lap onder de foto bij Over mij, het gaatje in het hangkaartje, en de tweede zin van de tweekleurige koppen op het canvas (hero en "Simpel, maar nooit standaard.").
-- **Zakstof** (peach-soft): het Over mij-vlak en de scrollbalkbaan.
+- **Perzik paneel** (peach): de grond onder het binnenlabel en het Over mij-vlak, het gaatje in het hangkaartje, en de tweede zin van de tweekleurige koppen op het canvas (hero en "Simpel, maar nooit standaard.").
+- **Zakstof** (peach-soft): de opgestikte lap onder de foto bij Over mij en de scrollbalkbaan.
 
 ### Neutral
 - **Wit** (white): standaard paginagrond, tekst op oranje en het karton van het hangkaartje.
@@ -243,7 +243,7 @@ Een breed ingenaaid label op het perzik vlak, van dezelfde geribde crème stof a
 Een wit kartonnen kaartje (288px, 260px onder sm) dat aan de onderrand van het binnenlabel hangt, rechts op desktop en links onder md. Een slappe oranje draad (2px, ronde uiteinden, als SVG getekend) loopt door een geponst gaatje bovenin. Het kaartje hangt op -4° (-3° onder md) en zwaait bij hover of focus naar -1,5° (420ms, cubic-bezier(0.16, 1, 0.3, 1)); bij prefers-reduced-motion beweegt het niet. Inhoud: "Een website vanaf", het bedrag in de Price-stap, "excl. btw" en de tekstlink "Bekijk alle prijzen". Het hele kaartje is één link naar Prijzen; de onderstreping zakt mee bij hover en focus. Lichte stof-op-stof-schaduw.
 
 ### Fotolap
-De foto bij Over mij staat groot (tot 480px breed, 360px onder md, foto 4:5) op een opgestikt stuk perzik stof: 20px rand, rondom gestikt op 8px van de rand, -1,5° gekanteld. Over de rechteronderhoek is een naamband gestikt: een strook marineblauw keper-canvas met een naad rondom (stitch-on-navy, 6px van de rand), +3° gekanteld, met "Luca" in Bree Serif (2,75rem, 2,125rem onder sm) geborduurd in oranje draad. Lap en band zijn vastgestikt en hebben geen schaduw; de band is voor schermlezers verborgen omdat de naam al in de kop staat. Geen verdere decoratie: de persoon staat voorop.
+De foto bij Over mij staat groot (tot 480px breed, 360px onder md, foto 4:5) op een opgestikt stuk zakstof (peach-soft) op het perzik vlak: 20px rand, rondom gestikt op 8px van de rand, -1,5° gekanteld. Over de rechteronderhoek is een naamband gestikt: een strook marineblauw keper-canvas met een naad rondom (stitch-on-navy, 6px van de rand), +3° gekanteld, met "Luca" in Bree Serif (2,75rem, 2,125rem onder sm) geborduurd in oranje draad. Lap en band zijn vastgestikt en hebben geen schaduw; de band is voor schermlezers verborgen omdat de naam al in de kop staat. Geen verdere decoratie: de persoon staat voorop.
 
 ### Links
 Tekstlinks zijn altijd onderstreept (2px, offset 0,22em) in werkjas-oranje en vet; bij hover zakt de streep naar 0,32em. Ze verwijzen door naar pagina's en dragen geen knopvorm.

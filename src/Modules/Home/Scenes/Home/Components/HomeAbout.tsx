@@ -13,7 +13,7 @@ import NameTape from './NameTape';
 // Staat als openstaand punt in de launch-checklist.
 const useStyles = makeStyles()(theme => ({
     root: {
-        backgroundColor: peachSoft,
+        backgroundColor: peach,
         paddingBlock: theme.spacing(14),
         [theme.breakpoints.down('md')]: {
             paddingBlock: theme.spacing(9),
@@ -29,13 +29,13 @@ const useStyles = makeStyles()(theme => ({
             rowGap: theme.spacing(7),
         },
     },
-    // De foto zit groot op een opgestikt stuk perzik stof, licht scheef aangezet. Over de
+    // De foto zit groot op een opgestikt stuk lichte zakstof, licht scheef aangezet. Over de
     // onderhoek is een naamband gestikt.
     photoFrame: {
         position: 'relative',
         maxWidth: 480,
         padding: theme.spacing(2.5),
-        backgroundColor: peach,
+        backgroundColor: peachSoft,
         transform: 'rotate(-1.5deg)',
         '&::after': {
             content: '""',

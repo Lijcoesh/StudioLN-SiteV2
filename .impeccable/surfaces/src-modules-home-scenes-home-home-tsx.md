@@ -11,7 +11,7 @@ Scope: de homepagina (`/`) van StudioLN V2. Mode: Persuade.
 
 Bezoeker: vakman van 40-50, weinig internetkennis, vaak op de telefoon. Na één scherm weet hij wat ik doe, dat ik de rest regel, en hoe hij me bereikt. Bellen, mailen en bericht sturen zijn gelijkwaardig. Geen gemaakt werk op Home (dat staat op Projecten), geen reviews of cijfers. Eén prijs: websites vanaf € 500 excl. btw, met een link naar Prijzen.
 
-Volgorde (herzien 11-11-2026): hero met de contactbaan → perzik vlak met het binnenlabel ("Wat er in een website van mij zit": vier diensten als labelregels, prijs op een hangkaartje) → "Simpel, maar nooit standaard" als groot moment op marineblauw canvas, met link naar Werkwijze → kort over mij (placeholderfoto + lorem) → marineblauwe afsluiting met de contactbaan → footer.
+Volgorde (herzien 11-11-2026): hero met de contactbaan → perzik vlak met het binnenlabel ("Waar ik je mee help": vier diensten als labelregels, prijs op een hangkaartje) → "Simpel, maar nooit standaard" als groot moment op marineblauw canvas, met link naar Werkwijze → kort over mij (placeholderfoto + lorem) → marineblauwe afsluiting: kop links, de drie routes op een vastgestikte oranje lap rechts (gekozen door Luca 11-11-2026, in plaats van de baan te herhalen) → footer.
 
 Kop (door Luca vrijgegeven om zelf te bedenken): "Jij doet je vak. Ik doe je website." Hero en contactbaan door Luca goedgekeurd (11-11-2026); niet aanraken.
 

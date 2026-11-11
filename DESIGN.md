@@ -127,7 +127,7 @@ De site weigert het standaard dienstverlenerssjabloon (hero met foto, icoonkaart
 
 **Key Characteristics:**
 - Marineblauw keper-canvas als grond voor hero, afsluiting en footer.
-- Eén oranje contrastbaan met drie gelijke contactroutes, de enige drager van acties.
+- Oranje is de enige drager van acties: de contrastbaan met drie gelijke contactroutes in de hero, en een vastgestikte oranje lap met dezelfde routes in de afsluiting.
 - Gestippelde stiknaden als enige lijnen.
 - Geweven crème label met omgevouwen, gestikte uiteinden als herkenningsteken.
 - Een breed ingenaaid binnenlabel op perzik met wat er in de website zit, met de prijs als wit hangkaartje aan een oranje draad.
@@ -139,7 +139,7 @@ De site weigert het standaard dienstverlenerssjabloon (hero met foto, icoonkaart
 Huisstijlkleuren van StudioLN (marineblauw, oranje, perzik, wit), gedragen als werkkleding: zwaar donker canvas, één fel contrastvlak, lichte stoffen ertussen.
 
 ### Primary
-- **Werkjas-oranje** (accent): de contrastbaan. Achtergrond van de contactroutes, onderstreepkleur van tekstlinks, actieve navigatiestreep, focusring op lichte vlakken en tekstcursor. Wit erop haalt 4,6:1.
+- **Werkjas-oranje** (accent): de contrastbaan en de contactlap. Achtergrond van de contactroutes, onderstreepkleur van tekstlinks, actieve navigatiestreep, focusring op lichte vlakken en tekstcursor. Wit erop haalt 4,6:1.
 - **Doorgestikt oranje** (accent-hover): hovertint van een contactroute (wit erop 5,9:1).
 
 ### Secondary
@@ -162,7 +162,7 @@ Huisstijlkleuren van StudioLN (marineblauw, oranje, perzik, wit), gedragen als w
 - **Signalen** (error, warning, success): altijd samen met icoon en tekst, nooit alleen kleur.
 
 ### Named Rules
-**The Contrastbaan Rule.** Oranje als vlak bestaat op één plek: de contactbaan. Elders verschijnt oranje alleen als draad (onderstreping, actieve streep, focusring, de draad waaraan het hangkaartje hangt), nooit als knop, kaart of achtergrond.
+**The Contrastbaan Rule.** Oranje als vlak bestaat alleen waar de contactroutes staan: de contactbaan in de hero en de contactlap in de afsluiting. Elders verschijnt oranje alleen als draad (onderstreping, actieve streep, focusring, de draad waaraan het hangkaartje hangt), nooit als knop, kaart of achtergrond.
 
 **The Draad-per-stof Rule.** Een naad krijgt de draadkleur van de stof waarop hij ligt: stitch-on-navy op canvas, stitch-on-light op perzik/wit/label, stitch-on-accent op de baan.
 
@@ -198,6 +198,8 @@ Het binnenlabel loopt over de volle inhoudsbreedte, met binnenruimte 52px boven,
 
 Canvasvelden die op elkaar aansluiten houden vaste hoogtes op een veelvoud van 8px (header 96px, 80px onder md), zodat de 8px-kepertegel naadloos doorloopt.
 
+De afsluiting zet kop en ondertitel links en de contactlap rechts op het 5fr / 6fr-raster, verticaal gecentreerd; onder lg komt de lap onder de kop, over de volle inhoudsbreedte. Onder de afsluiting begrenst een naad op canvas (binnen de paginabreedte) de overgang naar de footer.
+
 De contactbaan loopt altijd over de volle breedte, met drie gelijke vakken op lg en groter en onder lg drie vakken onder elkaar, elk over de volle breedte en gescheiden door een horizontale naad. Aanklikbare vakken zijn minimaal 56px hoog; contactroutes 112px (98px gestapeld).
 
 ## Elevation & Depth
@@ -210,7 +212,7 @@ De site is vlak. Diepte bestaat alleen waar een los stuk stof of karton op een a
 - **Zacht** (`box-shadow: 0 1px 2px rgba(14,34,64,0.12)`): gemapt op MUI-elevation 1-4; Paper staat standaard op 0, dus in de huidige build niet zichtbaar.
 
 ### Named Rules
-**The Stof-op-stof Rule.** Een schaduw betekent dat een los stuk stof of karton op een ander ligt: de labels en het hangkaartje. Op canvas de zware variant, op een licht vlak de lichte. Geen schaduw op vastgestikte lappen, vlakken, knoppen of de contactbaan.
+**The Stof-op-stof Rule.** Een schaduw betekent dat een los stuk stof of karton op een ander ligt: de labels en het hangkaartje. Op canvas de zware variant, op een licht vlak de lichte. Geen schaduw op vastgestikte lappen, vlakken, knoppen, de contactbaan of de contactlap.
 
 ## Shapes
 
@@ -221,7 +223,10 @@ Kleding heeft geen afgeronde kaarten: alle hoeken zijn vrijwel recht (2px), vlak
 ## Components
 
 ### Contactbaan
-Het signatuurelement en de enige drager van acties. Een oranje band over de volle breedte met een naad boven en onder, en drie gelijke routes: Bel (tel-link), Mail (mailto), Stuur een bericht (naar Contact). Elke route: omlijnd icoon, werkwoord plus waarde in Bree Serif, een pijl. Hover: de route kleurt naar accent-hover en de pijl schuift 6px op (220ms, cubic-bezier(0.16, 1, 0.3, 1)); focus: ring 6px naar binnen. Tussen de routes een verticale naad, gestapeld een horizontale. Staat in de hero en in de afsluiting, in beide gelijk.
+Het signatuurelement en de enige drager van acties. Een oranje band over de volle breedte met een naad boven en onder, en drie gelijke routes: Bel (tel-link), Mail (mailto), Stuur een bericht (naar Contact). Elke route: omlijnd icoon, werkwoord plus waarde in Bree Serif, een pijl. Hover: de route kleurt naar accent-hover en de pijl schuift 6px op (220ms, cubic-bezier(0.16, 1, 0.3, 1)); focus: ring 6px naar binnen. Tussen de routes een verticale naad, gestapeld een horizontale. Staat alleen in de hero; de afsluiting gebruikt de contactlap.
+
+### Contactlap
+De afsluiting herhaalt de baan niet, maar zet dezelfde drie routes op een oranje lap naast de kop: recht, zonder schaduw, rondom vastgestikt met een naad in stitch-on-accent op 8px van de rand. De routes staan onder elkaar, gescheiden door naden die van zijnaad tot zijnaad lopen; per route icoon, werkwoord plus waarde in Bree Serif (clamp 1,375-1,75rem) en de pijl rechts uitgelijnd. Hover en focus als bij de baan (accent-hover, pijl 6px, ring 6px naar binnen). Elke route minimaal 98px hoog. Geen laadanimatie.
 
 **Beweging:** in de hero stikken de naden van de baan zich één keer dicht bij het laden (clip van links naar rechts, 1700ms, 350ms vertraging, cubic-bezier(0.16, 1, 0.3, 1)). Bij prefers-reduced-motion staat de naad er meteen. Dit is het enige laadmoment van de wereld; verder beweegt alleen wat je aanraakt (contactroute, tekstlink, hangkaartje).
 
@@ -247,7 +252,7 @@ Tekstlinks zijn altijd onderstreept (2px, offset 0,22em) in werkjas-oranje en ve
 Header op canvas: woordmerk links, links rechts in 700 op 1,0625rem, minimaal 48px hoog. Hover: streep van 3px in draadkleur op marineblauw; actieve pagina: oranje streep. Onder md een omlijnde Menu-knop (2px rand in draadkleur, 2px hoeken) die een canvaslade van rechts opent met Bree Serif-links op 2rem, gescheiden door naden, en onderaan bellen en mailen.
 
 ### Buttons
-Alleen de omlijnde knop op canvas (menu openen/sluiten): geen elevatie, 2px hoeken, minimaal 48px hoog. Er bestaat geen gevulde knop; acties lopen via de contactbaan.
+Alleen de omlijnde knop op canvas (menu openen/sluiten): geen elevatie, 2px hoeken, minimaal 48px hoog. Er bestaat geen gevulde knop; acties lopen via de contactbaan en de contactlap.
 
 ### Focus
 Ring van 3px in werkjas-oranje met 3px afstand; op canvas in on-navy.
@@ -255,7 +260,7 @@ Ring van 3px in werkjas-oranje met 3px afstand; op canvas in on-navy.
 ## Do's and Don'ts
 
 ### Do:
-- **Do** zet elke contactactie in de oranje contactbaan, met de drie routes gelijkwaardig naast elkaar.
+- **Do** zet elke contactactie op oranje: in de contactbaan (hero) of de contactlap (afsluiting), met de drie routes altijd gelijkwaardig.
 - **Do** teken elke lijn als stiknaad (2px, steek 10px, tussenruimte 7px, ronde uiteinden) in de draadkleur van de onderliggende stof.
 - **Do** houd aansluitende canvasvelden op een hoogte die een veelvoud van 8px is.
 - **Do** zet een opsomming van wat de klant krijgt op een ingenaaid label: geribde crème stof, omgeslagen gestikte korte kanten, regels gescheiden door naden.
@@ -272,4 +277,4 @@ Ring van 3px in werkjas-oranje met 3px afstand; op canvas in on-navy.
 - **Don't** bouw rasters van kaartjes met een icoon erboven.
 - **Don't** trek doorlopende sierlijnen of dividers; een lijn is een naad die stof verbindt of begrenst, of hij is er niet.
 - **Don't** geef iets een schaduw tenzij een los stuk stof of karton op een ander ligt; gebruik op lichte vlakken de lichte variant.
-- **Don't** gebruik oranje als vlak buiten de contactbaan.
+- **Don't** gebruik oranje als vlak buiten de contactbaan en de contactlap.

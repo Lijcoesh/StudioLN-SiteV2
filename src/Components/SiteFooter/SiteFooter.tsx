@@ -51,6 +51,11 @@ const useStyles = makeStyles()(theme => ({
         padding: 0,
         minHeight: 40,
     },
+    link: {
+        '&:hover': {
+            textDecorationLine: 'underline',
+        },
+    },
     muted: {
         color: onNavyMuted,
     },
@@ -87,7 +92,12 @@ export default function SiteFooter() {
                         <List className={classes.list}>
                             {mainNavigation.map(item => (
                                 <ListItem key={item.to} className={classes.listItem}>
-                                    <Link component={RouterLink} to={item.to}>
+                                    <Link
+                                        component={RouterLink}
+                                        to={item.to}
+                                        underline="none"
+                                        className={classes.link}
+                                    >
                                         {item.label}
                                     </Link>
                                 </ListItem>
@@ -100,10 +110,14 @@ export default function SiteFooter() {
                         </Typography>
                         <List className={classes.list}>
                             <ListItem className={classes.listItem}>
-                                <Link href={phoneHref}>{phoneDisplay}</Link>
+                                <Link href={phoneHref} underline="none" className={classes.link}>
+                                    {phoneDisplay}
+                                </Link>
                             </ListItem>
                             <ListItem className={classes.listItem}>
-                                <Link href={emailHref}>{email}</Link>
+                                <Link href={emailHref} underline="none" className={classes.link}>
+                                    {email}
+                                </Link>
                             </ListItem>
                             <ListItem className={classes.listItem}>
                                 <Typography component="span" className={classes.muted}>
@@ -118,7 +132,13 @@ export default function SiteFooter() {
                     <Typography variant="body2">
                         © {year} {businessName}
                     </Typography>
-                    <Link component={RouterLink} to={paths.privacy} variant="body2">
+                    <Link
+                        component={RouterLink}
+                        to={paths.privacy}
+                        variant="body2"
+                        underline="none"
+                        className={classes.link}
+                    >
                         Privacyverklaring
                     </Link>
                 </Box>

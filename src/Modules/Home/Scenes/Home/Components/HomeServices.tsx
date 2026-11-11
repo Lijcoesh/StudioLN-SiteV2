@@ -155,7 +155,7 @@ export default function HomeServices() {
             <PageWidth>
                 <Box className={classes.head}>
                     <Typography variant="h2" id="services-title" className={classes.title}>
-                        Wat er in een website van mij zit
+                        Waar ik je mee help
                     </Typography>
                     <Typography className={classes.intro}>
                         Je krijgt alles bij één persoon. Geen helpdesk en geen doorverwijzen: je

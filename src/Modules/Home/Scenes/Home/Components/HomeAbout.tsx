@@ -5,12 +5,11 @@ import { makeStyles } from 'tss-react/mui';
 import { navy, peach, peachSoft, stitchOnLight } from 'src/colors';
 import PageWidth from 'src/Components/PageWidth/PageWidth';
 import { paths } from 'src/Config/navigation';
-import portraitPlaceholder from 'src/Resources/Images/portrait-placeholder.svg';
+import lucaPhoto from 'src/Resources/Images/luca.jpg';
 
 import NameTape from './NameTape';
 
-// Placeholderfoto en lorem ipsum op verzoek van Luca (10-11-2026), tot hij zijn eigen foto en tekst aanlevert.
-// Staat als openstaand punt in de launch-checklist.
+// De tekst is nog lorem ipsum tot Luca die aanlevert. Staat als openstaand punt in de launch-checklist.
 const useStyles = makeStyles()(theme => ({
     root: {
         backgroundColor: peach,
@@ -89,8 +88,8 @@ export default function HomeAbout() {
                     <Box className={classes.photoFrame}>
                         <Box
                             component="img"
-                            src={portraitPlaceholder}
-                            alt="Plaatshouder: hier komt een foto van Luca"
+                            src={lucaPhoto}
+                            alt="Luca, staand in een tuin met lichtjes en een zonnescherm"
                             className={classes.photo}
                         />
                         <NameTape name="Luca" className={classes.nameTape} />

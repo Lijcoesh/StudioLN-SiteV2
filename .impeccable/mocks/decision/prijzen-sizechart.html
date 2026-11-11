@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>De maattabel</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap">
+<style>
+:root{--navy:#132B4F;--accent:#C4531A;--peach:#F8DCC8;--label:#FAF4EE;--fold:#E9DDD0;--ink:#16202E;--graphite:#4E5866;--sn:#7F93B3;--sl:#8C7A6C;--on:#FAF4EE}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;overflow:hidden;background:#fff;font:19px/1.65 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:var(--ink)}
+.canvas{background:var(--navy);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px)}
+header{height:96px}
+.wrap{width:1240px;margin:0 auto;position:relative}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:96px}
+.wm{font:400 30px 'Bree Serif';color:var(--on)}
+nav{display:flex;gap:32px;font-weight:700;font-size:17px;color:var(--on)}
+nav span{padding:10px 0}
+nav .on{box-shadow:inset 0 -3px var(--accent)}
+.top{padding-top:64px;display:flex;align-items:baseline;gap:40px}
+h1{font:400 76px/1.02 'Bree Serif',Georgia,serif;color:var(--navy)}
+.lead{font-size:24px;line-height:1.45;max-width:34ch}
+/* de maattabel als ingenaaid label */
+.chart{position:relative;margin-top:44px;background:var(--label);
+ background-image:repeating-linear-gradient(90deg,rgba(19,43,79,.035) 0 2px,transparent 2px 4px);
+ box-shadow:0 10px 24px rgba(14,34,64,.16),0 2px 4px rgba(14,34,64,.12);padding:40px 72px 28px}
+.chart:before,.chart:after{content:"";position:absolute;top:0;bottom:0;width:16px;background:var(--fold)}
+.chart:before{left:0;border-right:2px dashed var(--sl)}
+.chart:after{right:0;border-left:2px dashed var(--sl)}
+.chart .st{position:absolute;left:16px;right:16px;top:14px;border-top:2px dashed var(--sl)}
+.row{display:grid;grid-template-columns:1fr 180px 220px 220px 220px;align-items:center;border-bottom:2px dashed rgba(140,122,108,.55);min-height:56px}
+.row>*{padding:8px 0}
+.head{border-bottom:2px dashed var(--sl);align-items:end}
+.head h3{font:400 30px/1.1 'Bree Serif';color:var(--navy)}
+.head .pr{font:400 44px/1 'Bree Serif';color:var(--navy);margin-top:6px}
+.head .pr small{font:400 17px 'Atkinson Hyperlegible Next';color:var(--graphite);margin-left:4px}
+.c{text-align:left}
+.name{font-weight:700}
+.los{color:var(--graphite);font-variant-numeric:tabular-nums}
+/* kruissteek: inbegrepen */
+.x{display:inline-block;width:22px;height:22px;position:relative}
+.x:before,.x:after{content:"";position:absolute;left:50%;top:0;width:3px;height:22px;margin-left:-1.5px;background:var(--navy);border-radius:2px}
+.x:before{transform:rotate(45deg)}.x:after{transform:rotate(-45deg)}
+.dash{color:var(--graphite)}
+.sum{border-bottom:0;color:var(--graphite)}
+.next{position:absolute;left:0;right:0;top:860px;font:400 40px 'Bree Serif';color:var(--navy)}
+</style></head><body>
+<header class="canvas"><div class="wrap">
+ <div class="wm">StudioLN</div>
+ <nav><span>Werkwijze</span><span class="on">Prijzen</span><span>Projecten</span><span>Over mij</span><span>Contact</span></nav>
+</div></header>
+<div class="wrap">
+ <div class="top"><h1>Wat het kost</h1><p class="lead">Je website draait op mijn server. Per maand kies je hoeveel ik daarnaast voor je regel. Alles excl. btw.</p></div>
+ <div class="chart"><div class="st"></div>
+  <div class="row head"><span></span><span class="los">los per maand</span>
+   <div class="c"><h3>Basis</h3><div class="pr">€ 25<small>p/m</small></div></div>
+   <div class="c"><h3>Plus</h3><div class="pr">€ 35<small>p/m</small></div></div>
+   <div class="c"><h3>Compleet</h3><div class="pr">€ 49,50<small>p/m</small></div></div></div>
+  <div class="row"><span class="name">Websitehosting</span><span class="los">€ 25</span><span><i class="x"></i></span><span><i class="x"></i></span><span><i class="x"></i></span></div>
+  <div class="row"><span class="name">Mail vanuit je contactformulier</span><span class="los">inbegrepen</span><span><i class="x"></i></span><span><i class="x"></i></span><span><i class="x"></i></span></div>
+  <div class="row"><span class="name">Bestel- en bevestigingsmails</span><span class="los">€ 10</span><span class="dash">–</span><span><i class="x"></i></span><span><i class="x"></i></span></div>
+  <div class="row"><span class="name">Websitestatistieken</span><span class="los">€ 7,50</span><span class="dash">–</span><span><i class="x"></i></span><span><i class="x"></i></span></div>
+  <div class="row"><span class="name">E-mailautomatisering</span><span class="los">€ 15</span><span class="dash">–</span><span class="dash">–</span><span><i class="x"></i></span></div>
+  <div class="row"><span class="name">1 uur aanpassingen per maand</span><span class="los">€ 35</span><span class="dash">–</span><span class="dash">–</span><span><i class="x"></i></span></div>
+  <div class="row sum"><span>Los zou dit kosten</span><span></span><span>€ 25</span><span>€ 42,50</span><span>€ 92,50</span></div>
+ </div>
+</div>
+</body></html>

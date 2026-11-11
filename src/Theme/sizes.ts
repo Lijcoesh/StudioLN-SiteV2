@@ -7,6 +7,10 @@ export const defaultSizeMapping: { [key: string]: number } = {
 // Kleding heeft geen afgeronde kaarten: hoeken blijven vrijwel recht.
 export const borderRadius = 2;
 
+// Hoogte van de vaste header (de pasnaad zit erbinnen); compact onder md
+export const headerHeight = 96;
+export const headerHeightCompact = 80;
+
 // Paginabreedte en zijmarges
 export const pageMaxWidth = 1240;
 

@@ -18,7 +18,7 @@ const theme = createTheme({
 });
 
 theme.components = {
-    MuiCssBaseline: overrideMuiCssBaseline(),
+    MuiCssBaseline: overrideMuiCssBaseline(theme),
     MuiButton: overrideMuiButton(theme),
     MuiIconButton: overrideMuiIconButton(),
     MuiLink: overrideMuiLink(theme),

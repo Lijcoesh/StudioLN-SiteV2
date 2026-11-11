@@ -12,17 +12,30 @@ import Seam from 'src/Components/Seam/Seam';
 import Wordmark from 'src/Components/Wordmark/Wordmark';
 import { email, emailHref, phoneDisplay, phoneHref } from 'src/Config/contact';
 import { mainNavigation } from 'src/Config/navigation';
+import { headerHeight, headerHeightCompact } from 'src/Theme/sizes';
 
 // Hoogtes op een veelvoud van 8, zodat het canvas naadloos doorloopt in het veld eronder.
+// Onderaan de pas van de jas: een dubbele stiknaad over de volle breedte, zodat de vaste header
+// ook boven een donker vlak zichtbaar loskomt van de pagina.
 const useStyles = makeStyles()(theme => ({
     bar: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        height: 96,
+        height: headerHeight,
+        paddingBottom: theme.spacing(1.5),
         [theme.breakpoints.down('md')]: {
-            height: 80,
+            height: headerHeightCompact,
         },
+    },
+    yoke: {
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        bottom: 6,
+        display: 'grid',
+        rowGap: '6px',
+        pointerEvents: 'none',
     },
     nav: {
         display: 'flex',
@@ -129,78 +142,84 @@ export default function SiteHeader() {
     const closeMenu = () => setMenuOpen(false);
 
     return (
-        <PageWidth>
-            <Box className={classes.bar}>
-                <Wordmark variant="onDark" />
-                <Box component="nav" aria-label="Hoofdmenu">
-                    <List className={classes.nav}>
-                        {mainNavigation.map(item => (
-                            <ListItem key={item.to} className={classes.navItem}>
-                                <Link
-                                    component={NavLink}
-                                    to={item.to}
-                                    underline="none"
-                                    className={classes.navLink}
-                                >
-                                    {item.label}
-                                </Link>
-                            </ListItem>
-                        ))}
-                    </List>
-                </Box>
-                <Button
-                    variant="outlined"
-                    className={classes.menuButton}
-                    onClick={() => setMenuOpen(true)}
-                    aria-expanded={menuOpen}
-                    aria-controls="site-menu"
-                    startIcon={<MenuOutlined />}
-                >
-                    Menu
-                </Button>
+        <>
+            <Box className={classes.yoke} aria-hidden>
+                <Seam tone="navy" />
+                <Seam tone="navy" />
             </Box>
-            <Drawer
-                id="site-menu"
-                anchor="right"
-                open={menuOpen}
-                onClose={closeMenu}
-                slotProps={{ paper: { className: classes.drawerPaper } }}
-            >
-                <CanvasField className={classes.drawerInner}>
-                    <Box className={classes.drawerTop}>
-                        <Wordmark variant="onDark" />
-                        <Button
-                            variant="outlined"
-                            className={classes.menuButton}
-                            onClick={closeMenu}
-                            startIcon={<CloseOutlined />}
-                        >
-                            Sluiten
-                        </Button>
-                    </Box>
+            <PageWidth>
+                <Box className={classes.bar}>
+                    <Wordmark variant="onDark" />
                     <Box component="nav" aria-label="Hoofdmenu">
-                        <List className={classes.drawerList}>
+                        <List className={classes.nav}>
                             {mainNavigation.map(item => (
-                                <ListItem key={item.to} className={classes.drawerItem}>
+                                <ListItem key={item.to} className={classes.navItem}>
                                     <Link
                                         component={NavLink}
                                         to={item.to}
-                                        className={classes.drawerLink}
-                                        onClick={closeMenu}
+                                        underline="none"
+                                        className={classes.navLink}
                                     >
                                         {item.label}
                                     </Link>
-                                    <Seam tone="navy" />
                                 </ListItem>
                             ))}
                         </List>
                     </Box>
-                    <Box className={classes.drawerContact}>
-                        <Link href={phoneHref}>Bel {phoneDisplay}</Link>
-                        <Link href={emailHref}>Mail {email}</Link>
-                    </Box>
-                </CanvasField>
-            </Drawer>
-        </PageWidth>
+                    <Button
+                        variant="outlined"
+                        className={classes.menuButton}
+                        onClick={() => setMenuOpen(true)}
+                        aria-expanded={menuOpen}
+                        aria-controls="site-menu"
+                        startIcon={<MenuOutlined />}
+                    >
+                        Menu
+                    </Button>
+                </Box>
+                <Drawer
+                    id="site-menu"
+                    anchor="right"
+                    open={menuOpen}
+                    onClose={closeMenu}
+                    slotProps={{ paper: { className: classes.drawerPaper } }}
+                >
+                    <CanvasField className={classes.drawerInner}>
+                        <Box className={classes.drawerTop}>
+                            <Wordmark variant="onDark" />
+                            <Button
+                                variant="outlined"
+                                className={classes.menuButton}
+                                onClick={closeMenu}
+                                startIcon={<CloseOutlined />}
+                            >
+                                Sluiten
+                            </Button>
+                        </Box>
+                        <Box component="nav" aria-label="Hoofdmenu">
+                            <List className={classes.drawerList}>
+                                {mainNavigation.map(item => (
+                                    <ListItem key={item.to} className={classes.drawerItem}>
+                                        <Link
+                                            component={NavLink}
+                                            to={item.to}
+                                            className={classes.drawerLink}
+                                            onClick={closeMenu}
+                                        >
+                                            {item.label}
+                                        </Link>
+                                        <Seam tone="navy" />
+                                    </ListItem>
+                                ))}
+                            </List>
+                        </Box>
+                        <Box className={classes.drawerContact}>
+                            <Link href={phoneHref}>Bel {phoneDisplay}</Link>
+                            <Link href={emailHref}>Mail {email}</Link>
+                        </Box>
+                    </CanvasField>
+                </Drawer>
+            </PageWidth>
+        </>
     );
 }

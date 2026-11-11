@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>In je zakken</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap">
+<style>
+:root{--navy:#132B4F;--accent:#C4531A;--peach:#F8DCC8;--soft:#FCEEE3;--label:#FAF4EE;--ink:#16202E;--graphite:#4E5866;--sn:#7F93B3;--sl:#8C7A6C;--on:#FAF4EE;--muted:#C3CDDD}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;overflow:hidden;font:19px/1.65 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:var(--on);
+ background:var(--navy);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px)}
+.wrap{width:1240px;margin:0 auto;position:relative}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:96px}
+.wm{font:400 30px 'Bree Serif'}
+nav{display:flex;gap:32px;font-weight:700;font-size:17px}
+nav span{padding:10px 0}
+nav .on{box-shadow:inset 0 -3px var(--accent)}
+.top{display:flex;align-items:baseline;gap:40px;padding-top:40px}
+h1{font:400 76px/1.02 'Bree Serif',Georgia,serif;color:var(--on)}
+.lead{font-size:24px;line-height:1.45;color:var(--muted);max-width:32ch}
+/* zakken: opgestikt, verschillende maat, licht scheef */
+.pocket{position:absolute;background:rgba(255,255,255,.06);border:2px dashed var(--sn);outline:8px solid transparent}
+.pocket h2{font:400 34px 'Bree Serif';color:var(--peach)}
+.flap{position:absolute;left:-2px;right:-2px;top:-2px;height:22px;border-bottom:2px dashed var(--sn)}
+.month{left:0;top:300px;width:700px;height:560px;transform:rotate(-1deg);padding:40px 36px}
+.once{left:760px;top:300px;width:400px;height:330px;transform:rotate(1.2deg);padding:40px 32px}
+.hour{left:1000px;top:670px;width:200px;height:200px;transform:rotate(-2deg);padding:36px 24px}
+.once ul{list-style:none;margin-top:10px}
+.once li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:2px dashed rgba(127,147,179,.5);font-size:18px}
+.once li b{font:400 24px 'Bree Serif';color:var(--on)}
+.hour b{display:block;font:400 44px/1 'Bree Serif';margin-top:10px}
+.hour small{color:var(--muted);font-size:17px}
+/* kaartjes die uit de borstzak steken */
+.tags{position:absolute;left:36px;right:36px;top:-150px;display:flex;gap:28px;align-items:flex-end}
+.tag{background:#fff;color:var(--navy);padding:34px 26px 22px;width:196px;box-shadow:0 10px 24px rgba(14,34,64,.45),0 2px 4px rgba(14,34,64,.35);position:relative}
+.tag:nth-child(1){transform:rotate(-5deg);height:240px}
+.tag:nth-child(2){transform:rotate(2deg);height:290px}
+.tag:nth-child(3){transform:rotate(-2deg);height:330px}
+.tag .hole{position:absolute;top:10px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--navy);border:2px solid var(--sl)}
+.tag h3{font:400 28px 'Bree Serif'}
+.tag b{display:block;font:400 42px/1 'Bree Serif';margin-top:6px}
+.tag small{color:var(--graphite);font-size:17px}
+.month .front{position:absolute;left:0;right:0;bottom:0;top:120px;background:var(--navy);
+ background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px);border-top:2px dashed var(--sn);padding:28px 36px}
+.front p{color:var(--muted);font-size:19px;max-width:40ch;margin-top:8px}
+</style></head><body>
+<header><div class="wrap">
+ <div class="wm">StudioLN</div>
+ <nav><span>Werkwijze</span><span class="on">Prijzen</span><span>Projecten</span><span>Over mij</span><span>Contact</span></nav>
+</div></header>
+<div class="wrap">
+ <div class="top"><h1>Wat het kost</h1><p class="lead">Wat je eenmalig betaalt, wat per maand en wat per uur. Alles excl. btw.</p></div>
+ <div class="pocket month"><div class="flap"></div>
+  <div class="tags">
+   <div class="tag"><span class="hole"></span><h3>Basis</h3><b>€ 25</b><small>per maand</small></div>
+   <div class="tag"><span class="hole"></span><h3>Plus</h3><b>€ 35</b><small>per maand<br>los € 42,50</small></div>
+   <div class="tag"><span class="hole"></span><h3>Compleet</h3><b>€ 49,50</b><small>per maand<br>los € 92,50</small></div>
+  </div>
+  <div class="front"><h2>Per maand</h2><p>Hosting op mijn server, met daarbovenop zoveel als jij wilt dat ik regel.</p></div>
+ </div>
+ <div class="pocket once"><div class="flap"></div><h2>Eenmalig</h2>
+  <ul><li>Website op maat<b>€ 500</b></li><li>Installatie en domein<b>€ 100</b></li><li>Zakelijke e-mail instellen<b>€ 75</b></li><li>Bestaande e-mail verhuizen<b>€ 100</b></li></ul></div>
+ <div class="pocket hour"><div class="flap"></div><h2>Per uur</h2><b>€ 35</b><small>aanpassingen</small></div>
+</div>
+</body></html>

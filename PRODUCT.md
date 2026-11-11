@@ -38,11 +38,11 @@ De site zelf is het bewijs: hij moet eruitzien als bewuste keuzes, niet als de A
 ## Capabilities and Constraints
 
 - **Werkwijze-pagina** (besloten 10-11-2026): draagt Luca's volledige tekst "Simpel, maar nooit standaard." (zie Evidence) plus het traject van eerste gesprek tot online. Het woord "AI" staat niet in het menu: een menu-item "AI" kan bij deze doelgroep wantrouwen wekken. De kern van de tekst komt in een paar zinnen op Home, met een verwijzing naar Werkwijze.
-- **Prijzen staan op een eigen pagina Prijzen** (besloten 10-11-2026, bedragen gelijk aan V1; bron: de catalogus in het dashboard, `PROJECT.md` §9). Bedragen excl. btw, en dat staat erbij.
-  - Website Basis (ontwerp en bouw): vanaf € 500 eenmalig
+- **Prijzen staan op een eigen pagina Prijzen** (besloten 10-11-2026; bedragen bijgewerkt naar de dashboardcatalogus op 11-11-2026). Alleen bedragen excl. btw, en dat staat erbij.
+  - Website Basis (ontwerp en bouw): € 500 eenmalig (geen "vanaf"; besloten 11-11-2026)
   - Installatie & domeinkoppeling: € 100 eenmalig
-  - Zakelijke e-mail instellen: € 75; migreren: € 100; e-mailhosting: € 7,50 per maand
-  - Pakketten per maand: Basis € 25 (hosting, formuliermailing), Plus € 35 (+ bestel- en bevestigingsmails, website statistieken), Compleet € 49,50 (+ e-mailautomatisering, 1 uur per maand gratis)
+  - Zakelijke e-mail instellen: € 75; migreren: € 100; e-mailhosting: € 10 per maand
+  - Pakketten per maand: Basis € 25 (hosting, formuliermailing), Plus € 35 (+ bestel- en bevestigingsmails € 10, website statistieken € 7,50), Compleet € 49,50 (+ e-mailautomatisering € 15, 1 uur per maand € 35). Op de site per pakket een feitelijke los-prijs (Plus € 42,50, Compleet € 92,50); geen "voordeel"-badge of doorgestreepte prijs.
   - Uurtarief voor aanpassingen en extra werk: € 35
   - Prijzen veranderen in het dashboard; de site volgt die, niet andersom.
 - **Projecten**: eerst een overzicht; de bezoeker klikt een project aan en krijgt dan een eigen pagina met wat er over dat project te vertellen is.

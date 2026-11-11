@@ -52,4 +52,5 @@ _Noteer hier tijdens het werk punten die vóór oplevering nog geregeld moeten w
 - Over mij: lorem ipsum vervangen door Luca's eigen tekst (zie `PRODUCT.md`). De foto is van Luca (`src/Resources/Images/luca.jpg`).
 - Contactformulier: endpoint in de dashboard-API bestaat nog niet; formulier pas live met werkend endpoint, consent/privacylink en privacyverklaring op de site.
 - Prijzen: bedragen in `src/Config/pricing.ts` volgen de dashboardcatalogus (stand 11-11-2026); vóór livegang nog eens naast het dashboard leggen.
-- Werkwijze, Projecten, Over mij, Contact en Privacyverklaring zijn nog tijdelijke pagina's ("Aan deze pagina werk ik nog"); de footer linkt al naar de privacyverklaring.
+- Projecten: drie plaatshouders (Schilder, Loodgieter, Hovenier; `placeholder: true` in `src/Config/projects.ts`) vóór livegang weghalen of vervangen door echte, vrijgegeven projecten; `projectTintPlaceholder` in `src/colors.ts` gaat dan mee.
+- Werkwijze, Over mij, Contact en Privacyverklaring zijn nog tijdelijke pagina's ("Aan deze pagina werk ik nog"); de footer linkt al naar de privacyverklaring.

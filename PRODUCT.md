@@ -45,7 +45,7 @@ De site zelf is het bewijs: hij moet eruitzien als bewuste keuzes, niet als de A
   - Pakketten per maand: Basis € 25 (hosting, formuliermailing), Plus € 35 (+ bestel- en bevestigingsmails € 10, website statistieken € 7,50), Compleet € 49,50 (+ e-mailautomatisering € 15, 1 uur per maand € 35). Op de site per pakket een feitelijke los-prijs (Plus € 42,50, Compleet € 92,50); geen "voordeel"-badge of doorgestreepte prijs.
   - Uurtarief voor aanpassingen en extra werk: € 35
   - Prijzen veranderen in het dashboard; de site volgt die, niet andersom.
-- **Projecten**: eerst een overzicht; de bezoeker klikt een project aan en krijgt dan een eigen pagina met wat er over dat project te vertellen is.
+- **Projecten**: eerst een overzicht; de bezoeker klikt een project aan en krijgt dan een eigen pagina met wat er over dat project te vertellen is. Het overzicht staat (11-11-2026); tot de projectpagina's er zijn linkt elk project naar de live site (nieuw tabblad).
 - **Contact**: formulier plus e-mail en telefoon, alle drie gelijkwaardig (geen ervan nadrukkelijker dan de andere; besloten 10-11-2026). Geen straatadres en geen plaats op de site.
 - **Taal**: Nederlands, ik-vorm.
 - **Hosting**: eigen VPS. GitHub Pages-preview pas na Luca's akkoord.
@@ -90,7 +90,7 @@ Herkenbare AI-designpatronen zijn het allerlaatste wat Luca wil. Naast wat zijn 
   >
   > **De efficiëntie van AI, gecombineerd met mijn eigen oog voor design. Zo ontstaat een website met een eigen karakter.**
 
-- **Projecten** (vrijgegeven in V1): Kamerbreed Interieur (`kamerbreedinterieur.nl`; vloeren en raambekleding in het Westland) en Stef van Zanten (`stefvanzanten.nl`; portfolio van een maker van video, muziek, audio en graphics). Screenshots en projectteksten staan in V1: `StudioLN-Site/src/Resources/Projects/` en `src/Config/projects.ts`. WaterZacht, LMVW en andere projecten niet tonen tot Luca ze vrijgeeft.
+- **Projecten** (vrijgegeven in V1): Kamerbreed Interieur (`kamerbreedinterieur.nl`; vloeren en raambekleding in het Westland) en Stef van Zanten (`stefvanzanten.nl`; portfolio van een maker van video, muziek, audio en graphics). Projectteksten komen uit V1; de screenshots zijn op 11-11-2026 vers gemaakt van de live sites (`src/Resources/Projects/`, data in `src/Config/projects.ts`). WaterZacht, LMVW en andere projecten niet tonen tot Luca ze vrijgeeft.
 - **Bedrijfsgegevens**: e-mail `contact@studioln.nl`, telefoon 06 11 22 39 04, KvK 42211223. Btw-id volgt nog; niet verzinnen.
 - **Juridisch**: privacyverklaring en algemene voorwaarden bestaan als concept in `StudioLN-Dashboard/StudioLN.API/Resources/Terms/`.
 - **Over mij**: foto en eigen tekst volgen van Luca. Tot dan een placeholderfoto en lorem ipsum (besloten 10-11-2026); geen persoonlijke feiten verzinnen. Beide moeten vóór livegang vervangen zijn.

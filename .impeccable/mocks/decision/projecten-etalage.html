@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>De etalage</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap">
+<style>
+:root{--navy:#132B4F;--accent:#C4531A;--peach:#F8DCC8;--soft:#FCEEE3;--label:#FAF4EE;--fold:#E9DDD0;--ink:#16202E;--graphite:#4E5866;--sn:#7F93B3;--sl:#8C7A6C;--on:#FAF4EE;--muted:#C3CDDD}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;overflow:hidden;font:19px/1.65 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:var(--on);
+ background:var(--navy);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px)}
+.wrap{width:1240px;margin:0 auto;position:relative}
+header{height:96px;position:relative}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:96px}
+header:after{content:'';position:absolute;left:0;right:0;bottom:6px;height:8px;border-top:2px dashed var(--sn);border-bottom:2px dashed var(--sn)}
+.wm{font:400 30px 'Bree Serif'}
+nav{display:flex;gap:32px;font-weight:700;font-size:17px}
+nav .on{box-shadow:inset 0 -3px var(--accent);padding-bottom:6px}
+h1{font:400 64px/1.02 'Bree Serif',Georgia,serif;padding:36px 0 28px;max-width:16ch}
+h1 span{color:var(--peach)}
+/* de grote etalageruit: het werk vult het venster, de naam is een geweven label op de lijst */
+.window{position:relative;height:620px;display:grid;grid-template-columns:1fr 340px;gap:0}
+.pane{position:relative;background:var(--soft);padding:22px;outline:2px dashed var(--sl);outline-offset:-10px}
+.shot{height:100%;background:#EEF0EA;position:relative;overflow:hidden}
+.shot .bar{height:50px;background:#fff;border-bottom:1px solid #ddd}
+.shot h3{position:absolute;left:60px;top:130px;font:700 64px/1.05 Georgia,serif;color:#4A4630;width:440px}
+.shot .btn{position:absolute;left:60px;top:440px;width:200px;height:44px;background:#D49058;border-radius:4px}
+.shot .btn+.btn{left:276px}
+.shot .ph{position:absolute;right:56px;top:100px;width:330px;height:390px;background:#E0E1DA}
+.woven{position:absolute;left:-18px;bottom:46px;background:var(--label);color:var(--navy);padding:18px 36px;transform:rotate(-3deg);
+ box-shadow:0 10px 24px rgba(14,34,64,.45),0 2px 4px rgba(14,34,64,.35)}
+.woven:before,.woven:after{content:'';position:absolute;top:0;bottom:0;width:12px;background:var(--fold);border-left:2px dashed var(--sl)}
+.woven:before{left:0}.woven:after{right:0}
+.woven b{font:400 30px 'Bree Serif'}
+.side{padding:40px 0 0 44px;display:flex;flex-direction:column;gap:18px}
+.side p{color:var(--muted);font-size:19px;max-width:28ch}
+.side a{font-weight:700;color:var(--on);text-decoration:underline 2px var(--accent);text-underline-offset:.22em}
+.next{margin-top:auto;border-top:2px dashed var(--sn);padding-top:18px}
+.next small{color:var(--muted);font-size:17px}
+.next b{display:block;font:400 26px 'Bree Serif'}
+.mini{height:120px;background:#231A33;margin-top:12px;outline:2px dashed var(--sn);outline-offset:6px}
+</style></head><body>
+<header><div class="wrap"><div class="wm">StudioLN</div>
+<nav><span>Werkwijze</span><span>Prijzen</span><span class="on">Projecten</span><span>Over mij</span><span>Contact</span></nav></div></header>
+<div class="wrap">
+ <h1>In de etalage. <span>Echt werk, op maat.</span></h1>
+ <div class="window">
+  <div class="pane"><div class="shot"><div class="bar"></div><h3>Vloeren en raambekleding in het Westland</h3><div class="ph"></div><div class="btn"></div><div class="btn"></div></div>
+   <div class="woven"><b>Kamerbreed Interieur</b></div></div>
+  <div class="side">
+   <p>Vloeren en raambekleding in het Westland. Een rustige site waarop bellen en mailen bovenaan staan.</p>
+   <a>Bekijk kamerbreedinterieur.nl</a>
+   <div class="next"><small>Volgende etalage</small><b>Stef van Zanten</b><div class="mini"></div></div>
+  </div>
+ </div>
+</div>
+</body></html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>Het stalenboek</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap">
+<style>
+:root{--navy:#132B4F;--accent:#C4531A;--peach:#F8DCC8;--soft:#FCEEE3;--label:#FAF4EE;--fold:#E9DDD0;--ink:#16202E;--graphite:#4E5866;--sn:#7F93B3;--sl:#8C7A6C;--on:#FAF4EE;--muted:#C3CDDD}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;overflow:hidden;font:19px/1.65 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:var(--ink);background:#fff}
+.canvas{background:var(--navy);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px);color:var(--on)}
+.wrap{width:1240px;margin:0 auto;position:relative}
+header{height:96px;position:relative}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:96px}
+header:after{content:'';position:absolute;left:0;right:0;bottom:6px;height:8px;border-top:2px dashed var(--sn);border-bottom:2px dashed var(--sn)}
+.wm{font:400 30px 'Bree Serif'}
+nav{display:flex;gap:32px;font-weight:700;font-size:17px}
+nav .on{box-shadow:inset 0 -3px var(--accent);padding-bottom:6px}
+.top{display:flex;justify-content:space-between;align-items:flex-end;padding:44px 0 36px}
+h1{font:400 76px/1.02 'Bree Serif',Georgia,serif;color:var(--navy)}
+.lead{font-size:22px;line-height:1.45;color:var(--graphite);max-width:34ch}
+/* het boek: een band van canvas bovenaan, stalen eronder, de bovenste open */
+.book{position:relative}
+.spine{height:56px;background:var(--navy);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px);
+ position:relative;box-shadow:0 10px 24px rgba(14,34,64,.16)}
+.spine:after{content:'';position:absolute;left:16px;right:16px;top:12px;bottom:12px;border-top:2px dashed var(--sn);border-bottom:2px dashed var(--sn)}
+.tabs{position:absolute;left:0;right:0;top:56px;display:flex;flex-direction:column}
+.under{height:20px;margin:0 14px;background:var(--label);border-bottom:2px dashed var(--sl)}
+.under:nth-child(2){margin:0 28px;background:var(--fold)}
+.under:nth-child(3){margin:0 42px;background:var(--label)}
+.under:nth-child(4){margin:0 56px;background:var(--fold)}
+.swatch{position:absolute;left:0;right:0;top:56px;height:620px;background:var(--label);box-shadow:0 10px 24px rgba(14,34,64,.16);
+ display:grid;grid-template-columns:8fr 3fr;gap:0}
+/* gekartelde onderrand van de staal */
+.swatch:after{content:'';position:absolute;left:0;right:0;bottom:-12px;height:12px;
+ background:linear-gradient(135deg,var(--label) 6px,transparent 0) 0 0/12px 12px,linear-gradient(225deg,var(--label) 6px,transparent 0) 0 0/12px 12px}
+.fabric{padding:28px 0 28px 28px}
+.shot{height:100%;background:#EEF0EA;position:relative;overflow:hidden;outline:2px dashed var(--sl);outline-offset:8px}
+.shot .bar{height:46px;background:#fff;border-bottom:1px solid #ddd}
+.shot h3{position:absolute;left:52px;top:120px;font:700 58px/1.05 Georgia,serif;color:#4A4630;width:380px}
+.shot .btn{position:absolute;left:52px;top:400px;width:180px;height:40px;background:#D49058;border-radius:4px}
+.shot .btn+.btn{left:246px}
+.shot .ph{position:absolute;right:48px;top:96px;width:300px;height:360px;background:#E0E1DA}
+.tag{padding:36px 32px;border-left:2px dashed var(--sl);margin:28px 0}
+.tag h2{font:400 34px/1.1 'Bree Serif';color:var(--navy)}
+.tag p{margin-top:14px;font-size:19px}
+.tag dl{margin-top:22px;font-size:17px}
+.tag dt{color:var(--graphite)}
+.tag dd{font-weight:700;margin-bottom:10px}
+.tag a{display:inline-block;margin-top:14px;font-weight:700;color:var(--ink);text-decoration:underline 2px var(--accent);text-underline-offset:.22em}
+</style></head><body>
+<div class="canvas"><header><div class="wrap"><div class="wm">StudioLN</div>
+<nav><span>Werkwijze</span><span>Prijzen</span><span class="on">Projecten</span><span>Over mij</span><span>Contact</span></nav></div></header></div>
+<div class="wrap">
+ <div class="top"><h1>Mijn stalenboek</h1><p class="lead">Vijf sites, elk op maat geknipt. Scroll en je slaat de volgende staal om.</p></div>
+ <div class="book">
+  <div class="spine"></div>
+  <div class="tabs" style="top:676px"><div class="under"></div><div class="under"></div><div class="under"></div><div class="under"></div></div>
+  <div class="swatch">
+   <div class="fabric"><div class="shot"><div class="bar"></div><h3>Vloeren en raambekleding in het Westland</h3><div class="ph"></div><div class="btn"></div><div class="btn"></div></div></div>
+   <div class="tag">
+    <h2>Kamerbreed Interieur</h2>
+    <p>Vloeren en raambekleding in het Westland. Klanten komen op de telefoon binnen en willen meteen bellen.</p>
+    <dl><dt>Gemaakt</dt><dd>Vijf pagina's, bellen en mailen bovenaan</dd><dt>Stof</dt><dd>Rustig groen, warm oranje</dd></dl>
+    <a>kamerbreedinterieur.nl</a>
+   </div>
+  </div>
+ </div>
+</div>
+</body></html>

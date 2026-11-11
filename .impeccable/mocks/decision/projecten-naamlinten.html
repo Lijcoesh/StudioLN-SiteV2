@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>De naamlinten</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap">
+<style>
+:root{--navy:#132B4F;--accent:#C4531A;--peach:#F8DCC8;--soft:#FCEEE3;--label:#FAF4EE;--fold:#E9DDD0;--ink:#16202E;--graphite:#4E5866;--sn:#7F93B3;--sl:#8C7A6C;--on:#FAF4EE;--muted:#C3CDDD}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;overflow:hidden;font:19px/1.65 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:var(--ink);background:var(--peach)}
+.canvas{background:var(--navy);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px);color:var(--on)}
+.wrap{width:1240px;margin:0 auto;position:relative}
+header{height:96px;position:relative}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:96px}
+header:after{content:'';position:absolute;left:0;right:0;bottom:6px;height:8px;border-top:2px dashed var(--sn);border-bottom:2px dashed var(--sn)}
+.wm{font:400 30px 'Bree Serif'}
+nav{display:flex;gap:32px;font-weight:700;font-size:17px}
+nav .on{box-shadow:inset 0 -3px var(--accent);padding-bottom:6px}
+.intro{padding:48px 0 40px}
+.intro .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:end}
+h1{font:400 76px/1.02 'Bree Serif',Georgia,serif}
+h1 span{color:var(--peach)}
+.lead{font-size:24px;line-height:1.45;color:var(--muted);max-width:38ch}
+/* register: linten links, het werk rechts */
+.reg{display:grid;grid-template-columns:5fr 6fr;gap:64px;padding-top:48px}
+.tapes{display:flex;flex-direction:column;gap:18px}
+.tape{position:relative;background:var(--navy);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px);
+ padding:16px 28px 14px 44px;color:var(--on);outline:2px dashed var(--sn);outline-offset:-7px}
+.tape:before,.tape:after{content:'';position:absolute;top:0;bottom:0;width:14px;background:#0E2240}
+.tape:before{left:0}.tape:after{right:0}
+.tape b{display:block;font:400 34px/1.1 'Bree Serif';color:var(--accent)}
+.tape small{font-size:17px;color:var(--muted)}
+.tape:nth-child(odd){transform:rotate(-.8deg)}
+.tape:nth-child(even){transform:rotate(.6deg);margin-left:22px}
+.tape.on{margin-left:-14px;margin-right:-34px;box-shadow:0 10px 24px rgba(14,34,64,.3)}
+.tape.on b{color:#fff;text-decoration:underline 3px var(--accent);text-underline-offset:.2em}
+.tape.ph b{color:var(--sn)}
+.work{position:relative}
+.frame{background:var(--soft);padding:20px;outline:2px dashed var(--sl);outline-offset:-10px;transform:rotate(1deg)}
+.shot{height:430px;background:#EEF0EA;position:relative;overflow:hidden}
+.shot .bar{height:44px;background:#fff;border-bottom:1px solid #ddd}
+.shot h3{position:absolute;left:44px;top:96px;font:700 50px/1.05 Georgia,serif;color:#4A4630;width:300px}
+.shot .btn{position:absolute;left:44px;top:330px;width:160px;height:36px;background:#D49058;border-radius:4px}
+.shot .btn+.btn{left:216px}
+.shot .ph{position:absolute;right:40px;top:80px;width:260px;height:300px;background:#E0E1DA}
+.cap{display:flex;justify-content:space-between;align-items:baseline;margin-top:28px}
+.cap p{max-width:36ch;font-size:19px}
+.cap a{font-weight:700;color:var(--ink);text-decoration:underline 2px var(--accent);text-underline-offset:.22em}
+</style></head><body>
+<div class="canvas">
+<header><div class="wrap"><div class="wm">StudioLN</div>
+<nav><span>Werkwijze</span><span>Prijzen</span><span class="on">Projecten</span><span>Over mij</span><span>Contact</span></nav></div></header>
+<section class="intro"><div class="wrap">
+<h1>Wat ik gemaakt heb. <span>Voor wie.</span></h1>
+<p class="lead">Elke site hieronder is op maat gemaakt voor één vakman. Tik een naam aan en je ziet de site.</p>
+</div></section>
+</div>
+<div class="wrap reg">
+ <div class="tapes">
+  <div class="tape on"><b>Kamerbreed Interieur</b><small>Vloeren en raambekleding, Westland</small></div>
+  <div class="tape"><b>Stef van Zanten</b><small>Video, muziek en graphics</small></div>
+  <div class="tape ph"><b>Schilderwerk Van Leeuwen</b><small>Plaatshouder</small></div>
+  <div class="tape ph"><b>Loodgieter Hoek</b><small>Plaatshouder</small></div>
+  <div class="tape ph"><b>Tuinwerk Duin</b><small>Plaatshouder</small></div>
+ </div>
+ <div class="work">
+  <div class="frame"><div class="shot"><div class="bar"></div><h3>Vloeren en raambekleding in het Westland</h3><div class="ph"></div><div class="btn"></div><div class="btn"></div></div></div>
+  <div class="cap"><p>Een rustige site waarop bellen en mailen bovenaan staan, ook op de telefoon.</p><a>kamerbreedinterieur.nl</a></div>
+ </div>
+</div>
+</body></html>

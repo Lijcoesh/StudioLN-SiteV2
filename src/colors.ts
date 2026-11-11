@@ -29,6 +29,12 @@ export const stitchOnNavy = '#7F93B3';
 export const stitchOnLight = '#8C7A6C';
 export const stitchOnAccent = '#F6C9AC';
 
+// Projectlappen op Projecten: elke klant zijn eigen stof, afgeleid van de kleuren van zijn site.
+// Alleen als ondergrond van de lap onder het screenshot, nergens anders.
+export const projectTintKamerbreed = '#DDD9C4';
+export const projectTintStefVanZanten = '#E6DCF3';
+export const projectTintPlaceholder = labelFold;
+
 // Signalen (altijd samen met icoon en tekst, nooit alleen kleur)
 export const error = '#B0132F';
 export const warning = '#7A5A00';

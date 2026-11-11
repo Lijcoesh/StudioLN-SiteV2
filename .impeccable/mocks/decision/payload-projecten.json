@@ -1,0 +1,40 @@
+{
+  "title": "Projecten",
+  "question": "De werkkleding-wereld ligt vast. Welke opbouw krijgt het overzicht Projecten (vijf projecten, waarvan drie plaatshouders)?",
+  "options": [
+    {
+      "id": "naamlinten",
+      "label": "De naamlinten",
+      "kicker": "THE ROLL",
+      "thesis": "Elke klant is een geborduurd naamlint, zoals de band met 'Luca' op Home: links het register van linten, rechts groot de site van het lint dat je aanwijst.",
+      "palette": ["#F8DCC8", "#132B4F", "#C4531A", "#FCEEE3", "#7F93B3"],
+      "materials": ["naamlinten van keper-canvas met oranje borduursel", "opgestikte lap rond het screenshot", "stiknaden"],
+      "viewport": "Canvas met h1 en één zin; daaronder op perzik links vijf naamlinten onder elkaar, licht scheef, het actieve lint steekt uit; rechts het screenshot op een gestikte lap met één zin en de link naar de live site.",
+      "risk": "Op de telefoon wordt het lint-plus-beeld een gewone lijst onder elkaar; en hover/tik-wisselen moet zonder uitleg werken voor iemand die niet digitaal vaardig is.",
+      "html": ".impeccable/mocks/decision/projecten-naamlinten.html"
+    },
+    {
+      "id": "stalenboek",
+      "label": "Het stalenboek",
+      "thesis": "De pagina is één stalenboek: elk project is een staal met gekartelde rand, het screenshot is de stof, en bij het scrollen slaat de volgende staal over de vorige heen.",
+      "palette": ["#FFFFFF", "#132B4F", "#FAF4EE", "#E9DDD0", "#C4531A"],
+      "materials": ["canvas boekband met dubbele naad", "crème stalen met kartelrand", "staallabel met naam, vak en link"],
+      "viewport": "Kop links, één zin rechts; daaronder de band van het boek over de volle breedte en de eerste staal open: screenshot groot links, het staallabel rechts met naam, wat de site moest doen en de link. Onder de staal zie je de randen van de volgende vier.",
+      "risk": "Scrollen dat stalen over elkaar laat schuiven (sticky) kan haperen of verwarren; zonder beweging is het een stapel grote blokken.",
+      "html": ".impeccable/mocks/decision/projecten-stalenboek.html"
+    },
+    {
+      "id": "etalage",
+      "label": "De etalage",
+      "thesis": "Elk project staat als één grote etalageruit op het canvas: het werk vult het venster, de klantnaam is een geweven label op de lijst, en ernaast zie je al de volgende etalage.",
+      "palette": ["#132B4F", "#FCEEE3", "#FAF4EE", "#F8DCC8", "#C4531A"],
+      "materials": ["keper-canvas als grond", "gestikte vensterlijst van zakstof", "geweven naamlabel met omgevouwen uiteinden"],
+      "viewport": "Canvas over de hele pagina. Een tweekleurige kop, daaronder het eerste venster over bijna de volle breedte met het Kamerbreed-screenshot en het naamlabel scheef over de hoek; rechts een smalle kolom met één zin, de link en een kijkje in de volgende etalage.",
+      "risk": "Groot beeld naast tekst, project na project, ligt het dichtst bij de standaard case-study-pagina; alles op donker is veel marineblauw.",
+      "html": ".impeccable/mocks/decision/projecten-etalage.html"
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "buildPath": { "value": "code" }
+}

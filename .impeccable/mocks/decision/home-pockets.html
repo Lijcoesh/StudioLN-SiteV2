@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>De jas van voren</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap">
+<style>
+:root{--navy:#132B4F;--accent:#C4531A;--peach:#F8DCC8;--soft:#FCEEE3;--label:#FAF4EE;--ink:#16202E;--graphite:#4E5866;--sn:#7F93B3;--sl:#8C7A6C;--sa:#F6C9AC;--muted:#C3CDDD}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;overflow:hidden;font:19px/1.65 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:var(--ink);
+ background:var(--navy);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px),repeating-linear-gradient(-45deg,rgba(0,0,0,.05) 0 2px,transparent 2px 6px)}
+.band{background:var(--accent);height:64px;position:relative}
+.band .seam{position:absolute;left:0;right:0;bottom:12px;border-top:2px dashed var(--sa)}
+.wrap{width:1240px;margin:0 auto;position:relative;height:836px}
+h2{position:absolute;left:0;top:72px;font:400 54px/1.08 'Bree Serif',Georgia,serif;color:var(--label);max-width:11ch}
+.lead{position:absolute;left:0;top:220px;width:360px;font-size:23px;line-height:1.5;color:var(--muted)}
+/* placket: de knoopsluiting van de jas als verticale naad */
+.placket{position:absolute;left:420px;top:40px;bottom:0;width:40px;border-left:2px dashed var(--sn);border-right:2px dashed var(--sn)}
+.placket i{position:absolute;left:50%;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:#0E2240;border:2px solid var(--sn)}
+.pocket{position:absolute;background:var(--soft);padding:44px 32px 28px;border:2px dashed var(--sl);border-top:0}
+.pocket:before{content:"";position:absolute;left:0;right:0;top:10px;border-top:2px dashed var(--sl)}
+.pocket:after{content:"";position:absolute;left:0;right:0;top:18px;border-top:2px dashed var(--sl)}
+.pocket h3{font:400 30px/1.15 'Bree Serif';color:var(--navy);margin-bottom:10px}
+.pocket p{font-size:18px;line-height:1.55}
+.flap{position:absolute;left:-2px;right:-2px;top:-40px;height:44px;background:var(--peach);border:2px dashed var(--sl);border-radius:0 0 2px 2px}
+.chest{left:510px;top:96px;width:420px;height:300px;transform:rotate(-1.2deg)}
+.chest h3{font-size:40px}
+.pen{left:980px;top:70px;width:260px;height:340px;background:var(--peach)}
+.side1{left:510px;top:480px;width:340px;height:250px;transform:rotate(1deg)}
+.side2{left:900px;top:470px;width:340px;height:250px;transform:rotate(-.8deg)}
+.tag{position:absolute;left:150px;top:470px;width:240px;background:#fff;padding:30px 26px 22px;transform:rotate(5deg);box-shadow:0 10px 24px rgba(14,34,64,.45),0 2px 4px rgba(14,34,64,.35)}
+.tag .hole{position:absolute;top:12px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--navy)}
+.thread{position:absolute;left:286px;top:300px;width:2px;height:190px;background:var(--label);transform:rotate(-38deg);transform-origin:top}
+.tag small{display:block;font-size:22px;color:var(--graphite)}
+.tag strong{display:block;font:400 48px/1 'Bree Serif';color:var(--navy);margin:6px 0}
+.tag a{display:inline-block;margin-top:10px;font-weight:700;font-size:22px;text-decoration:underline 2px var(--accent);text-underline-offset:.22em}
+</style></head><body>
+<div class="band"><div class="seam"></div></div>
+<div class="wrap">
+ <h2>Alles zit erin, op de goede plek</h2>
+ <p class="lead">Geen helpdesk en geen doorverwijzen. Je belt of mailt gewoon met mij.</p>
+ <div class="thread"></div>
+ <div class="tag"><span class="hole"></span><small>Website vanaf</small><strong>€ 500</strong><small>excl. btw</small><a>Alle prijzen</a></div>
+ <div class="placket"><i style="top:90px"></i><i style="top:300px"></i><i style="top:510px"></i><i style="top:720px"></i></div>
+ <div class="pocket chest"><div class="flap"></div><h3>Een website op maat</h3><p>Ontworpen en gebouwd rond jouw vak en jouw klanten. Geen sjabloon met jouw logo erop. Werkt op de computer én op de telefoon.</p></div>
+ <div class="pocket pen"><h3>Zakelijke e-mail</h3><p>Een adres op je eigen naam, zoals info@jouwbedrijf.nl. Ingesteld of verhuisd zonder dat er iets kwijtraakt.</p></div>
+ <div class="pocket side1"><h3>Hosting en domein</h3><p>Op mijn eigen server in Amsterdam. Ik koppel je domein en houd het draaiende.</p></div>
+ <div class="pocket side2"><h3>Aanpassingen achteraf</h3><p>Nieuwe foto's, andere openingstijden? Je belt, ik pas het aan.</p></div>
+</div>
+</body></html>

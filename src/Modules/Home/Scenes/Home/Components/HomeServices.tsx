@@ -1,25 +1,33 @@
-import { Box, Link, Typography } from '@mui/material';
-import { Link as RouterLink } from 'react-router';
+import { Box, List, ListItem, Typography } from '@mui/material';
 import { makeStyles } from 'tss-react/mui';
 
-import { navy, peach, peachSoft, stitchOnLight } from 'src/colors';
+import { graphite, label, labelFold, navy, peach, stitchOnLight } from 'src/colors';
+import LogoMark from 'src/Components/LogoMark/LogoMark';
 import PageWidth from 'src/Components/PageWidth/PageWidth';
 import Seam from 'src/Components/Seam/Seam';
-import { paths } from 'src/Config/navigation';
-import { services, websiteFromPrice } from 'src/Config/services';
+import { businessName } from 'src/Config/contact';
+import { services } from 'src/Config/services';
+// Zachtere rib dan het kleine hero-label: over een vlak van 1240px kleurt de marineblauwe rib de crème grijs.
+import labelRib from 'src/Resources/Textures/label-rib-soft.svg';
+import { fabricShadowLight } from 'src/Theme/shadow';
 
-const bartack = { width: 3, height: 16 };
+import PriceTag from './PriceTag';
 
-// Eén kledingstuk met vier opgestikte zakken: een perzik paneel met lichtere zakken erop. Elke zak is
-// aan drie kanten vastgestikt, heeft een dubbele naad als zakrand en trensjes op de bovenhoeken.
-// Geen losse kaarten, geen iconen.
+const foldWidth = 16;
+const seam = `2px dashed ${stitchOnLight}`;
+
+// Het binnenlabel: wat er in een website van mij zit, op één breed ingenaaid label van dezelfde
+// geribde stof als het label in de hero. Bovenaan ingestikt, korte kanten omgeslagen en gestikt.
+// Het prijskaartje hangt aan de onderrand.
 const useStyles = makeStyles()(theme => ({
     root: {
+        backgroundColor: peach,
         paddingTop: theme.spacing(14),
-        paddingBottom: theme.spacing(12),
+        // Ruimte voor het kaartje dat onder het label hangt
+        paddingBottom: theme.spacing(42),
         [theme.breakpoints.down('md')]: {
             paddingTop: theme.spacing(9),
-            paddingBottom: theme.spacing(8),
+            paddingBottom: theme.spacing(46),
         },
     },
     head: {
@@ -27,93 +35,115 @@ const useStyles = makeStyles()(theme => ({
         gridTemplateColumns: 'minmax(0, 5fr) minmax(0, 6fr)',
         columnGap: theme.spacing(8),
         alignItems: 'end',
-        marginBottom: theme.spacing(6),
+        marginBottom: theme.spacing(7),
         [theme.breakpoints.down('md')]: {
             gridTemplateColumns: '1fr',
             rowGap: theme.spacing(2.5),
-            marginBottom: theme.spacing(4),
+            marginBottom: theme.spacing(5),
         },
     },
     title: {
         color: navy,
+        maxWidth: '18ch',
     },
     intro: {
-        maxWidth: '44ch',
+        maxWidth: '40ch',
     },
-    panel: {
+    label: {
         position: 'relative',
-        backgroundColor: peach,
-        padding: theme.spacing(6),
-        [theme.breakpoints.down('md')]: {
-            padding: theme.spacing(3),
-        },
-        [theme.breakpoints.down('sm')]: {
-            padding: theme.spacing(2),
-        },
-    },
-    pockets: {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-        gap: theme.spacing(5),
-        [theme.breakpoints.down('md')]: {
-            gridTemplateColumns: '1fr',
-            gap: theme.spacing(4),
-        },
-    },
-    pocket: {
-        position: 'relative',
-        padding: theme.spacing(5, 4.5, 4.5),
-        // Een opgestikte zak van lichtere stof dan het paneel
-        backgroundColor: peachSoft,
-        borderLeft: `2px dashed ${stitchOnLight}`,
-        borderRight: `2px dashed ${stitchOnLight}`,
-        borderBottom: `2px dashed ${stitchOnLight}`,
-        // Trensjes: korte, dichte steken die de bovenhoeken van de zak versterken
+        backgroundColor: label,
+        backgroundImage: `url("${labelRib}")`,
+        backgroundSize: '4px 6px',
+        boxShadow: fabricShadowLight,
+        padding: theme.spacing(6.5, 9, 3),
+        // Omgeslagen korte kanten, alleen daar vastgestikt
         '&::before, &::after': {
             content: '""',
             position: 'absolute',
             top: 0,
-            width: bartack.width,
-            height: bartack.height,
-            backgroundColor: stitchOnLight,
+            bottom: 0,
+            width: foldWidth,
+            backgroundColor: labelFold,
+            pointerEvents: 'none',
         },
         '&::before': {
-            left: -2,
+            left: 0,
+            borderRight: seam,
         },
         '&::after': {
-            right: -2,
+            right: 0,
+            borderLeft: seam,
+        },
+        [theme.breakpoints.down('md')]: {
+            padding: theme.spacing(5.5, 5, 2),
         },
         [theme.breakpoints.down('sm')]: {
-            padding: theme.spacing(4.5, 2.5, 3.5),
+            padding: theme.spacing(5, 3.5, 1),
         },
     },
-    hem: {
+    topSeam: {
         position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        display: 'grid',
-        gap: 6,
+        top: 14,
+        left: foldWidth,
+        width: `calc(100% - ${foldWidth * 2}px)`,
     },
-    pocketTitle: {
-        color: navy,
-        marginBottom: theme.spacing(1.5),
-    },
-    pocketText: {
-        maxWidth: '40ch',
-    },
-    price: {
+    labelHead: {
         display: 'flex',
+        alignItems: 'center',
         flexWrap: 'wrap',
-        alignItems: 'baseline',
-        columnGap: theme.spacing(3),
-        rowGap: theme.spacing(1),
-        marginTop: theme.spacing(4),
+        columnGap: theme.spacing(2),
+        rowGap: theme.spacing(0.5),
+        paddingBottom: theme.spacing(2.5),
+        borderBottom: seam,
     },
-    priceText: {
+    brand: {
         fontFamily: theme.typography.h1.fontFamily,
-        fontSize: 'clamp(1.375rem, 1.2rem + 0.5vw, 1.625rem)',
+        fontSize: '1.875rem',
+        lineHeight: 1,
         color: navy,
+    },
+    maker: {
+        flexBasis: '100%',
+        paddingLeft: 60,
+        marginTop: -6,
+        color: graphite,
+        [theme.breakpoints.up('sm')]: {
+            flexBasis: 'auto',
+            paddingLeft: theme.spacing(1),
+            marginTop: 0,
+        },
+    },
+    rows: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+        columnGap: theme.spacing(9),
+        padding: 0,
+        [theme.breakpoints.down('lg')]: {
+            gridTemplateColumns: '1fr',
+        },
+    },
+    row: {
+        display: 'grid',
+        rowGap: theme.spacing(1),
+        alignItems: 'start',
+        alignContent: 'start',
+        padding: theme.spacing(3, 0),
+        borderTop: seam,
+        // Eerste regel van elke kolom sluit direct op de naad onder de kop aan
+        '&:nth-of-type(-n+2)': {
+            borderTop: 0,
+        },
+        [theme.breakpoints.down('lg')]: {
+            '&:nth-of-type(2)': {
+                borderTop: seam,
+            },
+        },
+    },
+    rowTitle: {
+        color: navy,
+    },
+    rowText: {
+        maxWidth: '46ch',
     },
 }));
 
@@ -125,38 +155,35 @@ export default function HomeServices() {
             <PageWidth>
                 <Box className={classes.head}>
                     <Typography variant="h2" id="services-title" className={classes.title}>
-                        Wat ik voor je doe
+                        Wat er in een website van mij zit
                     </Typography>
                     <Typography className={classes.intro}>
                         Je krijgt alles bij één persoon. Geen helpdesk en geen doorverwijzen: je
                         belt of mailt gewoon met mij.
                     </Typography>
                 </Box>
-                <Box className={classes.panel}>
-                    <Box className={classes.pockets}>
+                <Box className={classes.label}>
+                    <Seam tone="light" className={classes.topSeam} />
+                    <Box className={classes.labelHead}>
+                        <LogoMark size={44} variant="onLight" />
+                        <Typography component="span" className={classes.brand}>
+                            {businessName}
+                        </Typography>
+                        <Typography component="span" variant="body2" className={classes.maker}>
+                            gemaakt op maat, door Luca
+                        </Typography>
+                    </Box>
+                    <List className={classes.rows}>
                         {services.map(service => (
-                            <Box key={service.title} className={classes.pocket}>
-                                <Box className={classes.hem} aria-hidden>
-                                    <Seam tone="light" />
-                                    <Seam tone="light" />
-                                </Box>
-                                <Typography variant="h3" className={classes.pocketTitle}>
+                            <ListItem key={service.title} disablePadding className={classes.row}>
+                                <Typography variant="h3" className={classes.rowTitle}>
                                     {service.title}
                                 </Typography>
-                                <Typography className={classes.pocketText}>
-                                    {service.text}
-                                </Typography>
-                            </Box>
+                                <Typography className={classes.rowText}>{service.text}</Typography>
+                            </ListItem>
                         ))}
-                    </Box>
-                </Box>
-                <Box className={classes.price}>
-                    <Typography className={classes.priceText}>
-                        Een website laten maken kan vanaf {websiteFromPrice}, excl. btw.
-                    </Typography>
-                    <Link component={RouterLink} to={paths.pricing}>
-                        Bekijk alle prijzen
-                    </Link>
+                    </List>
+                    <PriceTag />
                 </Box>
             </PageWidth>
         </Box>

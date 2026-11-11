@@ -2,7 +2,7 @@ import { Box, Link, Typography } from '@mui/material';
 import { Link as RouterLink } from 'react-router';
 import { makeStyles } from 'tss-react/mui';
 
-import { navy, peachSoft, stitchOnLight } from 'src/colors';
+import { navy, peach, peachSoft, stitchOnLight } from 'src/colors';
 import PageWidth from 'src/Components/PageWidth/PageWidth';
 import { paths } from 'src/Config/navigation';
 import portraitPlaceholder from 'src/Resources/Images/portrait-placeholder.svg';
@@ -27,19 +27,22 @@ const useStyles = makeStyles()(theme => ({
             rowGap: theme.spacing(5),
         },
     },
+    // De foto zit op een opgestikt stuk perzik stof, licht scheef aangezet
     photoFrame: {
         position: 'relative',
         maxWidth: 400,
+        padding: theme.spacing(2.5),
+        backgroundColor: peach,
+        transform: 'rotate(-1.5deg)',
         '&::after': {
             content: '""',
             position: 'absolute',
-            inset: -12,
+            inset: 8,
             border: `2px dashed ${stitchOnLight}`,
             pointerEvents: 'none',
         },
         [theme.breakpoints.down('md')]: {
             maxWidth: 300,
-            marginInline: theme.spacing(1.5),
         },
     },
     photo: {

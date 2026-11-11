@@ -8,6 +8,8 @@ import { navyDeep } from 'src/colors';
 
 export const softShadow = `0 1px 2px ${alpha(navyDeep, 0.12)}`;
 export const fabricShadow = `0 10px 24px ${alpha(navyDeep, 0.45)}, 0 2px 4px ${alpha(navyDeep, 0.35)}`;
+// Dezelfde stof-op-stof-schaduw op een licht vlak (het binnenlabel en het hangkaartje op perzik).
+export const fabricShadowLight = `0 10px 24px ${alpha(navyDeep, 0.16)}, 0 2px 4px ${alpha(navyDeep, 0.12)}`;
 
 export default function overrideShadows(): Shadows {
     return Array.from({ length: 25 }, (_, elevation) => {

@@ -1,0 +1,40 @@
+{
+  "title": "Home onder de hero",
+  "question": "Hero en contactbaan blijven. Welke opbouw krijgt de rest van de homepagina?",
+  "options": [
+    {
+      "id": "label",
+      "label": "Het binnenlabel",
+      "kicker": "THE ROLL",
+      "thesis": "Wat je krijgt staat op één groot ingenaaid label, zoals de inhoud in een jas; de prijs hangt eraan als kaartje.",
+      "palette": ["#132B4F", "#FAF4EE", "#E9DDD0", "#F8DCC8", "#C4531A"],
+      "materials": ["geweven labelstof met rib", "hangkaartje aan een draad", "stiknaden"],
+      "viewport": "Onder de baan een perzik vlak met één breed crème label, aan de bovenkant ingestikt: vier diensten als labelregels in Bree, met een kartonnen kaartje met de vanaf-prijs dat aan de rand hangt. Daaronder begint 'Simpel, maar nooit standaard' als grote uitspraak op marineblauw canvas.",
+      "risk": "Een label van deze omvang moet leesbaar blijven als tekst en niet als illustratie gaan voelen.",
+      "html": ".impeccable/mocks/decision/home-label.html"
+    },
+    {
+      "id": "pockets",
+      "label": "De jas van voren",
+      "thesis": "Het canvas van de hero loopt door en de diensten zitten erop als echte zakken, elk met een eigen maat en plek, in plaats van vier gelijke vakken.",
+      "palette": ["#132B4F", "#FCEEE3", "#F8DCC8", "#7F93B3", "#C4531A"],
+      "materials": ["keper-canvas", "opgestikte zakken van ongelijke maat", "hangkaartje"],
+      "viewport": "Marineblauw canvas over de volle breedte: links een grote borstzak voor 'Een website op maat' met het prijskaartje eraan, rechts een smalle pennenzak (e-mail), daaronder twee lagere zakken (hosting, aanpassingen), scheef ten opzichte van elkaar zoals op een echte jas.",
+      "risk": "Te veel donker achter elkaar; de lichte stukken daarna moeten het ritme terugbrengen.",
+      "html": ".impeccable/mocks/decision/home-pockets.html"
+    },
+    {
+      "id": "tape",
+      "label": "Op maat gemeten",
+      "thesis": "Een maatlint loopt als ruggengraat links langs de hele pagina; elke sectie is ermee vastgespeld op een eigen hoogte, dus geen herhaling van kop-links-tekst-rechts.",
+      "palette": ["#FFFFFF", "#F8DCC8", "#132B4F", "#FAF4EE", "#C4531A"],
+      "materials": ["linnen maatlint met streepjes", "kopspelden", "stiknaden"],
+      "viewport": "Een wit vlak met links een verticaal maatlint in crème met marineblauwe streepjes. Rechts ervan de diensten als één grote doorlopende lijst in Bree, met daarnaast in de marge op het lint vastgespeld de vanaf-prijs.",
+      "risk": "Een lint met cijfers kan als nummering lezen; de streepjes dragen geen sectienummers, en het moet geen thema-indeling worden.",
+      "html": ".impeccable/mocks/decision/home-tape.html"
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "buildPath": { "value": "code" }
+}

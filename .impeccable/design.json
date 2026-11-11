@@ -1,57 +1,270 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-10T12:00:00Z",
+  "generatedAt": "2026-11-11T12:00:00Z",
   "title": "Design System: StudioLN",
   "extensions": {
     "colorMeta": {
-      "accent": { "role": "primary", "displayName": "Werkjas-oranje", "canonical": "#C4531A", "tonalRamp": ["#4A1E08", "#7A3410", "#A8440F", "#C4531A", "#DA7845", "#EAA27A", "#F6C9AC", "#FCEBDF"] },
-      "accent-hover": { "role": "primary", "displayName": "Doorgestikt oranje", "canonical": "#A8440F" },
-      "navy": { "role": "secondary", "displayName": "Werkjas-marineblauw", "canonical": "#132B4F", "tonalRamp": ["#0A1628", "#0E2240", "#132B4F", "#1D3B66", "#3A5683", "#6C83A8", "#A9B8CF", "#E3E9F2"] },
-      "navy-deep": { "role": "secondary", "displayName": "Diep marineblauw", "canonical": "#0E2240" },
-      "navy-raised": { "role": "secondary", "displayName": "Opgehaald marineblauw", "canonical": "#1D3B66" },
-      "peach": { "role": "tertiary", "displayName": "Perzik paneel", "canonical": "#F8DCC8", "tonalRamp": ["#5E3F2A", "#8E6648", "#BE9374", "#E2B898", "#F0CDB2", "#F8DCC8", "#FCEEE3", "#FFF8F2"] },
-      "peach-soft": { "role": "tertiary", "displayName": "Zakstof", "canonical": "#FCEEE3" },
-      "white": { "role": "neutral", "displayName": "Wit", "canonical": "#FFFFFF" },
-      "label": { "role": "neutral", "displayName": "Labelcrème", "canonical": "#FAF4EE", "tonalRamp": ["#3D352D", "#6B5F53", "#8C7A6C", "#B8A797", "#E9DDD0", "#F3EAE1", "#FAF4EE", "#FFFDFA"] },
-      "label-fold": { "role": "neutral", "displayName": "Labelvouw", "canonical": "#E9DDD0" },
-      "text": { "role": "neutral", "displayName": "Inkt", "canonical": "#16202E", "tonalRamp": ["#0B111A", "#16202E", "#2E3846", "#4E5866", "#76808D", "#A3AAB4", "#D0D4DA", "#F0F2F4"] },
-      "graphite": { "role": "neutral", "displayName": "Grafiet", "canonical": "#4E5866" },
-      "on-navy": { "role": "neutral", "displayName": "Labelcrème op canvas", "canonical": "#FAF4EE" },
-      "on-navy-muted": { "role": "neutral", "displayName": "Mistblauw", "canonical": "#C3CDDD" },
-      "stitch-on-navy": { "role": "neutral", "displayName": "Draad op canvas", "canonical": "#7F93B3" },
-      "stitch-on-light": { "role": "neutral", "displayName": "Draad op licht", "canonical": "#8C7A6C" },
-      "stitch-on-accent": { "role": "neutral", "displayName": "Draad op oranje", "canonical": "#F6C9AC" },
-      "error": { "role": "neutral", "displayName": "Signaal fout", "canonical": "#B0132F" },
-      "warning": { "role": "neutral", "displayName": "Signaal waarschuwing", "canonical": "#7A5A00" },
-      "success": { "role": "neutral", "displayName": "Signaal gelukt", "canonical": "#2F6B4F" }
+      "accent": {
+        "role": "primary",
+        "displayName": "Werkjas-oranje",
+        "canonical": "#C4531A",
+        "tonalRamp": [
+          "#4A1E08",
+          "#7A3410",
+          "#A8440F",
+          "#C4531A",
+          "#DA7845",
+          "#EAA27A",
+          "#F6C9AC",
+          "#FCEBDF"
+        ]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "Doorgestikt oranje",
+        "canonical": "#A8440F"
+      },
+      "navy": {
+        "role": "secondary",
+        "displayName": "Werkjas-marineblauw",
+        "canonical": "#132B4F",
+        "tonalRamp": [
+          "#0A1628",
+          "#0E2240",
+          "#132B4F",
+          "#1D3B66",
+          "#3A5683",
+          "#6C83A8",
+          "#A9B8CF",
+          "#E3E9F2"
+        ]
+      },
+      "navy-deep": {
+        "role": "secondary",
+        "displayName": "Diep marineblauw",
+        "canonical": "#0E2240"
+      },
+      "navy-raised": {
+        "role": "secondary",
+        "displayName": "Opgehaald marineblauw",
+        "canonical": "#1D3B66"
+      },
+      "peach": {
+        "role": "tertiary",
+        "displayName": "Perzik paneel",
+        "canonical": "#F8DCC8",
+        "tonalRamp": [
+          "#5E3F2A",
+          "#8E6648",
+          "#BE9374",
+          "#E2B898",
+          "#F0CDB2",
+          "#F8DCC8",
+          "#FCEEE3",
+          "#FFF8F2"
+        ]
+      },
+      "peach-soft": {
+        "role": "tertiary",
+        "displayName": "Zakstof",
+        "canonical": "#FCEEE3"
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Wit",
+        "canonical": "#FFFFFF"
+      },
+      "label": {
+        "role": "neutral",
+        "displayName": "Labelcrème",
+        "canonical": "#FAF4EE",
+        "tonalRamp": [
+          "#3D352D",
+          "#6B5F53",
+          "#8C7A6C",
+          "#B8A797",
+          "#E9DDD0",
+          "#F3EAE1",
+          "#FAF4EE",
+          "#FFFDFA"
+        ]
+      },
+      "label-fold": {
+        "role": "neutral",
+        "displayName": "Labelvouw",
+        "canonical": "#E9DDD0"
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Inkt",
+        "canonical": "#16202E",
+        "tonalRamp": [
+          "#0B111A",
+          "#16202E",
+          "#2E3846",
+          "#4E5866",
+          "#76808D",
+          "#A3AAB4",
+          "#D0D4DA",
+          "#F0F2F4"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Grafiet",
+        "canonical": "#4E5866"
+      },
+      "on-navy": {
+        "role": "neutral",
+        "displayName": "Labelcrème op canvas",
+        "canonical": "#FAF4EE"
+      },
+      "on-navy-muted": {
+        "role": "neutral",
+        "displayName": "Mistblauw",
+        "canonical": "#C3CDDD"
+      },
+      "stitch-on-navy": {
+        "role": "neutral",
+        "displayName": "Draad op canvas",
+        "canonical": "#7F93B3"
+      },
+      "stitch-on-light": {
+        "role": "neutral",
+        "displayName": "Draad op licht",
+        "canonical": "#8C7A6C"
+      },
+      "stitch-on-accent": {
+        "role": "neutral",
+        "displayName": "Draad op oranje",
+        "canonical": "#F6C9AC"
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Signaal fout",
+        "canonical": "#B0132F"
+      },
+      "warning": {
+        "role": "neutral",
+        "displayName": "Signaal waarschuwing",
+        "canonical": "#7A5A00"
+      },
+      "success": {
+        "role": "neutral",
+        "displayName": "Signaal gelukt",
+        "canonical": "#2F6B4F"
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Paginakop (h1); in de hero max 5rem, tweede zin in perzik." },
-      "headline": { "displayName": "Headline", "purpose": "Sectiekoppen (h2), smal gehouden." },
-      "title": { "displayName": "Title", "purpose": "Zaktitels (h3)." },
-      "title-small": { "displayName": "Title small", "purpose": "Kolomkoppen in de footer (h4)." },
-      "lead": { "displayName": "Lead", "purpose": "Eén ondertitel onder display- of afsluitkop." },
-      "body": { "displayName": "Body", "purpose": "Lopende tekst, max 58ch." },
-      "body-small": { "displayName": "Body small", "purpose": "Footer-onderregel en kleine tekst." },
-      "label": { "displayName": "Label", "purpose": "Knoppen en navigatielinks, geen hoofdletters." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "Paginakop (h1); in de hero max 5rem, tweede zin in perzik."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Sectiekoppen (h2), smal gehouden; als groot moment mag een h2 de display-maten dragen."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Regeltitels op het binnenlabel (h3)."
+      },
+      "title-small": {
+        "displayName": "Title small",
+        "purpose": "Kolomkoppen in de footer (h4)."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Eén ondertitel onder display- of afsluitkop."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Lopende tekst, max 58ch."
+      },
+      "body-small": {
+        "displayName": "Body small",
+        "purpose": "Footer-onderregel en kleine tekst."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Knoppen en navigatielinks, geen hoofdletters."
+      },
+      "price": {
+        "displayName": "Price",
+        "purpose": "Het bedrag op het hangkaartje."
+      }
     },
     "shadows": [
-      { "name": "fabric", "value": "0 10px 24px rgba(14,34,64,0.45), 0 2px 4px rgba(14,34,64,0.35)", "purpose": "Stof op stof: alleen onder het geweven label." },
-      { "name": "soft", "value": "0 1px 2px rgba(14,34,64,0.12)", "purpose": "MUI-elevation 1-4; Paper staat standaard op 0." }
+      {
+        "name": "fabric",
+        "value": "0 10px 24px rgba(14,34,64,0.45), 0 2px 4px rgba(14,34,64,0.35)",
+        "purpose": "Stof op stof: onder het geweven label op het canvas."
+      },
+      {
+        "name": "fabric-light",
+        "value": "0 10px 24px rgba(14,34,64,0.16), 0 2px 4px rgba(14,34,64,0.12)",
+        "purpose": "Stof op licht: onder het binnenlabel en het hangkaartje op perzik."
+      },
+      {
+        "name": "soft",
+        "value": "0 1px 2px rgba(14,34,64,0.12)",
+        "purpose": "MUI-elevation 1-4; Paper staat standaard op 0."
+      }
     ],
     "motion": [
-      { "name": "ease-out-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Naad dichtstikken, hover van contactroutes, pijlverschuiving." },
-      { "name": "seam-sew", "value": "clip-path inset(0 100% 0 0) -> inset(0) 1700ms, 350ms delay", "purpose": "Het enige bewegingsmoment: de naden van de hero-contactbaan stikken zich dicht bij het laden. Uit bij prefers-reduced-motion." },
-      { "name": "route-hover", "value": "background-color 180ms; arrow translateX(6px) 220ms", "purpose": "Hover van een contactroute." },
-      { "name": "link-hover", "value": "text-underline-offset 0.22em -> 0.32em, 160ms ease-out", "purpose": "Hover van tekstlinks." }
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Naad dichtstikken, hover van contactroutes, pijlverschuiving, zwaaien van het hangkaartje."
+      },
+      {
+        "name": "seam-sew",
+        "value": "clip-path inset(0 100% 0 0) -> inset(0) 1700ms, 350ms delay",
+        "purpose": "Het enige laadmoment: de naden van de hero-contactbaan stikken zich dicht bij het laden. Uit bij prefers-reduced-motion."
+      },
+      {
+        "name": "route-hover",
+        "value": "background-color 180ms; arrow translateX(6px) 220ms",
+        "purpose": "Hover van een contactroute."
+      },
+      {
+        "name": "link-hover",
+        "value": "text-underline-offset 0.22em -> 0.32em, 160ms ease-out",
+        "purpose": "Hover van tekstlinks."
+      },
+      {
+        "name": "tag-sway",
+        "value": "rotate(-4deg) -> rotate(-1.5deg), 420ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Hangkaartje zwaait bij hover of focus. Uit bij prefers-reduced-motion."
+      }
     ],
     "breakpoints": [
-      { "name": "sm", "value": "600px" },
-      { "name": "md", "value": "900px" },
-      { "name": "lg", "value": "1200px" },
-      { "name": "xl", "value": "1536px" }
+      {
+        "name": "sm",
+        "value": "600px"
+      },
+      {
+        "name": "md",
+        "value": "900px"
+      },
+      {
+        "name": "lg",
+        "value": "1200px"
+      },
+      {
+        "name": "xl",
+        "value": "1536px"
+      }
     ],
-    "stitch": { "width": "2px", "length": "10px", "gap": "7px", "linecap": "round" }
+    "stitch": {
+      "width": "2px",
+      "length": "10px",
+      "gap": "7px",
+      "linecap": "round"
+    },
+    "labelFold": {
+      "hero": "12px",
+      "binnenlabel": "16px"
+    }
   },
   "components": [
     {
@@ -79,12 +292,20 @@
       "css": ".ds-label { position: relative; display: inline-flex; flex-direction: column; padding: 26px 38px; background: #FAF4EE; color: #132B4F; box-shadow: 0 10px 24px rgba(14,34,64,0.45), 0 2px 4px rgba(14,34,64,0.35); transform: rotate(-4deg); } .ds-label::before, .ds-label::after { content: ''; position: absolute; top: 0; bottom: 0; width: 12px; background: #E9DDD0; } .ds-label::before { left: 0; border-right: 2px dashed #8C7A6C; } .ds-label::after { right: 0; border-left: 2px dashed #8C7A6C; } .ds-label-name { font-family: 'Bree Serif', Georgia, serif; font-size: 2.375rem; line-height: 1; } .ds-label-line { margin-top: 6px; font-weight: 700; font-size: 1.0625rem; color: #4E5866; }"
     },
     {
-      "name": "Zak op paneel",
-      "kind": "card",
-      "refersTo": "pocket",
-      "description": "Opgestikte zak in lichtere stof op een perzik paneel: drie gestikte kanten, dubbele zakrand, trensjes.",
-      "html": "<div class=\"ds-panel\"><div class=\"ds-pocket\"><span class=\"ds-pocket-hem\"></span><h3 class=\"ds-pocket-title\">Hosting en domein</h3><p class=\"ds-pocket-text\">Je website draait op mijn eigen server in Amsterdam.</p></div></div>",
-      "css": ".ds-panel { background: #F8DCC8; padding: 48px; } .ds-pocket { position: relative; background: #FCEEE3; padding: 40px 36px 36px; border: 2px dashed #8C7A6C; border-top: none; } .ds-pocket::before, .ds-pocket::after { content: ''; position: absolute; top: 0; width: 3px; height: 16px; background: #8C7A6C; } .ds-pocket::before { left: -2px; } .ds-pocket::after { right: -2px; } .ds-pocket-hem { position: absolute; top: 0; left: 0; right: 0; height: 10px; border-top: 2px dashed #8C7A6C; border-bottom: 2px dashed #8C7A6C; } .ds-pocket-title { font-family: 'Bree Serif', Georgia, serif; font-weight: 400; font-size: 1.75rem; line-height: 1.15; color: #132B4F; margin: 0 0 12px; } .ds-pocket-text { font-size: 1.1875rem; line-height: 1.65; color: #16202E; max-width: 40ch; margin: 0; }"
+      "name": "Binnenlabel",
+      "kind": "custom",
+      "refersTo": "inner-label",
+      "description": "Breed ingenaaid crème label op perzik: bovenrand gestikt, korte kanten 16px omgeslagen en gestikt, diensten als lijst gescheiden door naden. Lichte stof-op-stof-schaduw.",
+      "html": "<div class=\"ds-inner-wrap\"><div class=\"ds-inner\"><span class=\"ds-inner-top\"></span><div class=\"ds-inner-head\"><span class=\"ds-inner-logo\">LN</span><span class=\"ds-inner-brand\">StudioLN</span><span class=\"ds-inner-maker\">gemaakt op maat, door Luca</span></div><ul class=\"ds-inner-rows\"><li><h3>Een website op maat</h3><p>Ontworpen voor jouw zaak en jouw klanten.</p></li><li><h3>Hosting en domein</h3><p>Je website draait op mijn eigen server in Amsterdam.</p></li><li><h3>Zakelijke e-mail</h3><p>Een adres op je eigen domein.</p></li><li><h3>Aanpassingen achteraf</h3><p>Wijzigingen en technisch beheer.</p></li></ul></div></div>",
+      "css": ".ds-inner-wrap { background: #F8DCC8; padding: 48px; } .ds-inner { position: relative; background: #FAF4EE; color: #16202E; padding: 52px 72px 24px; box-shadow: 0 10px 24px rgba(14,34,64,0.16), 0 2px 4px rgba(14,34,64,0.12); } .ds-inner::before, .ds-inner::after { content: ''; position: absolute; top: 0; bottom: 0; width: 16px; background: #E9DDD0; } .ds-inner::before { left: 0; border-right: 2px dashed #8C7A6C; } .ds-inner::after { right: 0; border-left: 2px dashed #8C7A6C; } .ds-inner-top { position: absolute; top: 14px; left: 16px; right: 16px; border-top: 2px dashed #8C7A6C; } .ds-inner-head { display: flex; align-items: center; gap: 16px; padding-bottom: 20px; border-bottom: 2px dashed #8C7A6C; } .ds-inner-logo { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 8px; background: #132B4F; color: #FAF4EE; font-family: 'Bree Serif', Georgia, serif; } .ds-inner-brand { font-family: 'Bree Serif', Georgia, serif; font-size: 1.875rem; line-height: 1; color: #132B4F; } .ds-inner-maker { font-size: 1.0625rem; color: #4E5866; } .ds-inner-rows { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 72px; list-style: none; margin: 0; padding: 0; } .ds-inner-rows li { padding: 24px 0; border-top: 2px dashed #8C7A6C; } .ds-inner-rows li:nth-child(-n+2) { border-top: 0; } .ds-inner-rows h3 { font-family: 'Bree Serif', Georgia, serif; font-weight: 400; font-size: 1.875rem; line-height: 1.15; color: #132B4F; margin: 0 0 8px; } .ds-inner-rows p { font-size: 1.1875rem; line-height: 1.65; max-width: 46ch; margin: 0; }"
+    },
+    {
+      "name": "Hangkaartje",
+      "kind": "custom",
+      "refersTo": "hang-tag",
+      "description": "Wit kartonnen prijskaartje aan een slappe oranje draad door een geponst gaatje; -4 graden, zwaait naar -1,5 graden bij hover of focus; het hele kaartje is één link naar Prijzen.",
+      "html": "<div class=\"ds-tag-ground\"><div class=\"ds-tag-hanger\"><svg class=\"ds-tag-thread\" viewBox=\"0 0 24 50\" aria-hidden=\"true\"><path d=\"M12 0 C 5 14, 17 30, 12 50\" fill=\"none\" stroke=\"#C4531A\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg><a class=\"ds-tag\" href=\"#\"><span class=\"ds-tag-hole\"></span><span class=\"ds-tag-small\">Een website vanaf</span><span class=\"ds-tag-price\">&euro; 500</span><span class=\"ds-tag-small\">excl. btw</span><span class=\"ds-tag-more\">Bekijk alle prijzen</span></a></div></div>",
+      "css": ".ds-tag-ground { background: #F8DCC8; padding: 0 48px 48px; } .ds-tag-hanger { width: 288px; transform-origin: 50% 0; transform: rotate(-4deg); transition: transform 420ms cubic-bezier(0.16,1,0.3,1); } .ds-tag-hanger:has(a:hover), .ds-tag-hanger:has(a:focus-visible) { transform: rotate(-1.5deg); } @media (prefers-reduced-motion: reduce) { .ds-tag-hanger { transition: none; } } .ds-tag-thread { position: relative; z-index: 1; display: block; width: 24px; height: 50px; margin-inline: auto; overflow: visible; } .ds-tag { position: relative; display: block; margin-top: -22px; padding: 40px 28px 28px; background: #FFFFFF; color: #132B4F; text-decoration: none; box-shadow: 0 10px 24px rgba(14,34,64,0.16), 0 2px 4px rgba(14,34,64,0.12); } .ds-tag:focus-visible { outline: 3px solid #C4531A; outline-offset: 3px; } .ds-tag-hole { position: absolute; top: 10px; left: 50%; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: #F8DCC8; border: 2px solid #8C7A6C; box-sizing: border-box; } .ds-tag-small { display: block; font-size: 1.0625rem; color: #4E5866; } .ds-tag-price { display: block; font-family: 'Bree Serif', Georgia, serif; font-size: 3.25rem; line-height: 1; margin: 8px 0 4px; } .ds-tag-more { display: inline-block; margin-top: 16px; font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: #C4531A; text-underline-offset: 0.22em; transition: text-underline-offset 160ms ease-out; } .ds-tag:hover .ds-tag-more, .ds-tag:focus-visible .ds-tag-more { text-underline-offset: 0.32em; }"
     },
     {
       "name": "Tekstlink",
@@ -119,24 +340,49 @@
       "Eén oranje contrastbaan met drie gelijke contactroutes, de enige drager van acties.",
       "Gestippelde stiknaden als enige lijnen.",
       "Geweven crème label met omgevouwen, gestikte uiteinden als herkenningsteken.",
-      "Opgestikte zakken in een lichtere tint op een perzik paneel.",
+      "Een breed ingenaaid binnenlabel op perzik met wat er in de website zit, met de prijs als wit hangkaartje aan een oranje draad.",
       "Bree Serif voor koppen, Atkinson Hyperlegible Next voor tekst.",
-      "Eén bewegingsmoment: de naad van de contactbaan stikt zich dicht bij het laden."
+      "Eén laadmoment: de naad van de contactbaan stikt zich dicht bij het laden. Verder beweegt alleen wat je aanraakt."
     ],
     "rules": [
-      { "name": "The Contrastbaan Rule", "body": "Oranje als vlak bestaat op één plek: de contactbaan. Elders verschijnt oranje alleen als draad (onderstreping, actieve streep, focusring), nooit als knop, kaart of achtergrond.", "section": "colors" },
-      { "name": "The Draad-per-stof Rule", "body": "Een naad krijgt de draadkleur van de stof waarop hij ligt: stitch-on-navy op canvas, stitch-on-light op perzik/wit/label, stitch-on-accent op de baan.", "section": "colors" },
-      { "name": "The Kop-staat-alleen Rule", "body": "Een kop staat op zichzelf. Geen labeltje erboven; hoort er context bij, dan gaat die in de kop of in de tekst eronder. In de contactbaan staat het werkwoord op dezelfde regel als de waarde (\"Bel 06 …\").", "section": "typography" },
-      { "name": "The Gewicht-400 Rule", "body": "Bree Serif staat altijd op 400; nadruk komt uit formaat en kleur, niet uit vet.", "section": "typography" },
-      { "name": "The Stof-op-stof Rule", "body": "Een schaduw betekent dat een los stuk stof op een ander ligt. Geen schaduw op zakken, panelen, knoppen of de contactbaan.", "section": "elevation" },
-      { "name": "The Naad Rule", "body": "De enige lijn op de site is een gestippelde stiknaad, en elke naad verbindt of begrenst een stuk stof: de baan boven en onder, tussen de routes, de zijkanten en zakrand van een zak, de uiteinden van het label, de rand rond de foto, de onderkant van de footer en de items in het menu.", "section": "shapes" }
+      {
+        "name": "The Contrastbaan Rule",
+        "body": "Oranje als vlak bestaat op één plek: de contactbaan. Elders verschijnt oranje alleen als draad (onderstreping, actieve streep, focusring, de draad waaraan het hangkaartje hangt), nooit als knop, kaart of achtergrond.",
+        "section": "colors"
+      },
+      {
+        "name": "The Draad-per-stof Rule",
+        "body": "Een naad krijgt de draadkleur van de stof waarop hij ligt: stitch-on-navy op canvas, stitch-on-light op perzik/wit/label, stitch-on-accent op de baan.",
+        "section": "colors"
+      },
+      {
+        "name": "The Kop-staat-alleen Rule",
+        "body": "Een kop staat op zichzelf. Geen labeltje erboven; hoort er context bij, dan gaat die in de kop of in de tekst eronder. In de contactbaan staat het werkwoord op dezelfde regel als de waarde (\"Bel 06 …\").",
+        "section": "typography"
+      },
+      {
+        "name": "The Gewicht-400 Rule",
+        "body": "Bree Serif staat altijd op 400; nadruk komt uit formaat en kleur, niet uit vet.",
+        "section": "typography"
+      },
+      {
+        "name": "The Stof-op-stof Rule",
+        "body": "Een schaduw betekent dat een los stuk stof of karton op een ander ligt: de labels en het hangkaartje. Op canvas de zware variant, op een licht vlak de lichte. Geen schaduw op vastgestikte lappen, vlakken, knoppen of de contactbaan.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Naad Rule",
+        "body": "De enige getekende lijn op de site is een gestippelde stiknaad, en elke naad verbindt of begrenst een stuk stof: de baan boven en onder, tussen de routes, de uiteinden en de bovenrand van een label, de regels op het binnenlabel, de rand rond de foto, de bovenrand van het canvasmoment, de onderkant van de footer en de items in het menu. De draad van het hangkaartje is geen lijn maar garen: één doorlopende, slappe oranje draad.",
+        "section": "shapes"
+      }
     ],
     "dos": [
       "**Do** zet elke contactactie in de oranje contactbaan, met de drie routes gelijkwaardig naast elkaar.",
       "**Do** teken elke lijn als stiknaad (2px, steek 10px, tussenruimte 7px, ronde uiteinden) in de draadkleur van de onderliggende stof.",
       "**Do** houd aansluitende canvasvelden op een hoogte die een veelvoud van 8px is.",
-      "**Do** bouw gegroepeerde inhoud als zakken op een paneel: lichtere stof, drie gestikte kanten, dubbele zakrand.",
-      "**Do** laat de naad van de contactbaan alleen in de hero dichtstikken, en sla dat over bij prefers-reduced-motion.",
+      "**Do** zet een opsomming van wat de klant krijgt op een ingenaaid label: geribde crème stof, omgeslagen gestikte korte kanten, regels gescheiden door naden.",
+      "**Do** laat de naad van de contactbaan alleen in de hero dichtstikken, en sla dat over bij prefers-reduced-motion; ook het zwaaien van het hangkaartje staat dan uit.",
+      "**Do** wissel de sectievorm af: de 5fr / 6fr-as mag terugkomen, maar niet elke sectie als kop links, tekst rechts.",
       "**Do** houd hoeken op 2px en Bree Serif op gewicht 400."
     ],
     "donts": [
@@ -147,7 +393,7 @@
       "**Don't** nummer secties of onderdelen als 01/02/03.",
       "**Don't** bouw rasters van kaartjes met een icoon erboven.",
       "**Don't** trek doorlopende sierlijnen of dividers; een lijn is een naad die stof verbindt of begrenst, of hij is er niet.",
-      "**Don't** geef iets een schaduw tenzij een los stuk stof op een ander ligt.",
+      "**Don't** geef iets een schaduw tenzij een los stuk stof of karton op een ander ligt; gebruik op lichte vlakken de lichte variant.",
       "**Don't** gebruik oranje als vlak buiten de contactbaan."
     ]
   }

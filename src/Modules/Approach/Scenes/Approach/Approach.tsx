@@ -1,12 +1,13 @@
 import SiteClose from 'src/Components/SiteClose/SiteClose';
-import { useDocumentTitle } from 'src/Hooks/useDocumentTitle';
+import { pageMeta } from 'src/Config/seo';
+import { usePageMeta } from 'src/Hooks/usePageMeta';
 
 import ApproachIntro from './Components/ApproachIntro';
 import ApproachStory from './Components/ApproachStory';
 import FittingRoom from './Components/FittingRoom';
 
 export default function Approach() {
-    useDocumentTitle('Werkwijze');
+    usePageMeta(pageMeta.approach);
 
     return (
         <>

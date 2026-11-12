@@ -1,11 +1,12 @@
 import SiteClose from 'src/Components/SiteClose/SiteClose';
-import { useDocumentTitle } from 'src/Hooks/useDocumentTitle';
+import { pageMeta } from 'src/Config/seo';
+import { usePageMeta } from 'src/Hooks/usePageMeta';
 
 import PricingIntro from './Components/PricingIntro';
 import PricingPackages from './Components/PricingPackages';
 
 export default function Pricing() {
-    useDocumentTitle('Prijzen');
+    usePageMeta(pageMeta.pricing);
 
     return (
         <>

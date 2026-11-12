@@ -21,6 +21,7 @@ Hosting, de VPS en wat erop draait: zie @.claude/vps.md
 - **Theme**: opgesplitst in `src/Theme/` (palette, typography, shadow, sizes, `Components/`), `theme.ts` doet alleen compositie. Zie @.claude/conventions/styling.md
 - **Ontwerp**: alle ontwerp- en UI-werk via de skill `impeccable` (`.claude/skills/impeccable`, hooks in `.claude/settings.json`). Per klant eerst `/impeccable init` voor `PRODUCT.md`. Botst impeccable met mijn conventies, dan gaan mijn conventies voor.
 - **Structuur & naming**: zie @.claude/conventions/structure.md
+- **SEO**: titel en beschrijving per pagina in `src/Config/seo.ts`, gezet met `usePageMeta(pageMeta.x)`; de homegegevens, deeltags en schema.org komen via `seoPlugin` in `vite.config.ts` in `index.html`. Een nieuwe route ook toevoegen aan `public/sitemap.xml` en aan `@route` in `deploy/studioln-site.caddy` (anders geeft hij een 404).
 - **Backend**: de API van het contactformulier staat in `server/` (.NET 10, zoals bij Kamerbreed en WaterZacht). Zie @.claude/conventions/server.md; deploy en VPS-namen (`studioln-site`, poort 5083) in `deploy/README.md`.
 - **Commits**: subject begint met een werkwoord in de gebiedende wijs, Engels, geen punt.
   `Add hero section`, `Fix avatar overflow`, `Move colors to src/colors.ts` — niet `Added ...` / `hero section`.

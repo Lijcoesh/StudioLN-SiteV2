@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Dezelfde routes als in src/Config/navigation.ts en deploy/studioln-site.caddy (@route) -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url><loc>https://studioln.nl/</loc></url>
+    <url><loc>https://studioln.nl/werkwijze</loc></url>
+    <url><loc>https://studioln.nl/prijzen</loc></url>
+    <url><loc>https://studioln.nl/projecten</loc></url>
+    <url><loc>https://studioln.nl/over-mij</loc></url>
+    <url><loc>https://studioln.nl/contact</loc></url>
+    <url><loc>https://studioln.nl/privacy</loc></url>
+</urlset>

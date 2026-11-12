@@ -5,7 +5,8 @@ import { peach } from 'src/colors';
 import PageWidth from 'src/Components/PageWidth/PageWidth';
 import SiteClose from 'src/Components/SiteClose/SiteClose';
 import { projects } from 'src/Config/projects';
-import { useDocumentTitle } from 'src/Hooks/useDocumentTitle';
+import { pageMeta } from 'src/Config/seo';
+import { usePageMeta } from 'src/Hooks/usePageMeta';
 
 import ProjectsIntro from './Components/ProjectsIntro';
 import ProjectStrip from './Components/ProjectStrip';
@@ -29,7 +30,7 @@ const useStyles = makeStyles()(theme => ({
 }));
 
 export default function Projects() {
-    useDocumentTitle('Projecten');
+    usePageMeta(pageMeta.projects);
     const { classes } = useStyles();
 
     return (

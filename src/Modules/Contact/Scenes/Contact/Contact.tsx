@@ -4,7 +4,8 @@ import { makeStyles } from 'tss-react/mui';
 import { navy, peach, text } from 'src/colors';
 import PageWidth from 'src/Components/PageWidth/PageWidth';
 import { responsePromise } from 'src/Config/contactForm';
-import { useDocumentTitle } from 'src/Hooks/useDocumentTitle';
+import { pageMeta } from 'src/Config/seo';
+import { usePageMeta } from 'src/Hooks/usePageMeta';
 
 import ContactCard from './Components/ContactCard';
 import ContactForm from './Components/ContactForm';
@@ -52,7 +53,7 @@ const useStyles = makeStyles()(theme => ({
 }));
 
 export default function Contact() {
-    useDocumentTitle('Contact');
+    usePageMeta(pageMeta.contact);
     const { classes } = useStyles();
 
     return (

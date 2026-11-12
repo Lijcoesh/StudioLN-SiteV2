@@ -1,4 +1,5 @@
-import { useDocumentTitle } from 'src/Hooks/useDocumentTitle';
+import { pageMeta } from 'src/Config/seo';
+import { usePageMeta } from 'src/Hooks/usePageMeta';
 
 import HomeAbout from './Components/HomeAbout';
 import HomeApproach from './Components/HomeApproach';
@@ -7,7 +8,7 @@ import HomeHero from './Components/HomeHero';
 import HomeServices from './Components/HomeServices';
 
 export default function Home() {
-    useDocumentTitle();
+    usePageMeta(pageMeta.home);
 
     return (
         <>

@@ -7,7 +7,7 @@ import CanvasField from 'src/Components/CanvasField/CanvasField';
 import ContactBand from 'src/Components/ContactBand/ContactBand';
 import PageWidth from 'src/Components/PageWidth/PageWidth';
 import { paths } from 'src/Config/navigation';
-import { useDocumentTitle } from 'src/Hooks/useDocumentTitle';
+import { usePageMeta } from 'src/Hooks/usePageMeta';
 
 interface IProps {
     title: string;
@@ -36,7 +36,7 @@ export default function ComingSoon(props: IProps) {
 
     const { classes } = useStyles();
 
-    useDocumentTitle(title);
+    usePageMeta({ title, description: message });
 
     return (
         <Box component="section" aria-labelledby="page-title">

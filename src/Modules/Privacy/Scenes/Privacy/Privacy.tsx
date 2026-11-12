@@ -5,7 +5,8 @@ import { onNavyMuted } from 'src/colors';
 import CanvasField from 'src/Components/CanvasField/CanvasField';
 import PageWidth from 'src/Components/PageWidth/PageWidth';
 import { privacyLead, privacySections, privacyTitle, privacyVersion } from 'src/Config/privacy';
-import { useDocumentTitle } from 'src/Hooks/useDocumentTitle';
+import { pageMeta } from 'src/Config/seo';
+import { usePageMeta } from 'src/Hooks/usePageMeta';
 
 const useStyles = makeStyles()(theme => ({
     field: {
@@ -45,7 +46,7 @@ const useStyles = makeStyles()(theme => ({
 export default function Privacy() {
     const { classes } = useStyles();
 
-    useDocumentTitle(privacyTitle);
+    usePageMeta(pageMeta.privacy);
 
     return (
         <>

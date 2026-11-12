@@ -30,6 +30,9 @@ Geen Node op de server: frontends worden in GitHub Actions gebouwd en alleen `di
 |---|---|---|---|
 | WaterZacht | `http://85.10.151.178` | `/var/www/waterzacht/site` + `api` | GitHub Actions bij push naar `main` (rsync + service-herstart) |
 | Kamerbreed Interieur | `http://85.10.151.178:8080` | `/var/www/kamerbreed` | handmatig; voorbeeld voor de PO, met `noindex` |
+| StudioLN-website (deze repo) | `https://studioln.nl` (www verwijst door) | `/var/www/studioln-site/site` + `api` | GitHub Actions bij push naar `main` (rsync + herstart `studioln-site-api`); API op `127.0.0.1:5083`; live sinds 12-11-2026 |
+
+Deze tabel is een verouderde kopie: Kamerbreed, Stef van Zanten en het dashboard staan inmiddels ook live. Het actuele overzicht staat in `F:/Development/StudioLN-Dashboard/.claude/vps.md`.
 
 - WaterZacht heeft een API (`waterzacht-api.service`, draait als gebruiker `waterzacht` op `127.0.0.1:5080`). Caddy stuurt `/api/*` door; de rest is de statische site. Secrets (Brevo) staan in `/etc/waterzacht/api.env`, alleen leesbaar voor root.
 - Geen van beide heeft al een domein. Bij livegang wordt de eerste regel van het `.caddy`-bestand vervangen door het domein (`waterzacht.nl, www.waterzacht.nl {`) en haalt Caddy zelf een certificaat.

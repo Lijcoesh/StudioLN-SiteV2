@@ -203,6 +203,42 @@
         ],
         "createdAt": "2026-11-11T21:27:27.182Z",
         "reason": "Claude: closed decision-round skeleton sketch; the build sets its own padding and is checked by the hook itself"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/overmij-waslabel.html"
+        ],
+        "createdAt": "2026-11-12T17:26:13.171Z",
+        "reason": "Claude: DESIGN.md 'Stof op stof' neutral navy shadow under the care label on canvas, not a glow"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/overmij-waslabel.html"
+        ],
+        "createdAt": "2026-11-12T17:26:13.440Z",
+        "reason": "Claude: full-bleed canvas band in decision sketch; content inset by the 1240px wrap"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/overmij-wiedoetwat.html"
+        ],
+        "createdAt": "2026-11-12T17:28:58.894Z",
+        "reason": "Claude: DESIGN.md 'Stof op licht' neutral navy shadow under the inner label that crosses from canvas onto peach, not a glow"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/overmij-wiedoetwat.html"
+        ],
+        "createdAt": "2026-11-12T17:28:59.125Z",
+        "reason": "Claude: full-bleed canvas band in decision sketch; content inset by the 1240px wrap"
       }
     ]
   }

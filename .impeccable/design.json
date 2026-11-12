@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-11T20:00:00Z",
+  "generatedAt": "2026-11-12T12:00:00Z",
   "title": "Design System: StudioLN",
   "extensions": {
     "colorMeta": {
@@ -222,11 +222,11 @@
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Sectiekoppen (h2), smal gehouden; als groot moment mag een h2 de display-maten dragen."
+        "purpose": "Sectiekoppen (h2), smal gehouden; als groot moment mag een h2 de display-maten dragen. Op Over mij is de h1 een headline in navy, twee bijzinnen op eigen regels."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Regeltitels op het binnenlabel (h3); koppen van zakken, maattabel en het lijstje in de paskamer; bedragen in de zakken; nadrukzin en slotzin van het verhaal op Werkwijze."
+        "purpose": "Regeltitels op het binnenlabel (h3); koppen van zakken, maattabel en het lijstje in de paskamer; bedragen in de zakken; nadrukzin en slotzin van het verhaal op Werkwijze; de kop van de feitjeslap op Over mij."
       },
       "title-small": {
         "displayName": "Title small",
@@ -354,6 +354,20 @@
       "linecap": "round",
       "tilt": "-1.2deg",
       "inset": "0.55em boven/onder, 0.75em opzij; krap: 0.12em boven/onder"
+    },
+    "nameBand": {
+      "ground": "canvas-field (navy keper)",
+      "width": "calc(100% + 120px), marginInline -60px",
+      "tilt": "-2deg (-2.5deg onder md)",
+      "paddingBlock": "28px (20px onder md)",
+      "seams": "boven en onder in stitch-on-navy, 10px van de rand",
+      "nameFont": "Bree Serif 400",
+      "nameSize": "clamp(4.75rem, 2rem + 10vw, 11.5rem)",
+      "nameLineHeight": "0.9",
+      "nameLetterSpacing": "0.01em",
+      "nameColor": "accent, -webkit-text-stroke 0.012em accent-hover",
+      "photoOverlap": "fotolap +2deg, zonder naambandje, begint 32px onder de bovenrand van de band; onder md 200px (180px onder sm), rechts over het eind van de band",
+      "aria": "aria-hidden"
     }
   },
   "components": [
@@ -446,6 +460,22 @@
       "css": ".ds-tack-ground { background: #FAF4EE; padding: 48px; } .ds-tack-target { position: relative; display: inline-block; font: 700 1.1875rem 'Atkinson Hyperlegible Next Variable', system-ui, sans-serif; color: #16202E; } .ds-tack { position: absolute; top: -0.55em; left: -0.75em; width: calc(100% + 1.5em); height: calc(100% + 1.1em); overflow: visible; pointer-events: none; transform: rotate(-1.2deg); clip-path: inset(-12px 100% -12px -12px); animation: ds-tack-sew 640ms cubic-bezier(0.16,1,0.3,1) forwards; } @keyframes ds-tack-sew { to { clip-path: inset(-12px); } } @media (prefers-reduced-motion: reduce) { .ds-tack { clip-path: none; animation: none; } }"
     },
     {
+      "name": "Naamband op paginamaat",
+      "kind": "custom",
+      "refersTo": "name-band",
+      "description": "Opening van Over mij: een strook navy keper-canvas van rand tot rand, 120px breder dan het scherm, -2 graden, naden boven en onder in stitch-on-navy, met \"Luca\" groot in oranje geborduurd. Vastgestikt, geen schaduw, verborgen voor schermlezers.",
+      "html": "<div class=\"ds-nb-ground\"><div class=\"ds-nb\" aria-hidden=\"true\"><span class=\"ds-nb-seam ds-nb-seam-t\"></span><span class=\"ds-nb-name\">Luca</span><span class=\"ds-nb-seam ds-nb-seam-b\"></span></div></div>",
+      "css": ".ds-nb-ground { background: #F8DCC8; padding: 48px 0 64px; overflow-x: clip; } .ds-nb { position: relative; width: calc(100% + 120px); margin-inline: -60px; padding: 28px 108px; box-sizing: border-box; background-color: #132B4F; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M-1 3 3 -1M-1 7 7 -1M3 9 9 3' stroke='%23fff' stroke-opacity='.055' stroke-width='1.2'/%3E%3Cpath d='M-1 5 5 -1M1 9 9 1M5 9 9 5' stroke='%23000814' stroke-opacity='.16'/%3E%3C/svg%3E\"); background-size: 8px 8px; transform: rotate(-2deg); } .ds-nb-seam { position: absolute; left: 0; right: 0; border-top: 2px dashed #7F93B3; } .ds-nb-seam-t { top: 10px; } .ds-nb-seam-b { bottom: 10px; } .ds-nb-name { display: block; font-family: 'Bree Serif', Georgia, serif; font-weight: 400; font-size: clamp(4.75rem, 2rem + 10vw, 11.5rem); line-height: 0.9; letter-spacing: 0.01em; color: #C4531A; -webkit-text-stroke: 0.012em #A8440F; }"
+    },
+    {
+      "name": "Feitjeslap",
+      "kind": "card",
+      "refersTo": "fact-patch",
+      "description": "Losse feiten op Over mij: opgestikte lap perzik stof op wit, rondom gestikt op 8px, +1 graad, zonder schaduw; regels gescheiden door naden.",
+      "html": "<div class=\"ds-facts-ground\"><aside class=\"ds-facts\"><h2 class=\"ds-facts-title\">In het kort</h2><ul class=\"ds-facts-list\"><li><b>Bedrijf</b><span>StudioLN, mijn eenmanszaak</span></li><li><b>Wie je spreekt</b><span>Ik, van het eerste gesprek tot het onderhoud</span></li><li><b>Waar je website draait</b><span>Op mijn eigen server in Amsterdam</span></li></ul></aside></div>",
+      "css": ".ds-facts-ground { background: #FFFFFF; padding: 48px; } .ds-facts { position: relative; max-width: 460px; padding: 40px 40px 24px; background: #F8DCC8; color: #16202E; transform: rotate(1deg); } .ds-facts::after { content: ''; position: absolute; inset: 8px; border: 2px dashed #8C7A6C; pointer-events: none; } .ds-facts-title { margin: 0; padding-bottom: 16px; font-family: 'Bree Serif', Georgia, serif; font-weight: 400; font-size: 1.875rem; line-height: 1.15; color: #132B4F; } .ds-facts-list { list-style: none; margin: 0; padding: 0; } .ds-facts-list li { display: flex; flex-direction: column; justify-content: center; min-height: 56px; padding: 12px 0; border-top: 2px dashed #8C7A6C; } .ds-facts-list b { font-size: 1.1875rem; } .ds-facts-list span { font-size: 1.0625rem; line-height: 1.6; color: #4E5866; }"
+    },
+    {
       "name": "Tekstlink",
       "kind": "custom",
       "refersTo": "link",
@@ -475,7 +505,7 @@
     "overview": "De site draagt dezelfde kleding als zijn bezoeker: een stevige marineblauwe werkjas met oranje contrastvlakken, zichtbaar gestikt, met het logo als geweven label. Alles wat je ziet is stof, naad of label. Marineblauw canvas met een fijne keperbinding is de grond van de zware delen (header, hero, de opening van Prijzen, afsluiting, footer); perzik en wit zijn de lichte vlakken daartussen; één oranje contrastbaan draagt de acties.\n\nDe dichtheid is rustig en ruim: grote Bree Serif-koppen, een op leesbaarheid ontworpen tekstletter op 19px, brede secties (112px verticaal). Vormen zijn vrijwel recht (2px), diepte bestaat alleen waar stof over stof ligt. Lijnen zijn altijd stiknaden: gestippeld, met ronde steekuiteinden, en elke naad verbindt of begrenst een stuk stof.\n\nDe site weigert het standaard dienstverlenerssjabloon (hero met foto, icoonkaartjes, CTA-band) en elk AI-recept: geen eyebrows, geen glas, geen nummering, geen gradients, geen glans. Alleen in de paskamer op Werkwijze hangt dat recept, als verzonnen voorbeeld in eigen stof, om het aan te wijzen.",
     "keyCharacteristics": [
       "Marineblauw keper-canvas als grond voor header, hero, afsluiting en footer; de header blijft staan en eindigt in een dubbele pasnaad.",
-      "Oranje is de enige drager van acties: de contrastbaan met drie gelijke contactroutes in de hero, en een vastgestikte oranje lap met dezelfde routes in de afsluiting.",
+      "Oranje is de enige drager van acties: de contrastbaan met drie gelijke contactroutes in de hero, en een vastgestikte oranje lap met dezelfde routes in de afsluiting en in de opening van Over mij.",
       "Gestippelde stiknaden als enige lijnen.",
       "Geweven crème label met omgevouwen, gestikte uiteinden als herkenningsteken.",
       "Een breed ingenaaid binnenlabel op perzik met wat er in de website zit, met de prijs als wit hangkaartje aan een oranje draad; op Prijzen is hetzelfde label de maattabel van de pakketten, met kruissteken waar iets inbegrepen is.",
@@ -486,7 +516,7 @@
     "rules": [
       {
         "name": "The Contrastbaan Rule",
-        "body": "Oranje als vlak bestaat alleen waar de contactroutes staan: de contactbaan in de hero en de contactlap in de afsluiting. Elders verschijnt oranje alleen als draad (onderstreping, actieve streep, focusring, de draad waaraan het hangkaartje hangt, de geborduurde naam op de naamband, de rijgsteek en het actieve teken in het lijstje van de paskamer), nooit als knop, kaart of achtergrond.",
+        "body": "Oranje als vlak bestaat alleen waar de contactroutes staan: de contactbaan in de hero en de contactlap in de afsluiting en in de opening van Over mij (daar de enige contactactie; Over mij heeft, net als Contact, geen afsluiting). Elders verschijnt oranje alleen als draad (onderstreping, actieve streep, focusring, de draad waaraan het hangkaartje hangt, de geborduurde naam op de naamband van de fotolap en op de naamband op paginamaat, de rijgsteek en het actieve teken in het lijstje van de paskamer), nooit als knop, kaart of achtergrond.",
         "section": "colors"
       },
       {
@@ -511,17 +541,17 @@
       },
       {
         "name": "The Stof-op-stof Rule",
-        "body": "Een schaduw betekent dat een los stuk stof of karton op een ander ligt: de labels, de maattabel, het hangkaartje en de vaste header die over de pagina schuift. Op canvas de zware variant, op een licht vlak de lichte; de header draagt altijd de lichte. Geen schaduw op vastgestikte lappen en zakken, vlakken, knoppen, de contactbaan of de contactlap. Op Projecten ligt elke projectstrook los op het perzik vlak en het screenshot als los afdrukje op de lap: beide de lichte variant. Op Werkwijze liggen het afdrukje van de sjabloonsite en het lijstje op labelstof los op het perzik vlak: ook de lichte variant.",
+        "body": "Een schaduw betekent dat een los stuk stof of karton op een ander ligt: de labels, de maattabel, het hangkaartje en de vaste header die over de pagina schuift. Op canvas de zware variant, op een licht vlak de lichte; de header draagt altijd de lichte. Geen schaduw op vastgestikte lappen, banden en zakken, vlakken, knoppen, de contactbaan of de contactlap. Op Projecten ligt elke projectstrook los op het perzik vlak en het screenshot als los afdrukje op de lap: beide de lichte variant. Op Werkwijze liggen het afdrukje van de sjabloonsite en het lijstje op labelstof los op het perzik vlak: ook de lichte variant.",
         "section": "elevation"
       },
       {
         "name": "The Naad Rule",
-        "body": "De enige getekende lijn op de site is een gestippelde stiknaad, en elke naad verbindt of begrenst een stuk stof: de baan boven en onder, tussen de routes, de uiteinden en de bovenrand van een label, de regels op het binnenlabel, de rand rond de foto en rond de naamband, de bovenrand van het canvasmoment, de dubbele pasnaad onder de header, de rand en de zoom van de zakken, de regels van de maattabel en van het lijstje in de paskamer, de onderkant van de footer en de items in het menu. De draad van het hangkaartje is geen lijn maar garen: één doorlopende, slappe oranje draad. Ook trensjes, kruissteken, de oranje rijgsteek en het ringetje voor elke regel in het lijstje van de paskamer zijn garen, geen lijn.",
+        "body": "De enige getekende lijn op de site is een gestippelde stiknaad, en elke naad verbindt of begrenst een stuk stof: de baan boven en onder, tussen de routes, de uiteinden en de bovenrand van een label, de regels op het binnenlabel, de rand rond de foto en rond de naamband, boven en onder de naamband op paginamaat, de rand en de regels van de feitjeslap, de bovenrand van het canvasmoment, de dubbele pasnaad onder de header, de rand en de zoom van de zakken, de regels van de maattabel en van het lijstje in de paskamer, de onderkant van de footer en de items in het menu. De draad van het hangkaartje is geen lijn maar garen: één doorlopende, slappe oranje draad. Ook trensjes, kruissteken, de oranje rijgsteek en het ringetje voor elke regel in het lijstje van de paskamer zijn garen, geen lijn.",
         "section": "shapes"
       }
     ],
     "dos": [
-      "**Do** zet elke contactactie op oranje: in de contactbaan (hero) of de contactlap (afsluiting), met de drie routes altijd gelijkwaardig.",
+      "**Do** zet elke contactactie op oranje: in de contactbaan (hero) of de contactlap (afsluiting, en de opening van Over mij), met de drie routes altijd gelijkwaardig.",
       "**Do** teken elke lijn als stiknaad (2px, steek 10px, tussenruimte 7px, ronde uiteinden) in de draadkleur van de onderliggende stof.",
       "**Do** houd aansluitende canvasvelden op een hoogte die een veelvoud van 8px is.",
       "**Do** zet een opsomming van wat de klant krijgt op een ingenaaid label: geribde crème stof, omgeslagen gestikte korte kanten, regels gescheiden door naden. Een vergelijking van pakketten wordt op dat label een echte tabel met kruissteken.",

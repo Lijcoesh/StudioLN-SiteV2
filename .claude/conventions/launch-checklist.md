@@ -49,9 +49,9 @@ Dingen die makkelijk vergeten worden maar juridisch, ethisch of qua toegankelijk
 
 _Noteer hier tijdens het werk punten die vóór oplevering nog geregeld moeten worden. Leeg = niets bekend, niet = alles gedaan; loop de lijst hierboven altijd volledig na._
 
-- Over mij: lorem ipsum vervangen door Luca's eigen tekst (zie `PRODUCT.md`). De foto is van Luca (`src/Resources/Images/luca.jpg`).
+- Over mij (pagina staat, 12-11-2026): lorem ipsum op Home en op Over mij vervangen door Luca's eigen tekst (zie `PRODUCT.md`), en de twee plaatshouders "Nog in te vullen" in `src/Config/about.ts` vervangen door echte feitjes of weghalen. De kop, de tussenkoppen en de drie ingevulde feitjes daar zijn concept tot Luca akkoord geeft. De foto is van Luca (`src/Resources/Images/luca.jpg`).
 - Contactformulier: endpoint in de dashboard-API bestaat nog niet; formulier pas live met werkend endpoint, consent/privacylink en privacyverklaring op de site. Het formulier staat in de code (`src/Modules/Contact`, 11-11-2026): het stuurt JSON `{ name, email, phone, message, website }` als POST naar `VITE_CONTACT_ENDPOINT`; `website` is een spamval die leeg moet zijn (gevuld = weggooien). Zonder die variabele toont productie een melding in plaats van velden. Teksten in `src/Config/contactForm.ts` zijn concept.
 - Prijzen: bedragen in `src/Config/pricing.ts` volgen de dashboardcatalogus (stand 11-11-2026); vóór livegang nog eens naast het dashboard leggen.
 - Projecten: drie plaatshouders (Schilder, Loodgieter, Hovenier; `placeholder: true` in `src/Config/projects.ts`) vóór livegang weghalen of vervangen door echte, vrijgegeven projecten; `projectTintPlaceholder` in `src/colors.ts` gaat dan mee.
 - Werkwijze staat (11-11-2026); de kop en ondertitel van de afsluiting daar en de namen van de vijf patronen in `src/Config/templatePatterns.ts` zijn concept en wachten op Luca's akkoord. De verzonnen voorbeeldsites ("Jouw Bedrijf" en "Jouw Klusbedrijf", met hun teksten) is als verzonnen gelabeld en bevat geen cijfers of reviews; zo houden. Het traject van eerste gesprek tot online komt later op die pagina.
-- Over mij en Privacyverklaring zijn nog tijdelijke pagina's ("Aan deze pagina werk ik nog"); de footer linkt al naar de privacyverklaring.
+- Privacyverklaring is nog een tijdelijke pagina ("Aan deze pagina werk ik nog"); de footer linkt al naar de privacyverklaring.

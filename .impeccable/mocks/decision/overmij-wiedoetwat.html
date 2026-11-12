@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>Over mij: wie doet wat</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap">
+<style>
+:root{--navy:#132B4F;--accent:#C4531A;--peach:#F8DCC8;--soft:#FCEEE3;--label:#FAF4EE;--fold:#E9DDD0;--ink:#16202E;--graphite:#4E5866;--mist:#C3CDDD;--sn:#7F93B3;--sl:#8C7A6C;--sa:#F6C9AC}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;overflow:hidden;font:19px/1.65 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:var(--ink);background:var(--peach)}
+.keper{background-color:var(--navy);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.04) 0 2px,transparent 2px 6px),repeating-linear-gradient(-45deg,rgba(0,0,0,.08) 0 2px,transparent 2px 6px)}
+.top{height:400px;color:var(--label)}
+header{height:96px;position:relative;color:var(--label);z-index:2}
+.wrap{width:1240px;margin:0 auto;position:relative}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+.brand{font:400 30px 'Bree Serif'}
+nav{display:flex;gap:36px;font:400 19px 'Bree Serif';color:var(--mist)}
+nav .on{color:var(--label);box-shadow:inset 0 -3px var(--accent);padding-bottom:6px}
+.pas{position:absolute;left:0;right:0;border-top:2px dashed var(--sn)}
+.grid{display:grid;grid-template-columns:7fr 5fr;gap:64px;padding-top:56px}
+h1{font:400 60px/1.05 'Bree Serif';color:var(--label)}
+h1 em{font-style:normal;color:var(--peach);display:block}
+.lead{font-size:22px;line-height:1.5;margin-top:18px;color:var(--mist);max-width:42ch}
+/* binnenlabel: elke regel eindigt op dezelfde geborduurde naam */
+.label{position:relative;margin-top:64px;background:var(--label);padding:48px 56px 12px;
+ background-image:repeating-linear-gradient(90deg,rgba(19,43,79,.025) 0 2px,transparent 2px 4px);
+ box-shadow:0 10px 24px rgba(14,34,64,.16),0 2px 4px rgba(14,34,64,.12)}
+.label:before{content:"";position:absolute;left:16px;right:16px;top:14px;border-top:2px dashed var(--sl)}
+.fl,.fr{position:absolute;top:0;bottom:0;width:16px;background:var(--fold)}
+.fl{left:0}.fr{right:0}
+.label h2{font:400 30px 'Bree Serif';color:var(--navy);padding-bottom:14px}
+.row{display:flex;align-items:baseline;gap:16px;border-top:2px dashed var(--sl);padding:14px 0}
+.row b{font-weight:700}
+.row small{color:var(--graphite);font-size:17px}
+.row .who{margin-left:auto;font:400 32px/1 'Bree Serif';color:var(--accent);transform:rotate(-2deg)}
+.side{position:relative}
+.patch{position:relative;padding:20px;background:var(--soft);transform:rotate(-1.5deg);margin-top:-8px}
+.patch:before{content:"";position:absolute;inset:8px;border:2px dashed var(--sl)}
+.photo{position:relative;height:420px;background:var(--fold,#E9DDD0);display:flex;align-items:flex-end;padding:16px;color:var(--ink);font-size:16px}
+.lap{position:relative;margin-top:40px;background:var(--accent);color:#fff}
+.lap:before{content:"";position:absolute;inset:8px;border:2px dashed var(--sa);pointer-events:none}
+.route{position:relative;display:flex;align-items:center;gap:14px;padding:26px 30px;font:400 24px/1.1 'Bree Serif'}
+.route+.route{border-top:2px dashed var(--sa)}
+.route i{width:26px;height:26px;border:2.5px solid #fff;border-radius:4px}
+.route b{margin-left:auto;font-family:system-ui}
+</style></head><body>
+<div class="keper top">
+<header><div class="wrap"><div class="brand">StudioLN</div>
+<nav><span>Home</span><span>Werkwijze</span><span>Prijzen</span><span>Projecten</span><span class="on">Over mij</span><span>| Contact</span></nav>
+</div><div class="pas" style="bottom:12px"></div><div class="pas" style="bottom:6px"></div></header>
+
+<div class="wrap grid">
+ <div>
+  <h1>Ik ben Luca.<em>Je hebt alleen met mij te maken.</em></h1>
+  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+  <div class="label"><span class="fl"></span><span class="fr"></span>
+   <h2>Wie doet wat bij StudioLN</h2>
+   <div class="row"><b>Het ontwerp</b><small>afgestemd op jouw bedrijf</small><span class="who">Luca</span></div>
+   <div class="row"><b>Het bouwen</b><small>de website zelf</small><span class="who">Luca</span></div>
+   <div class="row"><b>Hosting</b><small>op mijn eigen server</small><span class="who">Luca</span></div>
+   <div class="row"><b>Domein en zakelijke e-mail</b><span class="who">Luca</span></div>
+   <div class="row"><b>Aanpassingen en vragen</b><span class="who">Luca</span></div>
+  </div>
+ </div>
+ <div class="side">
+  <div class="patch"><div class="photo">Portret van Luca (luca.jpg)</div></div>
+  <div class="lap">
+   <div class="route"><i></i>Bel 06 11 22 39 04<b>→</b></div>
+   <div class="route"><i></i>Mail contact@studioln.nl<b>→</b></div>
+  </div>
+ </div>
+</div>
+</div>
+</body></html>

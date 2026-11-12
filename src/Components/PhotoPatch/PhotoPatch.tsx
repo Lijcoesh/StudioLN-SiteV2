@@ -8,6 +8,8 @@ import NameTape from './NameTape';
 
 interface IProps {
     className?: string;
+    /** Zonder naambandje, voor een pagina waar de naam al groot in beeld staat (Over mij). */
+    withNameTape?: boolean;
 }
 
 // Luca's foto op een opgestikt stuk lichte zakstof, licht scheef aangezet, met over de onderhoek
@@ -50,7 +52,7 @@ const useStyles = makeStyles()(theme => ({
 }));
 
 export default function PhotoPatch(props: IProps) {
-    const { className } = props;
+    const { className, withNameTape = true } = props;
 
     const { classes, cx } = useStyles();
 
@@ -62,7 +64,7 @@ export default function PhotoPatch(props: IProps) {
                 alt="Luca, staand in een tuin met lichtjes en een zonnescherm"
                 className={classes.photo}
             />
-            <NameTape name="Luca" className={classes.nameTape} />
+            {withNameTape && <NameTape name="Luca" className={classes.nameTape} />}
         </Box>
     );
 }

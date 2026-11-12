@@ -93,7 +93,7 @@ Herkenbare AI-designpatronen zijn het allerlaatste wat Luca wil. Naast wat zijn 
 - **Projecten** (vrijgegeven in V1): Kamerbreed Interieur (`kamerbreedinterieur.nl`; vloeren en raambekleding in het Westland) en Stef van Zanten (`stefvanzanten.nl`; portfolio van een maker van video, muziek, audio en graphics). Projectteksten komen uit V1; de screenshots zijn op 11-11-2026 vers gemaakt van de live sites (`src/Resources/Projects/`, data in `src/Config/projects.ts`). WaterZacht, LMVW en andere projecten niet tonen tot Luca ze vrijgeeft.
 - **Bedrijfsgegevens**: e-mail `contact@studioln.nl`, telefoon 06 11 22 39 04, KvK 42211223. Btw-id volgt nog; niet verzinnen.
 - **Juridisch**: privacyverklaring en algemene voorwaarden bestaan als concept in `StudioLN-Dashboard/StudioLN.API/Resources/Terms/`.
-- **Over mij**: foto en eigen tekst volgen van Luca. Tot dan een placeholderfoto en lorem ipsum (besloten 10-11-2026); geen persoonlijke feiten verzinnen. Beide moeten vóór livegang vervangen zijn.
+- **Over mij**: de foto is van Luca (`src/Resources/Images/luca.jpg`, de enige foto voor deze pagina). Eigen tekst volgt: een verhaal plus een paar losse feitjes (besloten 12-11-2026); tot dan lorem ipsum, geen persoonlijke feiten verzinnen, vóór livegang vervangen. De pagina moet laten zien: een echt persoon, die alles zelf regelt, kleine bedrijven snapt en die je gewoon kunt bellen. Opbouw "De naamband" gekozen (12-11-2026), met de drie contactroutes in de lap bovenaan en zonder afsluiting onderaan.
 - Er zijn **geen** testimonials, reviews, klantaantallen of andere cijfers. Niet verzinnen.
 
 ## Product Principles

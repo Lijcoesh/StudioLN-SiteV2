@@ -1,0 +1,40 @@
+{
+  "title": "Over mij",
+  "question": "De werkkleding-wereld en de fotolap met naamband liggen vast. Welke opbouw krijgt Over mij: één portretfoto, een verhaal plus een paar losse feitjes, en de bezoeker moet denken: een echt persoon, die alles zelf regelt, mijn soort bedrijf snapt en die ik gewoon kan bellen?",
+  "options": [
+    {
+      "id": "naamband",
+      "label": "De naamband",
+      "kicker": "THE ROLL",
+      "thesis": "De naamband van de fotolap wordt de paginakop: een strook marineblauw keper-canvas loopt scheef van rand tot rand over het perzik vlak, met 'Luca' groot in oranje draad geborduurd. Het is een persoon, geen bedrijf, en dat zie je voordat je iets leest.",
+      "palette": ["#F8DCC8", "#132B4F", "#C4531A", "#FCEEE3", "#FFFFFF"],
+      "materials": ["naamband van keper-canvas over de volle schermbreedte, -2°, met naden boven en onder", "de bestaande fotolap groot rechts, half over de band gestikt", "oranje contactlap met bellen en mailen naast elkaar"],
+      "viewport": "Header; daaronder over de hele breedte de naamband met 'Luca' op ~210px in oranje. Rechts de fotolap (+2°) die over de band valt. Links onder de band de h1 'Ik maak je website, en ik blijf je aanspreekpunt.', één lead-zin en de contactlap met Bel en Mail. Onderin begint het verhaal op wit; de losse feitjes komen daar als korte regels naast de tekst.",
+      "risk": "Het grootste gebaar van de drie; 'Luca' op die maat moet als naam lezen, niet als logo. Op de telefoon wordt de band smaller en staat de foto onder de kop.",
+      "html": ".impeccable/mocks/decision/overmij-naamband.html"
+    },
+    {
+      "id": "waslabel",
+      "label": "Het waslabel",
+      "thesis": "Op het canvas hangt rechts een lang crème waslabel, ingestikt in de pasnaad van de header, met de losse feitjes als regels: wie het maakt, wat erin zit, waar het draait. Links de fotolap, in het midden de tweekleurige kop; de contactbaan sluit het eerste scherm af.",
+      "palette": ["#132B4F", "#FAF4EE", "#F8DCC8", "#C4531A", "#FCEEE3"],
+      "materials": ["keper-canvas als grond van het eerste scherm", "lang geweven waslabel met omgeslagen bovenkant en naden tussen de regels, zware stof-op-stof-schaduw", "de contactbaan van Home over de volle breedte"],
+      "viewport": "Drie kolommen op canvas: fotolap links (-1,5°), in het midden h1 'Ik ben Luca.' met in perzik 'Ik doe het hele traject zelf.' en een lead-zin, rechts het waslabel dat uit de pasnaad hangt ('Wat erin zit': gemaakt door Luca, ontwerp tot onderhoud, eigen server in Amsterdam, twee feitjes van jou). Daaronder de oranje baan met Bel, Mail en Stuur een bericht. Het verhaal volgt op wit.",
+      "risk": "De contactbaan stond tot nu toe alleen op Home; hier keert hij terug, dus Over mij lijkt in het eerste scherm iets op Home. Het waslabel moet echte feitjes krijgen, anders blijft het een lijst met plaatshouders.",
+      "html": ".impeccable/mocks/decision/overmij-waslabel.html"
+    },
+    {
+      "id": "wiedoetwat",
+      "label": "Wie doet wat",
+      "thesis": "Het bewijs dat je alles bij één persoon hebt: een ingenaaid label 'Wie doet wat bij StudioLN' waarop elke regel (ontwerp, bouwen, hosting, domein en e-mail, aanpassingen en vragen) eindigt op dezelfde in oranje geborduurde naam: Luca.",
+      "palette": ["#132B4F", "#F8DCC8", "#FAF4EE", "#C4531A", "#FCEEE3"],
+      "materials": ["korte canvasopening die overgaat in perzik", "binnenlabel van geribde crème stof met omgeslagen korte kanten en naden tussen de regels", "fotolap rechts met de oranje contactlap eronder"],
+      "viewport": "Op canvas links h1 'Ik ben Luca.' met in perzik 'Je hebt alleen met mij te maken.' en een lead-zin; daaronder loopt het label over de grens van canvas naar perzik, vijf regels die elk op 'Luca' eindigen. Rechts de fotolap (-1,5°) en daaronder de contactlap met Bel en Mail. Verhaal en feitjes volgen eronder.",
+      "risk": "Het label herhaalt deels wat Home en Prijzen al zeggen over wat erin zit; het verschil moet uit de herhaalde naam komen. De grap werkt één keer, dus geen tweede label op de pagina.",
+      "html": ".impeccable/mocks/decision/overmij-wiedoetwat.html"
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "buildPath": { "value": "code" }
+}

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { FormEvent } from 'react';
 
 import { contactEndpoint, contactFormText, contactLimits } from 'src/Config/contactForm';
@@ -77,6 +77,7 @@ export function useContactForm() {
     const fieldRefs = useRef<
         Partial<Record<ContactField, HTMLInputElement | HTMLTextAreaElement | null>>
     >({});
+    const focusMessage = useRef(false);
 
     const change = (field: ContactField, value: string) => {
         setValues(current => ({ ...current, [field]: value }));
@@ -110,7 +111,34 @@ export function useContactForm() {
         }
     };
 
-    const firstName = values.name.trim().split(/\s+/)[0] ?? '';
+    // Nog een bericht: naam, e-mail en telefoon blijven staan, het bericht is leeg en krijgt de focus
+    const again = () => {
+        setValues(current => ({ ...current, message: '' }));
+        setStatus('idle');
+        focusMessage.current = true;
+    };
 
-    return { values, errors, status, honeypot, setHoneypot, change, register, submit, firstName };
+    useEffect(() => {
+        if (status === 'idle' && focusMessage.current) {
+            focusMessage.current = false;
+            fieldRefs.current.message?.focus();
+        }
+    }, [status]);
+
+    // Met hoofdletter, ook als de bezoeker zijn naam klein typte
+    const first = values.name.trim().split(/\s+/)[0] ?? '';
+    const firstName = first.charAt(0).toLocaleUpperCase('nl') + first.slice(1);
+
+    return {
+        values,
+        errors,
+        status,
+        honeypot,
+        setHoneypot,
+        change,
+        register,
+        submit,
+        again,
+        firstName,
+    };
 }

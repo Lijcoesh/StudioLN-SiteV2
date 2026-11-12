@@ -9,7 +9,6 @@ import {
     OutlinedInput,
     Typography,
 } from '@mui/material';
-import { useEffect, useRef } from 'react';
 import { Link as RouterLink } from 'react-router';
 import { makeStyles } from 'tss-react/mui';
 
@@ -32,6 +31,8 @@ import labelRib from 'src/Resources/Textures/label-rib-soft.svg';
 import { useContactForm } from 'src/Modules/Contact/Scenes/Contact/Hooks/useContactForm';
 import type { ContactField } from 'src/Modules/Contact/Scenes/Contact/Hooks/useContactForm';
 import { tapTarget } from 'src/Theme/sizes';
+
+import ContactSent from './ContactSent';
 
 const seam = `2px dashed ${stitchOnLight}`;
 const inset = 8;
@@ -91,9 +92,6 @@ const useStyles = makeStyles()(theme => ({
     title: {
         color: navy,
         marginBottom: theme.spacing(3),
-        '&:focus': {
-            outline: 'none',
-        },
     },
     form: {
         display: 'grid',
@@ -196,22 +194,23 @@ const useStyles = makeStyles()(theme => ({
         color: text,
         fontWeight: 400,
     },
-    note: {
-        maxWidth: '40ch',
-    },
 }));
 
 export default function ContactForm() {
     const { classes, cx } = useStyles();
 
-    const { values, errors, status, honeypot, setHoneypot, change, register, submit, firstName } =
-        useContactForm();
-    const titleRef = useRef<HTMLHeadingElement>(null);
-
-    // Na versturen gaat de focus naar de bevestiging, zodat ook een schermlezer hoort dat het lukte.
-    useEffect(() => {
-        if (status === 'sent') titleRef.current?.focus();
-    }, [status]);
+    const {
+        values,
+        errors,
+        status,
+        honeypot,
+        setHoneypot,
+        change,
+        register,
+        submit,
+        again,
+        firstName,
+    } = useContactForm();
 
     const t = contactFormText;
 
@@ -289,19 +288,7 @@ export default function ContactForm() {
             ))}
 
             {status === 'sent' ? (
-                <>
-                    <Typography
-                        variant="h3"
-                        component="h2"
-                        id="contact-form-title"
-                        tabIndex={-1}
-                        ref={titleRef}
-                        className={classes.title}
-                    >
-                        {t.sentTitle(firstName)}
-                    </Typography>
-                    <Typography className={classes.note}>{t.sentText}</Typography>
-                </>
+                <ContactSent firstName={firstName} values={values} onAgain={again} />
             ) : (
                 <>
                     <Typography

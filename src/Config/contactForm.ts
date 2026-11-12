@@ -40,5 +40,12 @@ export const contactFormText = {
     },
     sentTitle: (firstName: string) => (firstName ? `Bedankt, ${firstName}.` : 'Bedankt.'),
     sentText: `Je bericht is binnen. ${responsePromise}`,
+    // Na versturen: een doorslag van wat de bezoeker stuurde, en wat hij daarna kan doen (concept, 12-11-2026)
+    copyTitle: 'Wat je me stuurde',
+    copyFrom: 'Van',
+    again: 'Iets vergeten?',
+    againLink: 'Stuur nog een bericht',
+    browse: 'Of kijk intussen rond bij',
+    browseLink: 'mijn projecten',
     failed: 'Het versturen lukte niet. Bel of mail me gerust, dan kom je er net zo snel:',
 };

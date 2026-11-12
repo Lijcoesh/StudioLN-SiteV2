@@ -7,7 +7,7 @@ import PageWidth from 'src/Components/PageWidth/PageWidth';
 import PhotoPatch from 'src/Components/PhotoPatch/PhotoPatch';
 import { paths } from 'src/Config/navigation';
 
-// De tekst is nog lorem ipsum tot Luca die aanlevert. Staat als openstaand punt in de launch-checklist.
+// De tekst is concept (12-11-2026) tot Luca akkoord geeft. Staat als openstaand punt in de launch-checklist.
 const useStyles = makeStyles()(theme => ({
     root: {
         backgroundColor: peach,
@@ -55,14 +55,10 @@ export default function HomeAbout() {
                         </Typography>
                         <Box className={classes.body}>
                             <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                ad minim veniam, quis nostrud exercitation ullamco laboris.
-                            </Typography>
-                            <Typography>
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident.
+                                Ik maak websites voor kleine ondernemers en doe het hele traject
+                                zelf: ontwerp, bouw, hosting, domein en e-mail.
+                                Je hebt één aanspreekpunt, en je kunt me gewoon bellen.
+                                Ik bouw websites voor ondernemers die zich liever met hun eigen vak bezighouden. Alles wat daarbij komt kijken, regel ik.
                             </Typography>
                             <Link component={RouterLink} to={paths.about} className={classes.link}>
                                 Meer over mij

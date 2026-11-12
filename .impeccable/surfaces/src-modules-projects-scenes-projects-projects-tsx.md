@@ -25,7 +25,7 @@ OWN-WORLD: Perzik vlak onder het canvas (op verzoek van Luca, 11-11-2026, gelijk
 
 STORY: Hij ziet direct echte sites van echte vakmensen, leest per project in twee zinnen wat het bedrijf doet en wat er gemaakt is, klikt door naar de site, en belt of mailt onderaan.
 
-FIRST VIEWPORT: Canvas met h1 "Wat ik gemaakt heb" en één lead-zin. Daaronder de eerste strook (Kamerbreed): lap 7fr met screenshot groot, labelstof 5fr met naam, twee zinnen en "Bekijk kamerbreedinterieur.nl". De hele strook is klikbaar; bij hover schuift het screenshot 6px omhoog. Onder md: screenshot boven, tekst eronder.
+FIRST VIEWPORT: Canvas met h1 "Projecten" (was "Wat ik gemaakt heb", gewijzigd 12-11-2026), rechts één lead-zin over echte ondernemers en de live adressen van de projecten (uit `src/Config/projects.ts`, geen verzonnen aantallen). Daaronder de eerste strook (Kamerbreed): lap 7fr met screenshot groot, labelstof 5fr met naam, twee zinnen en "Bekijk kamerbreedinterieur.nl". De hele strook is klikbaar; bij hover schuift het screenshot 6px omhoog. Onder md: screenshot boven, tekst eronder.
 
 FORM: Door Luca vastgezet (eigen voorbeeld, overruled de worp), niet uit de eigen lijst van zeven; seed key 3c3d2b23 (surface-roll, afgewezen hand).
 

@@ -56,9 +56,10 @@ export default function HomeAbout() {
                         <Box className={classes.body}>
                             <Typography>
                                 Ik maak websites voor kleine ondernemers en doe het hele traject
-                                zelf: ontwerp, bouw, hosting, domein en e-mail.
-                                Je hebt één aanspreekpunt, en je kunt me gewoon bellen.
-                                Ik bouw websites voor ondernemers die zich liever met hun eigen vak bezighouden. Alles wat daarbij komt kijken, regel ik.
+                                zelf: ontwerp, bouw, hosting, domein en e-mail. Je hebt één
+                                aanspreekpunt, en je kunt me gewoon bellen. Ik bouw websites voor
+                                ondernemers die zich liever met hun eigen vak bezighouden. Alles wat
+                                daarbij komt kijken, regel ik.
                             </Typography>
                             <Link component={RouterLink} to={paths.about} className={classes.link}>
                                 Meer over mij

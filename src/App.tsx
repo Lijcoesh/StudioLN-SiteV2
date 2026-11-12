@@ -8,6 +8,7 @@ import Contact from 'src/Modules/Contact/Scenes/Contact/Contact';
 import Home from 'src/Modules/Home/Scenes/Home/Home';
 import ComingSoon from 'src/Modules/Pages/Scenes/ComingSoon/ComingSoon';
 import Pricing from 'src/Modules/Pricing/Scenes/Pricing/Pricing';
+import Privacy from 'src/Modules/Privacy/Scenes/Privacy/Privacy';
 import Projects from 'src/Modules/Projects/Scenes/Projects/Projects';
 
 export default function App() {
@@ -20,7 +21,7 @@ export default function App() {
                 <Route path={paths.projects} element={<Projects />} />
                 <Route path={paths.about} element={<About />} />
                 <Route path={paths.contact} element={<Contact />} />
-                <Route path={paths.privacy} element={<ComingSoon title="Privacyverklaring" />} />
+                <Route path={paths.privacy} element={<Privacy />} />
                 <Route
                     path="*"
                     element={

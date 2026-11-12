@@ -13,4 +13,4 @@ Herkomst en licentie van elke font, foto, illustratie en icoon. Werk dit bij zod
 | `src/Resources/Projects/kamerbreed-home.jpg` | screenshot van de homepagina van kamerbreedinterieur.nl (11-11-2026), gemaakt door StudioLN; site ontworpen en gebouwd door StudioLN | project vrijgegeven door Luca (PRODUCT.md); inhoud van de site, waaronder de woonkamerfoto, van de klant | nee |
 | `src/Resources/Projects/stefvanzanten-home.jpg` | screenshot van de homepagina van stefvanzanten.nl (11-11-2026), gemaakt door StudioLN; site ontworpen en gebouwd door StudioLN | project vrijgegeven door Luca (PRODUCT.md); inhoud van de site, waaronder het portret, van de klant | nee |
 | `src/Resources/Textures/label-rib.svg` | zelf gemaakt (labelrib van het geweven label en de projectstrook) | eigendom StudioLN | nee |
-| `src/Resources/Images/portrait-placeholder.svg` | zelf gemaakt, **plaatshouder**: vervangen door Luca's foto vóór livegang | eigendom StudioLN | nee |
+| `src/Resources/Images/luca.jpg` | foto van Luca, aangeleverd door Luca (12-11-2026) | eigendom Luca / StudioLN | nee |

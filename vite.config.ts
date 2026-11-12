@@ -39,7 +39,8 @@ function seoPlugin(): Plugin {
             meta({ property: 'og:title', content: homeTitle }),
             meta({ property: 'og:description', content: pageMeta.home.description }),
             meta({ property: 'og:url', content: `${siteUrl}/` }),
-            // public/og-image.png: uitsnede van de hero, 1200x630 (zie LICENSES.md)
+            // public/og-image.png, 1200x630 (zie LICENSES.md). Alles wat telt staat in het middelste
+            // vierkant: WhatsApp snijdt de kleine preview bij tot 630x630 uit het midden.
             meta({ property: 'og:image', content: `${siteUrl}/og-image.png` }),
             meta({ property: 'og:image:width', content: '1200' }),
             meta({ property: 'og:image:height', content: '630' }),

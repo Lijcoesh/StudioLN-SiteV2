@@ -51,7 +51,7 @@ export const privacySections: PrivacySection[] = [
     {
         title: 'Hoe lang ik je gegevens bewaar',
         paragraphs: [
-            'Een bericht bewaar ik zolang het nodig is om je vraag af te handelen, en daarna nog hooguit een jaar na ons laatste contact. Daarna verwijder ik het.',
+            'Een bericht bewaar ik zolang het nodig is om het af te handelen, en daarna nog hooguit een jaar na ons laatste contact. Daarna verwijder ik het.',
             'Word je klant, dan gelden de gegevens en bewaartermijnen uit de privacyverklaring die bij mijn offerte hoort.',
         ],
     },

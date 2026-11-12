@@ -25,3 +25,6 @@ dist-ssr
 
 # Impeccable: persoonlijke keuzes (o.a. toestemming voor de hook), niet delen
 .impeccable/config.local.json
+# Impeccable live-modus: sessiestatus, alleen config.json hoort in git
+.impeccable/live/*
+!.impeccable/live/config.json

@@ -225,7 +225,8 @@ Huisstijlkleuren van StudioLN (marineblauw, oranje, perzik, wit), gedragen als w
 - **Title small** (400, 1,375rem, 1,2): kolomkoppen in de footer.
 - **Lead** (400, clamp 1,25-1,5rem, 1,5): één ondertitel onder een display- of afsluitkop, max 38-40ch. Op Werkwijze staan drie lead-alinea's als één kolom onder de kop (max 44ch).
 - **Body** (400, 1,1875rem, 1,65): lopende tekst, max 58ch; intro's 44ch. Namen van regels in zakken en maattabel staan in body op 700.
-- **Label** (700, 1,0625rem): knoppen en navigatielinks, geen hoofdletters, geen letterspatiëring.
+- **Label** (700, 1,0625rem): knoppen, geen hoofdletters, geen letterspatiëring.
+- **Nav** (Bree Serif 400, 1,1875rem, 1): de links in de header; het woord, niet een knop.
 
 ### Named Rules
 **The Kop-staat-alleen Rule.** Een kop staat op zichzelf. Geen labeltje erboven; hoort er context bij, dan gaat die in de kop of in de tekst eronder. In de contactbaan staat het werkwoord op dezelfde regel als de waarde ("Bel 06 …").
@@ -325,7 +326,7 @@ Een met de hand gelegde lus van oranje draad (werkjas-oranje, 3px, ronde uiteind
 Tekstlinks zijn altijd onderstreept (2px, offset 0,22em) in werkjas-oranje en vet; bij hover zakt de streep naar 0,32em. Ze verwijzen door naar pagina's en dragen geen knopvorm.
 
 ### Navigation
-Header op canvas, vast bovenaan tijdens het scrollen (boven de inhoud, met de lichte stof-op-stof-schaduw), 96px hoog (80px onder md). De onderrand is de pasnaad: twee naden in stitch-on-navy over de volle schermbreedte, 6px uit elkaar en 6px boven de onderkant, op elke pagina. Woordmerk links, links rechts in 700 op 1,0625rem, minimaal 48px hoog. De eerste link is Home, ook al linkt het woordmerk al naar de homepage: de doelgroep herkent een woordmerk niet als knop. Home is alleen actief op de homepage zelf. Hover: streep van 3px in draadkleur op marineblauw; actieve pagina: oranje streep. Onder md een omlijnde Menu-knop (2px rand in draadkleur, 2px hoeken) die een canvaslade van rechts opent met Bree Serif-links op 2rem, gescheiden door naden, en onderaan bellen en mailen.
+Header op canvas, vast bovenaan tijdens het scrollen (boven de inhoud, met de lichte stof-op-stof-schaduw), 96px hoog (80px onder md). De onderrand is de pasnaad: twee naden in stitch-on-navy over de volle schermbreedte, 6px uit elkaar en 6px boven de onderkant, op elke pagina. Woordmerk links, links rechts in Bree Serif 400 op 1,1875rem, minimaal 48px hoog, in mistblauw (on-navy-muted) zodat ze als één rustige rij lezen; bij hover en op de actieve pagina worden ze on-navy. Contact staat los achteraan, na een korte verticale naad (24px, stitch-on-navy), in dezelfde stijl: geen knop, geen oranje vlak. De eerste link is Home, ook al linkt het woordmerk al naar de homepage: de doelgroep herkent een woordmerk niet als knop. Home is alleen actief op de homepage zelf. Hover: streep van 3px in draadkleur op marineblauw; actieve pagina: oranje streep. Onder md een omlijnde Menu-knop (2px rand in draadkleur, 2px hoeken) die een canvaslade van rechts opent met Bree Serif-links op 2rem, gescheiden door naden, en onderaan bellen en mailen.
 
 ### Buttons
 Alleen de omlijnde knop op canvas (menu openen/sluiten): geen elevatie, 2px hoeken, minimaal 48px hoog. Er bestaat geen gevulde knop; acties lopen via de contactbaan en de contactlap.

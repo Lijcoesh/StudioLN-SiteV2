@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router';
 import { makeStyles } from 'tss-react/mui';
 
-import { accent, label, navy, onNavy, stitchOnNavy } from 'src/colors';
+import { accent, label, navy, onNavy, onNavyMuted, stitchOnNavy } from 'src/colors';
 import CanvasField from 'src/Components/CanvasField/CanvasField';
 import PageWidth from 'src/Components/PageWidth/PageWidth';
 import Seam from 'src/Components/Seam/Seam';
@@ -13,6 +13,9 @@ import Wordmark from 'src/Components/Wordmark/Wordmark';
 import { email, emailHref, phoneDisplay, phoneHref } from 'src/Config/contact';
 import { mainNavigation, paths } from 'src/Config/navigation';
 import { headerHeight, headerHeightCompact } from 'src/Theme/sizes';
+
+// Contact staat in de balk los achter een naad; in de lade gewoon in de rij.
+const pageLinks = mainNavigation.filter(item => item.to !== paths.contact);
 
 // Hoogtes op een veelvoud van 8, zodat het canvas naadloos doorloopt in het veld eronder.
 // Onderaan de pas van de jas: een dubbele stiknaad over de volle breedte, zodat de vaste header
@@ -37,9 +40,11 @@ const useStyles = makeStyles()(theme => ({
         rowGap: '6px',
         pointerEvents: 'none',
     },
+    // Rustige links in Bree Serif, gedempt tot je ze aanraakt of erop staat; Contact staat
+    // los achter een korte naad.
     nav: {
         display: 'flex',
-        gap: theme.spacing(1),
+        alignItems: 'center',
         padding: 0,
         [theme.breakpoints.down('md')]: {
             display: 'none',
@@ -53,21 +58,30 @@ const useStyles = makeStyles()(theme => ({
         display: 'inline-flex',
         alignItems: 'center',
         minHeight: 48,
-        paddingInline: theme.spacing(1.5),
-        fontSize: '1.0625rem',
-        fontWeight: 700,
-        color: onNavy,
+        paddingInline: theme.spacing(1.25),
+        fontFamily: theme.typography.h1.fontFamily,
+        fontSize: '1.1875rem',
+        fontWeight: 400,
+        lineHeight: 1,
+        color: onNavyMuted,
         textDecorationLine: 'underline',
         textDecorationColor: 'transparent',
         textDecorationThickness: 3,
-        textUnderlineOffset: '0.45em',
-        transition: 'text-decoration-color 160ms ease-out',
+        textUnderlineOffset: '0.42em',
+        transition: 'text-decoration-color 160ms ease-out, color 160ms ease-out',
         '&:hover': {
+            color: onNavy,
             textDecorationColor: stitchOnNavy,
         },
         '&[aria-current="page"]': {
+            color: onNavy,
             textDecorationColor: accent,
         },
+    },
+    navSeam: {
+        display: 'flex',
+        height: 24,
+        marginInline: theme.spacing(1.5),
     },
     menuButton: {
         display: 'none',
@@ -152,7 +166,7 @@ export default function SiteHeader() {
                     <Wordmark variant="onDark" />
                     <Box component="nav" aria-label="Hoofdmenu">
                         <List className={classes.nav}>
-                            {mainNavigation.map(item => (
+                            {pageLinks.map(item => (
                                 <ListItem key={item.to} className={classes.navItem}>
                                     <Link
                                         component={NavLink}
@@ -165,6 +179,19 @@ export default function SiteHeader() {
                                     </Link>
                                 </ListItem>
                             ))}
+                            <ListItem className={classes.navItem}>
+                                <Box className={classes.navSeam} aria-hidden>
+                                    <Seam tone="navy" orientation="vertical" />
+                                </Box>
+                                <Link
+                                    component={NavLink}
+                                    to={paths.contact}
+                                    underline="none"
+                                    className={classes.navLink}
+                                >
+                                    Contact
+                                </Link>
+                            </ListItem>
                         </List>
                     </Box>
                     <Button

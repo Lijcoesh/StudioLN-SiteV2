@@ -14,6 +14,7 @@ export const paths = {
 };
 
 export const mainNavigation: NavItem[] = [
+    { label: 'Home', to: paths.home },
     { label: 'Werkwijze', to: paths.approach },
     { label: 'Prijzen', to: paths.pricing },
     { label: 'Projecten', to: paths.projects },

@@ -11,7 +11,7 @@ import PageWidth from 'src/Components/PageWidth/PageWidth';
 import Seam from 'src/Components/Seam/Seam';
 import Wordmark from 'src/Components/Wordmark/Wordmark';
 import { email, emailHref, phoneDisplay, phoneHref } from 'src/Config/contact';
-import { mainNavigation } from 'src/Config/navigation';
+import { mainNavigation, paths } from 'src/Config/navigation';
 import { headerHeight, headerHeightCompact } from 'src/Theme/sizes';
 
 // Hoogtes op een veelvoud van 8, zodat het canvas naadloos doorloopt in het veld eronder.
@@ -157,6 +157,7 @@ export default function SiteHeader() {
                                     <Link
                                         component={NavLink}
                                         to={item.to}
+                                        end={item.to === paths.home}
                                         underline="none"
                                         className={classes.navLink}
                                     >
@@ -203,6 +204,7 @@ export default function SiteHeader() {
                                         <Link
                                             component={NavLink}
                                             to={item.to}
+                                            end={item.to === paths.home}
                                             className={classes.drawerLink}
                                             onClick={closeMenu}
                                         >

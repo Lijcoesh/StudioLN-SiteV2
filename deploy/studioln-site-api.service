@@ -1,0 +1,26 @@
+# /etc/systemd/system/studioln-site-api.service
+# Niet studioln-api.service: die naam is van het dashboard.
+[Unit]
+Description=StudioLN website API
+After=network.target
+
+[Service]
+User=studioln-site
+WorkingDirectory=/var/www/studioln-site/api
+ExecStart=/usr/bin/dotnet /var/www/studioln-site/api/StudioLN.Site.API.dll
+Restart=always
+RestartSec=5
+
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=ASPNETCORE_URLS=http://127.0.0.1:5083
+Environment=Api__TrustedProxyNetworks__0=127.0.0.1/32
+# Brevo__ApiKey en Brevo__SenderEmail (alleen leesbaar voor root)
+EnvironmentFile=/etc/studioln-site/api.env
+
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

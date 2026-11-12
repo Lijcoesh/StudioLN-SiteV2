@@ -1,0 +1,40 @@
+# /etc/caddy/sites/studioln-site.caddy
+# Niet studioln.caddy: die naam is van het dashboard (dashboard.studioln.nl).
+# Caddy regelt zelf HTTPS (poort 80 en 443); daarvoor moeten de A-records van @ en www naar de VPS wijzen.
+# Geen `log`-regel: zonder schrijft Caddy geen toegangslog, dus geen IP-adressen van bezoekers.
+www.studioln.nl {
+	redir https://studioln.nl{uri} permanent
+}
+
+studioln.nl {
+	encode zstd gzip
+
+	handle /api/* {
+		reverse_proxy 127.0.0.1:5083
+	}
+
+	handle {
+		root * /var/www/studioln-site/site
+		# Vite zet een hash in de bestandsnamen, dus die mogen een jaar in de cache
+		header /assets/* Cache-Control "public, max-age=31536000, immutable"
+		# Alleen de routes van de app (src/Config/navigation.ts) krijgen index.html.
+		# De rest is een bestand of een echte 404, geen "soft 404" met status 200.
+		@route path / /werkwijze /prijzen /projecten /over-mij /contact /privacy
+		# index.html steeds opnieuw ophalen, zodat een nieuwe versie direct te zien is
+		header @route Cache-Control "no-cache"
+		rewrite @route /index.html
+		file_server
+	}
+
+	# Onbekende pagina: de app (die zijn eigen "bestaat niet"-pagina toont), maar met status 404.
+	# Met een matcher, niet `handle_errors 404`: dat kent de Caddy op de VPS nog niet.
+	handle_errors {
+		@notFound expression {err.status_code} == 404
+		handle @notFound {
+			root * /var/www/studioln-site/site
+			header Cache-Control "no-cache"
+			rewrite * /index.html
+			file_server
+		}
+	}
+}

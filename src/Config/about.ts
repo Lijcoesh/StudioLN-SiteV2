@@ -26,5 +26,5 @@ export const aboutFacts: AboutFact[] = [
     { term: 'Wie je spreekt', value: 'Ik, van het eerste gesprek tot het onderhoud' },
     { term: 'Waar je website draait', value: 'Op mijn eigen server in Amsterdam' },
     { term: 'Reactietijd', value: 'Je hoort binnen één werkdag van me' },
-    { term: 'Contact', value: 'Bellen of mailen: wat jou het fijnst is' },
+    { term: 'Contact', value: 'Bellen, mailen of het formulier: wat jou het fijnst is' },
 ];

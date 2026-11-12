@@ -32,7 +32,7 @@ De site zelf is het bewijs: hij moet eruitzien als bewuste keuzes, niet als de A
 
 - Bezoekers komen via via, via een link uit een gesprek of offerte, of zoeken StudioLN op. Waarschijnlijk veel op de telefoon.
 - De site draait op Luca's eigen TransIP-VPS (Caddy), naast de klantsites, op `studioln.nl`. Het dashboard staat op `dashboard.studioln.nl`.
-- Het contactformulier verstuurt via een endpoint in de dashboard-API (`StudioLN.API` in `F:\Development\StudioLN-Dashboard`), die al Brevo gebruikt met `noreply@studioln.nl` als afzender. Dat endpoint bestaat nog niet (stand 10-11-2026) en wordt in een aparte stap gebouwd.
+- Het contactformulier verstuurt via een eigen API in `server/` van deze repo, net als bij WaterZacht en Kamerbreed, en niet via de dashboard-API (besloten 12-11-2026). De API mailt het bericht via Brevo (afzender `noreply@studioln.nl`) naar `contact@studioln.nl` en slaat niets op.
 - Na een eerste contact volgt een offerte vanuit het dashboard (met algemene voorwaarden, verwerkersovereenkomst en privacyverklaring als PDF). Klanten kunnen zakelijk of particulier zijn.
 
 ## Capabilities and Constraints
@@ -46,7 +46,7 @@ De site zelf is het bewijs: hij moet eruitzien als bewuste keuzes, niet als de A
   - Uurtarief voor aanpassingen en extra werk: € 35
   - Prijzen veranderen in het dashboard; de site volgt die, niet andersom.
 - **Projecten**: eerst een overzicht; de bezoeker klikt een project aan en krijgt dan een eigen pagina met wat er over dat project te vertellen is. Het overzicht staat (11-11-2026); tot de projectpagina's er zijn linkt elk project naar de live site (nieuw tabblad).
-- **Contact**: formulier plus e-mail en telefoon, alle drie gelijkwaardig (geen ervan nadrukkelijker dan de andere; besloten 10-11-2026). Geen straatadres en geen plaats op de site. Formuliervelden: naam, e-mailadres, telefoonnummer (niet verplicht) en bericht; niets meer. Belofte: "Je hoort binnen één werkdag van me" (besloten 11-11-2026). Het formulier wordt volledig gebouwd maar staat uit tot het endpoint werkt; tot dan alleen bellen en mailen. Opbouw "Het visitekaartje" op het perzik vlak, met het kaartje hangend aan een draad zoals bij de hangkaartje-optie (gekozen 11-11-2026).
+- **Contact**: formulier plus e-mail en telefoon, alle drie gelijkwaardig (geen ervan nadrukkelijker dan de andere; besloten 10-11-2026). Geen straatadres en geen plaats op de site. Formuliervelden: naam, e-mailadres, telefoonnummer (niet verplicht) en bericht; niets meer. Belofte: "Je hoort binnen één werkdag van me" (besloten 11-11-2026). Het formulier staat aan en post naar `/api/contact-messages` (12-11-2026). Opbouw "Het visitekaartje" op het perzik vlak, met het kaartje hangend aan een draad zoals bij de hangkaartje-optie (gekozen 11-11-2026).
 - **Taal**: Nederlands, ik-vorm.
 - **Hosting**: eigen VPS. GitHub Pages-preview pas na Luca's akkoord.
 - **Niet overgenomen uit V1**: het idee van een stijlkiezer (de site in meerdere stijlen tonen). Niet bouwen zonder nieuw akkoord.

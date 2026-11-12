@@ -1,4 +1,4 @@
-# Productie: bouwt de site en zet dist/ met rsync op de VPS (studioln.nl).
+# Productie: bouwt de site en de API en zet ze met rsync op de VPS (studioln.nl).
 # Eenmalig instellen: zie deploy/README.md. Zonder die secrets faalt de job; dat is bedoeld.
 name: Deploy to VPS
 
@@ -25,11 +25,14 @@ jobs:
                   node-version: 22
                   cache: npm
             - run: npm ci
+            - run: npm run lint
             - run: npm run build
-              env:
-                  # Repository variable (geen secret): het endpoint van het contactformulier.
-                  # Leeg of niet gezet = het formulier blijft uit.
-                  VITE_CONTACT_ENDPOINT: ${{ vars.VITE_CONTACT_ENDPOINT }}
+
+            - uses: actions/setup-dotnet@v4
+              with:
+                  dotnet-version: 10.0.x
+            - run: dotnet test server --configuration Release
+            - run: dotnet publish server/StudioLN.Site.API.csproj --configuration Release --output publish/api
 
             - name: Set up SSH
               run: |
@@ -38,5 +41,10 @@ jobs:
                   chmod 600 ~/.ssh/id_ed25519
                   echo "${{ secrets.VPS_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
 
-            - name: Upload site
-              run: rsync -az --delete dist/ deploy@${{ secrets.VPS_HOST }}:/var/www/studioln/site/
+            - name: Upload site and API
+              run: |
+                  rsync -az --delete --chmod=D755,F644 dist/ deploy@${{ secrets.VPS_HOST }}:/var/www/studioln-site/site/
+                  rsync -az --delete --chmod=D755,F644 publish/api/ deploy@${{ secrets.VPS_HOST }}:/var/www/studioln-site/api/
+
+            - name: Restart API
+              run: ssh deploy@${{ secrets.VPS_HOST }} sudo systemctl restart studioln-site-api

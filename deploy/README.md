@@ -1,36 +1,66 @@
 # Deploy naar de VPS
 
-De site (studioln.nl) is statisch: er draait geen API of service bij. Caddy serveert `dist/`. Bij elke push naar `main` bouwt GitHub Actions ([deploy-vps.yml](../.github/workflows/deploy-vps.yml)) de site en zet hem met rsync op de VPS. Het contactformulier praat met de dashboard-API (`VITE_CONTACT_ENDPOINT`), niet met deze server. Zie ook [.claude/vps.md](../.claude/vps.md).
+De site en de API draaien op de eigen VPS (TransIP, Ubuntu 26.04, `85.10.151.178`), naast WaterZacht, Kamerbreed en het dashboard. Caddy serveert de site op `studioln.nl` (HTTPS via Caddy, `www` verwijst door) en stuurt `/api` door naar de API op `127.0.0.1:5083`. De API ontvangt het contactformulier en mailt het via Brevo naar `contact@studioln.nl`; hij slaat niets op. Opgezet zoals Kamerbreed (`F:/Development/Kamerbreed-Interieur/deploy/README.md`).
+
+Bij elke push naar `main` bouwt GitHub Actions ([deploy-vps.yml](../.github/workflows/deploy-vps.yml)) de site (eerst `npm run lint`) en de API (eerst `dotnet test`), zet ze met rsync op de VPS en herstart de API. Handmatig starten kan via Actions → Deploy to VPS → Run workflow.
+
+**Namen:** alles heet `studioln-site`, niet `studioln`. `studioln.caddy`, `studioln-api`, `/var/www/studioln`, `/etc/studioln` en de gebruiker `studioln` zijn van het dashboard (`dashboard.studioln.nl`). Poorten: 5080 WaterZacht, 5081 dashboard, 5082 Kamerbreed, **5083 deze site**.
 
 | Op de VPS | Wat |
 |---|---|
-| `/var/www/studioln/site/` | gebouwde frontend (`dist/`), eigendom van `deploy` |
-| `/etc/caddy/sites/studioln.caddy` | Caddy-config ([studioln.caddy](studioln.caddy)) |
+| `/var/www/studioln-site/site/` | gebouwde frontend (`dist/`), eigenaar `deploy` |
+| `/var/www/studioln-site/api/` | `dotnet publish` van `server/`, eigenaar `deploy` |
+| `/etc/studioln-site/api.env` | secrets voor de API, alleen leesbaar voor root |
+| `/etc/caddy/sites/studioln-site.caddy` | Caddy-config ([studioln-site.caddy](studioln-site.caddy)) |
+| `/etc/systemd/system/studioln-site-api.service` | de API-service ([studioln-site-api.service](studioln-site-api.service)) |
 
-## Vóór de livegang
+Gebruikers: `deploy` (GitHub logt hiermee in, dezelfde als bij de andere sites) en `studioln-site` (draait de API, kan niet inloggen). Caddy, rsync, de .NET-runtime, de firewall, fail2ban en `deploy` zijn er al.
 
-1. Snapshot maken in het TransIP-paneel.
-2. Op de VPS (inloggen met `ssh -t lijcoesh@85.10.151.178`):
-   ```
-   sudo mkdir -p /var/www/studioln/site
-   sudo chown -R deploy:deploy /var/www/studioln
-   ```
-3. GitHub-secrets in deze repo (Settings → Secrets and variables → Actions): `VPS_HOST` (het IP), `VPS_SSH_KEY` (de privé deploy-key) en `VPS_KNOWN_HOSTS` (uitvoer van `ssh-keyscan 85.10.151.178`). Dezelfde als bij WaterZacht, maar dan voor deze repo.
-4. Eerste deploy: Actions → Deploy to VPS → Run workflow. Controleer dat `/var/www/studioln/site/index.html` er staat.
-5. DNS bij de registrar: A-record voor `studioln.nl` en `www.studioln.nl` naar `85.10.151.178`. Wacht tot dat doorgekomen is.
-6. Caddy-config zetten en laden:
-   ```
-   sudo cp studioln.caddy /etc/caddy/sites/studioln.caddy
-   caddy validate --config /etc/caddy/Caddyfile
-   sudo systemctl reload caddy
-   ```
-   Caddy haalt zelf het certificaat. Controleer `https://studioln.nl`, `https://www.studioln.nl` (moet doorsturen) en een diepe link zoals `https://studioln.nl/prijzen`.
+## Eenmalig instellen
 
-## Contactformulier later aanzetten
+Doe stap 1 tot en met 6 **voordat** je naar `main` pusht; anders faalt de workflow bij het herstarten van de API.
 
-Zodra het endpoint in de dashboard-API werkt: in GitHub onder Settings → Secrets and variables → Actions → **Variables** de variabele `VITE_CONTACT_ENDPOINT` zetten, en de workflow opnieuw draaien. Pas daarna het feitje "Contact" in `src/Config/about.ts` weer aanvullen met "het formulier", en controleer of de privacyverklaring nog klopt met wat het endpoint doet.
+0. Snapshot maken in het TransIP-paneel.
+1. Gebruiker en mappen:
+   ```
+   sudo useradd --system --no-create-home --shell /usr/sbin/nologin studioln-site
+   sudo mkdir -p /var/www/studioln-site/site /var/www/studioln-site/api /etc/studioln-site
+   sudo chown -R deploy:deploy /var/www/studioln-site
+   ```
+2. Secrets in `/etc/studioln-site/api.env` (`sudo nano`, daarna `sudo chmod 600`):
+   ```
+   Brevo__ApiKey=...
+   Brevo__SenderEmail=noreply@studioln.nl
+   ```
+   Brevo: het gedeelde account, met een eigen API-key voor deze site (`studioln-site-api`). De afzender mag een `noreply@` zijn: het formulier vraagt altijd een e-mailadres, dus de mail heeft altijd de bezoeker als reply-to. Controleer in Brevo dat `studioln.nl` als afzenderdomein geverifieerd is (het dashboard gebruikt `noreply@studioln.nl` al). Om te testen kun je de ontvanger in `api.env` overschrijven met `Mail__ContactMessageRecipient=<jouw adres>`.
+3. Config: kopieer [studioln-site.caddy](studioln-site.caddy) naar `/etc/caddy/sites/` en [studioln-site-api.service](studioln-site-api.service) naar `/etc/systemd/system/` (bv. met `scp` naar je home en dan `sudo mv`; plakken in nano vanuit Windows kan de regeleinden kapotmaken), dan:
+   ```
+   caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile
+   sudo systemctl daemon-reload
+   sudo systemctl enable studioln-site-api
+   ```
+   Nog **niet** `reload caddy`: dat pas in stap 7, als de DNS goed staat.
+4. `deploy` mag de service herstarten:
+   ```
+   echo 'deploy ALL=(root) NOPASSWD: /usr/bin/systemctl restart studioln-site-api' | sudo tee /etc/sudoers.d/deploy-studioln-site
+   sudo chmod 440 /etc/sudoers.d/deploy-studioln-site
+   ```
+5. Poort 5083 blijft dicht in de firewall: de API luistert alleen op `127.0.0.1`.
+6. GitHub-secrets in deze repo (Settings → Secrets and variables → Actions): `VPS_HOST` (het IP), `VPS_SSH_KEY` (de privé deploy-key van `deploy`, dezelfde als bij de andere sites) en `VPS_KNOWN_HOSTS` (uitvoer van `ssh-keyscan 85.10.151.178`). Daarna de workflow draaien (push of Run workflow).
+7. DNS bij de registrar: A-records van `@` en `www` (`studioln.nl`) naar `85.10.151.178`. Laat het record van `dashboard` staan. Als het doorgekomen is:
+   ```
+   caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile && sudo systemctl reload caddy
+   ```
+   Caddy haalt dan zelf het certificaat.
+
+Wijzig je later `studioln-site.caddy` of de service, kopieer hem dan opnieuw en doe `sudo systemctl reload caddy` of `sudo systemctl daemon-reload && sudo systemctl restart studioln-site-api`. De workflow kopieert alleen de site en de API.
+
+Op de VPS draait Caddy 2.6.2 (het Ubuntu-pakket). Nieuwere syntax, zoals `handle_errors 404`, kent die niet. Herlaad alleen na een geslaagde validatie: een mislukte reload laat de oude config draaien, maar het kapotte bestand blijft op schijf staan, en bij een herstart van Caddy liggen dan **alle** sites op de VPS plat.
 
 ## Controleren
 
-- Caddy: `systemctl status caddy`; config testen: `caddy validate --config /etc/caddy/Caddyfile`; na wijzigen `sudo systemctl reload caddy`.
-- Wijzig je `studioln.caddy`, kopieer hem dan opnieuw naar `/etc/caddy/sites/`; de workflow zet alleen de site neer.
+- Laatste deploy: tabblad Actions op GitHub.
+- Site: `curl -I https://studioln.nl/` geeft `200`; `https://www.studioln.nl/` geeft een `301` naar de hoofdnaam; `https://studioln.nl/bestaat-niet` geeft `404`.
+- API: `curl https://studioln.nl/api/health` geeft `Healthy`.
+- Formulier: stuur een testbericht via `/contact` en kijk of het in `contact@studioln.nl` aankomt, met de bezoeker als reply-to.
+- API-status: `systemctl status studioln-site-api`; logs: `journalctl -u studioln-site-api -n 50`. De API logt geen formulierinhoud of e-mailadressen.

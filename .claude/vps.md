@@ -44,7 +44,7 @@ Geen Node op de server: frontends worden in GitHub Actions gebouwd en alleen `di
 /var/www/<site>/                # eigendom van deploy; site/ en evt. api/
 ```
 
-Elke site met een API krijgt een eigen systeemgebruiker (zonder login) en een eigen poort op `127.0.0.1` (WaterZacht heeft 5080; de volgende krijgt een andere).
+Elke site met een API krijgt een eigen systeemgebruiker (zonder login) en een eigen poort op `127.0.0.1`: WaterZacht 5080, dashboard (`studioln`) 5081, Kamerbreed 5082, StudioLN-website (`studioln-site`) 5083. De volgende krijgt 5084. Het actuele overzicht staat in `F:/Development/StudioLN-Dashboard/.claude/vps.md`.
 
 Per `.caddy`-bestand vast: `encode zstd gzip`, `Cache-Control: immutable` op `/assets/*` (Vite hasht de bestandsnamen), `try_files {path} /index.html` voor client-side routing.
 

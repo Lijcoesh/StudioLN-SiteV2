@@ -26,7 +26,7 @@ import {
     white,
 } from 'src/colors';
 import { email, emailHref, phoneDisplay, phoneHref } from 'src/Config/contact';
-import { contactFormEnabled, contactFormText } from 'src/Config/contactForm';
+import { contactFormText } from 'src/Config/contactForm';
 import { paths } from 'src/Config/navigation';
 import labelRib from 'src/Resources/Textures/label-rib-soft.svg';
 import { useContactForm } from 'src/Modules/Contact/Scenes/Contact/Hooks/useContactForm';
@@ -312,78 +312,74 @@ export default function ContactForm() {
                     >
                         {t.title}
                     </Typography>
-                    {contactFormEnabled ? (
-                        <Box component="form" noValidate onSubmit={submit} className={classes.form}>
-                            {field('name', { label: t.name, autoComplete: 'name' })}
-                            {field('email', {
-                                label: t.email,
-                                type: 'email',
-                                autoComplete: 'email',
-                                inputMode: 'email',
-                            })}
-                            {field('phone', {
-                                label: t.phone,
-                                hint: t.phoneHint,
-                                type: 'tel',
-                                autoComplete: 'tel',
-                                inputMode: 'tel',
-                                wide: true,
-                            })}
-                            {field('message', {
-                                label: t.message,
-                                autoComplete: 'off',
-                                multiline: true,
-                                wide: true,
-                            })}
-                            {/* Valkuil voor spambots: mensen zien en vullen dit veld niet */}
-                            <Box className={classes.honeypot} aria-hidden>
-                                <Box component="label" htmlFor="contact-website">
-                                    Website
-                                </Box>
-                                <Box
-                                    component="input"
-                                    id="contact-website"
-                                    name="website"
-                                    tabIndex={-1}
-                                    autoComplete="off"
-                                    value={honeypot}
-                                    onChange={event => setHoneypot(event.target.value)}
-                                />
+                    <Box component="form" noValidate onSubmit={submit} className={classes.form}>
+                        {field('name', { label: t.name, autoComplete: 'name' })}
+                        {field('email', {
+                            label: t.email,
+                            type: 'email',
+                            autoComplete: 'email',
+                            inputMode: 'email',
+                        })}
+                        {field('phone', {
+                            label: t.phone,
+                            hint: t.phoneHint,
+                            type: 'tel',
+                            autoComplete: 'tel',
+                            inputMode: 'tel',
+                            wide: true,
+                        })}
+                        {field('message', {
+                            label: t.message,
+                            autoComplete: 'off',
+                            multiline: true,
+                            wide: true,
+                        })}
+                        {/* Valkuil voor spambots: mensen zien en vullen dit veld niet */}
+                        <Box className={classes.honeypot} aria-hidden>
+                            <Box component="label" htmlFor="contact-website">
+                                Website
                             </Box>
-                            <Typography variant="body2" className={classes.privacy}>
-                                {t.privacy}{' '}
-                                <Link component={RouterLink} to={paths.privacy}>
-                                    {t.privacyLink}
-                                </Link>
-                            </Typography>
-                            <Box className={classes.actions}>
-                                <Button
-                                    type="submit"
-                                    disabled={status === 'sending'}
-                                    className={classes.submit}
-                                >
-                                    {status === 'sending' ? t.sending : t.submit}
-                                    {status !== 'sending' && (
-                                        <ArrowForwardOutlined
-                                            aria-hidden
-                                            className={cx(classes.arrow, 'submit-arrow')}
-                                        />
-                                    )}
-                                </Button>
-                                {status === 'failed' && (
-                                    <Box role="alert" className={classes.failed}>
-                                        <ErrorOutlineOutlined aria-hidden />
-                                        <Typography component="span" className={classes.failedText}>
-                                            {t.failed} <Link href={phoneHref}>{phoneDisplay}</Link>{' '}
-                                            of <Link href={emailHref}>{email}</Link>.
-                                        </Typography>
-                                    </Box>
-                                )}
-                            </Box>
+                            <Box
+                                component="input"
+                                id="contact-website"
+                                name="website"
+                                tabIndex={-1}
+                                autoComplete="off"
+                                value={honeypot}
+                                onChange={event => setHoneypot(event.target.value)}
+                            />
                         </Box>
-                    ) : (
-                        <Typography className={classes.note}>{t.offline}</Typography>
-                    )}
+                        <Typography variant="body2" className={classes.privacy}>
+                            {t.privacy}{' '}
+                            <Link component={RouterLink} to={paths.privacy}>
+                                {t.privacyLink}
+                            </Link>
+                        </Typography>
+                        <Box className={classes.actions}>
+                            <Button
+                                type="submit"
+                                disabled={status === 'sending'}
+                                className={classes.submit}
+                            >
+                                {status === 'sending' ? t.sending : t.submit}
+                                {status !== 'sending' && (
+                                    <ArrowForwardOutlined
+                                        aria-hidden
+                                        className={cx(classes.arrow, 'submit-arrow')}
+                                    />
+                                )}
+                            </Button>
+                            {status === 'failed' && (
+                                <Box role="alert" className={classes.failed}>
+                                    <ErrorOutlineOutlined aria-hidden />
+                                    <Typography component="span" className={classes.failedText}>
+                                        {t.failed} <Link href={phoneHref}>{phoneDisplay}</Link> of{' '}
+                                        <Link href={emailHref}>{email}</Link>.
+                                    </Typography>
+                                </Box>
+                            )}
+                        </Box>
+                    </Box>
                 </>
             )}
         </Box>

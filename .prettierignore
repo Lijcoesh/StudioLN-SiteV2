@@ -4,6 +4,10 @@ node_modules
 package-lock.json
 *.md
 
+# .NET-buildoutput van de API (server/.gitignore)
+server/**/bin
+server/**/obj
+
 # Impeccable: code van de skill zelf, niet herformatteren (bijwerken gaat via de installer)
 .claude/skills
 .github/skills

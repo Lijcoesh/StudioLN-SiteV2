@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import type { FormEvent } from 'react';
 
-import { contactEndpoint, contactFormText } from 'src/Config/contactForm';
+import { contactEndpoint, contactFormText, contactLimits } from 'src/Config/contactForm';
 
 export type ContactField = 'name' | 'email' | 'phone' | 'message';
 export type ContactValues = Record<ContactField, string>;
@@ -11,33 +11,53 @@ export type ContactStatus = 'idle' | 'sending' | 'sent' | 'failed';
 const emptyValues: ContactValues = { name: '', email: '', phone: '', message: '' };
 const fieldOrder: ContactField[] = ['name', 'email', 'phone', 'message'];
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Cijfers met eventueel +, spaties, streepjes en haakjes; 10 tot 15 cijfers
+const phoneCharacters = /^\+?[\d\s\-()]+$/;
+
+function isValidPhone(phone: string) {
+    const digits = phone.replace(/\D/g, '');
+
+    return (
+        phone.length <= contactLimits.phone &&
+        phoneCharacters.test(phone) &&
+        digits.length >= 10 &&
+        digits.length <= 15
+    );
+}
 
 function validate(values: ContactValues): ContactErrors {
     const { errors } = contactFormText;
     const result: ContactErrors = {};
 
-    if (!values.name.trim()) result.name = errors.name;
-    if (!values.email.trim()) result.email = errors.email;
-    else if (!emailPattern.test(values.email.trim())) result.email = errors.emailInvalid;
-    if (!values.message.trim()) result.message = errors.message;
+    const name = values.name.trim();
+    const email = values.email.trim();
+    const phone = values.phone.trim();
+    const message = values.message.trim();
+
+    if (!name) result.name = errors.name;
+    else if (name.length > contactLimits.name) result.name = errors.nameTooLong;
+
+    if (!email) result.email = errors.email;
+    else if (email.length > contactLimits.email || !emailPattern.test(email))
+        result.email = errors.emailInvalid;
+
+    if (phone && !isValidPhone(phone)) result.phone = errors.phoneInvalid;
+
+    if (!message) result.message = errors.message;
+    else if (message.length > contactLimits.message) result.message = errors.messageTooLong;
 
     return result;
 }
 
 async function send(values: ContactValues, honeypot: string) {
-    // Zonder endpoint (alleen lokaal): doen alsof, zodat de toestanden te beoordelen zijn.
-    if (!contactEndpoint) {
-        await new Promise(resolve => setTimeout(resolve, 900));
-        return;
-    }
-
     const response = await fetch(contactEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             name: values.name.trim(),
             email: values.email.trim(),
-            phone: values.phone.trim(),
+            // De API verwacht een leeg optioneel veld als null, niet als ""
+            phone: values.phone.trim() || null,
             message: values.message.trim(),
             website: honeypot,
         }),

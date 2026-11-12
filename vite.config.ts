@@ -13,4 +13,8 @@ export default defineConfig({
             src: fileURLToPath(new URL('./src', import.meta.url)),
         },
     },
+    server: {
+        // De API (server/) draait lokaal met `dotnet run` op deze poort (launchSettings.json)
+        proxy: { '/api': 'http://localhost:5083' },
+    },
 });

@@ -7,7 +7,15 @@ import CanvasField from 'src/Components/CanvasField/CanvasField';
 import PageWidth from 'src/Components/PageWidth/PageWidth';
 import Seam from 'src/Components/Seam/Seam';
 import Wordmark from 'src/Components/Wordmark/Wordmark';
-import { businessName, email, emailHref, kvk, phoneDisplay, phoneHref } from 'src/Config/contact';
+import {
+    btwId,
+    businessName,
+    email,
+    emailHref,
+    kvk,
+    phoneDisplay,
+    phoneHref,
+} from 'src/Config/contact';
 import { mainNavigation, paths } from 'src/Config/navigation';
 
 const useStyles = makeStyles()(theme => ({
@@ -122,6 +130,11 @@ export default function SiteFooter() {
                             <ListItem className={classes.listItem}>
                                 <Typography component="span" className={classes.muted}>
                                     KvK {kvk}
+                                </Typography>
+                            </ListItem>
+                            <ListItem className={classes.listItem}>
+                                <Typography component="span" className={classes.muted}>
+                                    Btw {btwId}
                                 </Typography>
                             </ListItem>
                         </List>

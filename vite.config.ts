@@ -39,6 +39,15 @@ function seoPlugin(): Plugin {
             meta({ property: 'og:title', content: homeTitle }),
             meta({ property: 'og:description', content: pageMeta.home.description }),
             meta({ property: 'og:url', content: `${siteUrl}/` }),
+            // public/og-image.png: uitsnede van de hero, 1200x630 (zie LICENSES.md)
+            meta({ property: 'og:image', content: `${siteUrl}/og-image.png` }),
+            meta({ property: 'og:image:width', content: '1200' }),
+            meta({ property: 'og:image:height', content: '630' }),
+            meta({
+                property: 'og:image:alt',
+                content: `${businessName}: Jij doet je vak. Ik doe je website.`,
+            }),
+            meta({ name: 'twitter:card', content: 'summary_large_image' }),
             {
                 tag: 'script',
                 attrs: { type: 'application/ld+json' },

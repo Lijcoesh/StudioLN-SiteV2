@@ -14,3 +14,4 @@ Herkomst en licentie van elke font, foto, illustratie en icoon. Werk dit bij zod
 | `src/Resources/Projects/stefvanzanten-home.jpg` | screenshot van de homepagina van stefvanzanten.nl (11-11-2026), gemaakt door StudioLN; site ontworpen en gebouwd door StudioLN | project vrijgegeven door Luca (PRODUCT.md); inhoud van de site, waaronder het portret, van de klant | nee |
 | `src/Resources/Textures/label-rib.svg` | zelf gemaakt (labelrib van het geweven label en de projectstrook) | eigendom StudioLN | nee |
 | `src/Resources/Images/luca.jpg` | foto van Luca, aangeleverd door Luca (12-11-2026) | eigendom Luca / StudioLN | nee |
+| `public/og-image.png` | deelafbeelding (1200x630), zelf gemaakt (12-11-2026) als uitsnede van de hero: canvas-twill, label-rib, het LN-teken, Bree Serif en Atkinson Hyperlegible Next | eigendom StudioLN; de fonts onder SIL OFL 1.1 (mag in een afbeelding) | nee |

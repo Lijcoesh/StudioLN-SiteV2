@@ -33,7 +33,6 @@ export const stitchOnAccent = '#F6C9AC';
 // Alleen als ondergrond van de lap onder het screenshot, nergens anders.
 export const projectTintKamerbreed = '#DDD9C4';
 export const projectTintStefVanZanten = '#E6DCF3';
-export const projectTintPlaceholder = labelFold;
 
 // De verzonnen sjabloonsite op Werkwijze: de "trendstof" die Luca's tekst bekritiseert. Alleen in
 // dat voorbeeld; kleurverloop, gloed en glas komen verder nergens op de site.

@@ -202,11 +202,6 @@ const useStyles = makeStyles()(theme => ({
         clip: 'rect(0 0 0 0)',
         whiteSpace: 'nowrap',
     },
-    placeholderNote: {
-        marginTop: theme.spacing(3),
-        fontWeight: 700,
-        color: graphite,
-    },
 }));
 
 export default function ProjectStrip(props: IProps) {
@@ -214,8 +209,8 @@ export default function ProjectStrip(props: IProps) {
 
     const { classes, cx } = useStyles();
 
-    const { name, summary, made, domain, image, imageAlt, tint, placeholder } = project;
-    const href = !placeholder && domain ? `https://${domain}` : undefined;
+    const { name, summary, made, domain, image, imageAlt, tint } = project;
+    const href = domain ? `https://${domain}` : undefined;
 
     return (
         <Box component="article" data-strip className={classes.root}>
@@ -227,7 +222,7 @@ export default function ProjectStrip(props: IProps) {
                 <Typography variant="body2" className={classes.made}>
                     {made}
                 </Typography>
-                {href ? (
+                {href && (
                     <Link href={href} target="_blank" rel="noopener" className={classes.link}>
                         Bekijk {domain}
                         <OpenInNewOutlined aria-hidden className={classes.linkIcon} />
@@ -235,10 +230,6 @@ export default function ProjectStrip(props: IProps) {
                             (opent in een nieuw tabblad)
                         </Box>
                     </Link>
-                ) : (
-                    <Typography variant="body2" className={classes.placeholderNote}>
-                        Plaatshouder
-                    </Typography>
                 )}
             </Box>
             <Box className={classes.joinSeam} aria-hidden />

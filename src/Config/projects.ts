@@ -1,8 +1,4 @@
-import {
-    projectTintKamerbreed,
-    projectTintPlaceholder,
-    projectTintStefVanZanten,
-} from 'src/colors';
+import { projectTintKamerbreed, projectTintStefVanZanten } from 'src/colors';
 import kamerbreedHome from 'src/Resources/Projects/kamerbreed-home.jpg';
 import stefVanZantenHome from 'src/Resources/Projects/stefvanzanten-home.jpg';
 
@@ -23,8 +19,6 @@ export interface Project {
     imageAlt?: string;
     /** Kleur van de lap onder het screenshot (uit `src/colors.ts`). */
     tint: string;
-    /** Tijdelijk voorbeeld om de opbouw te testen. Moet vóór livegang weg (launch-checklist). */
-    placeholder?: boolean;
 }
 
 export const projects: Project[] = [
@@ -49,29 +43,5 @@ export const projects: Project[] = [
         imageAlt:
             'De homepagina van Stef van Zanten: zijn naam groot op een donkere achtergrond, de zin ‘Ik maak video en muziek met een verhaal.’ en een portret',
         tint: projectTintStefVanZanten,
-    },
-    {
-        slug: 'plaatshouder-schilder',
-        name: 'Schilder',
-        summary: 'Plaatshouder voor een schildersbedrijf.',
-        made: 'Hier komt een echt project. Dit voorbeeld verdwijnt voordat de site online gaat.',
-        tint: projectTintPlaceholder,
-        placeholder: true,
-    },
-    {
-        slug: 'plaatshouder-loodgieter',
-        name: 'Loodgieter',
-        summary: 'Plaatshouder voor een loodgietersbedrijf.',
-        made: 'Hier komt een echt project. Dit voorbeeld verdwijnt voordat de site online gaat.',
-        tint: projectTintPlaceholder,
-        placeholder: true,
-    },
-    {
-        slug: 'plaatshouder-hovenier',
-        name: 'Hovenier',
-        summary: 'Plaatshouder voor een hoveniersbedrijf.',
-        made: 'Hier komt een echt project. Dit voorbeeld verdwijnt voordat de site online gaat.',
-        tint: projectTintPlaceholder,
-        placeholder: true,
     },
 ];

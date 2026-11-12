@@ -2,12 +2,10 @@ import { Box, Link, Typography } from '@mui/material';
 import { Link as RouterLink } from 'react-router';
 import { makeStyles } from 'tss-react/mui';
 
-import { navy, peach, peachSoft, stitchOnLight } from 'src/colors';
+import { navy, peach } from 'src/colors';
 import PageWidth from 'src/Components/PageWidth/PageWidth';
+import PhotoPatch from 'src/Components/PhotoPatch/PhotoPatch';
 import { paths } from 'src/Config/navigation';
-import lucaPhoto from 'src/Resources/Images/luca.jpg';
-
-import NameTape from './NameTape';
 
 // De tekst is nog lorem ipsum tot Luca die aanlevert. Staat als openstaand punt in de launch-checklist.
 const useStyles = makeStyles()(theme => ({
@@ -27,41 +25,6 @@ const useStyles = makeStyles()(theme => ({
             gridTemplateColumns: '1fr',
             rowGap: theme.spacing(7),
         },
-    },
-    // De foto zit groot op een opgestikt stuk lichte zakstof, licht scheef aangezet. Over de
-    // onderhoek is een naamband gestikt.
-    photoFrame: {
-        position: 'relative',
-        maxWidth: 480,
-        padding: theme.spacing(2.5),
-        backgroundColor: peachSoft,
-        transform: 'rotate(-1.5deg)',
-        '&::after': {
-            content: '""',
-            position: 'absolute',
-            inset: 8,
-            border: `2px dashed ${stitchOnLight}`,
-            pointerEvents: 'none',
-        },
-        [theme.breakpoints.down('md')]: {
-            maxWidth: 360,
-        },
-        [theme.breakpoints.down('sm')]: {
-            maxWidth: 'calc(100% - 24px)',
-        },
-    },
-    photo: {
-        display: 'block',
-        width: '100%',
-        aspectRatio: '4 / 5',
-        objectFit: 'cover',
-    },
-    nameTape: {
-        position: 'absolute',
-        zIndex: 1,
-        right: theme.spacing(-3),
-        bottom: theme.spacing(5),
-        transform: 'rotate(3deg)',
     },
     title: {
         color: navy,
@@ -85,15 +48,7 @@ export default function HomeAbout() {
         <Box component="section" aria-labelledby="about-title" className={classes.root}>
             <PageWidth>
                 <Box className={classes.grid}>
-                    <Box className={classes.photoFrame}>
-                        <Box
-                            component="img"
-                            src={lucaPhoto}
-                            alt="Luca, staand in een tuin met lichtjes en een zonnescherm"
-                            className={classes.photo}
-                        />
-                        <NameTape name="Luca" className={classes.nameTape} />
-                    </Box>
+                    <PhotoPatch />
                     <Box>
                         <Typography variant="h2" id="about-title" className={classes.title}>
                             Ik ben Luca

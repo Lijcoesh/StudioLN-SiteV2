@@ -10,8 +10,8 @@ interface IProps {
 }
 
 // Een naamband van marineblauw canvas, opgestikt, met de naam erop geborduurd in oranje draad,
-// zoals op een werkjas. Vastgestikt, dus zonder schaduw. De naam staat al in de kop, dus voor
-// schermlezers verborgen.
+// zoals op een werkjas. Vastgestikt, dus zonder schaduw. De naam staat al in de kop of in de
+// alt-tekst van de foto, dus voor schermlezers verborgen.
 const useStyles = makeStyles()(theme => ({
     root: {
         position: 'relative',

@@ -12,7 +12,7 @@ export const services: Service[] = [
     },
     {
         title: 'Hosting en domein',
-        text: 'Je website draait op mijn eigen server in Amsterdam. Ik koppel je domeinnaam en zorg dat alles blijft werken.',
+        text: 'Je website draait op mijn eigen server in Amsterdam. Ik zorg dat hij bereikbaar is op je eigen domein, zoals jouwbedrijf.nl, en dat alles blijft werken.',
     },
     {
         title: 'Zakelijke e-mail',

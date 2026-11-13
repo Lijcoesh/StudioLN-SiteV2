@@ -74,7 +74,7 @@ export default function HomeApproach() {
                     </Typography>
                     <Typography variant="subtitle1">
                         Ik gebruik AI als hulpmiddel. Daardoor werk ik sneller en blijven mijn
-                        prijzen betaalbaar. Maar de keuzes in je website maak ik zelf: in vorm,
+                        prijzen betaalbaar. Maar de keuzes maak ik zelf: in vorm,
                         kleur en indeling, voor jouw zaak en jouw klanten.
                     </Typography>
                     <Link component={RouterLink} to={paths.approach} className={classes.link}>

@@ -8,7 +8,7 @@ export const storyTitle = 'Simpel, maar nooit standaard.';
 
 export const storyIntro = [
     'Laten we eerlijk zijn: steeds meer websites beginnen verdacht veel op elkaar te lijken.',
-    'Een klein eyebrow-tekstje boven iedere kop, glazen kaarten met een subtiel blur-effect, onderdelen netjes genummerd met 01, 02 en 03 en alles op één eindeloos scrollende pagina. Je kent het inmiddels wel.',
+    'Een klein labeltje boven iedere kop, glazen kaarten met een subtiel blur-effect, onderdelen netjes genummerd met 01, 02 en 03 en alles op één eindeloos scrollende pagina. Je kent het inmiddels wel.',
     'Het lijkt soms alsof er één ongeschreven handleiding bestaat voor hoe een moderne website eruit moet zien. Veel websites volgen dezelfde trends en lijken daardoor uit dezelfde AI-template te komen, telkens in een net iets ander jasje.',
 ];
 

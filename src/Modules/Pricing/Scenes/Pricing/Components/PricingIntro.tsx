@@ -62,8 +62,8 @@ export default function PricingIntro() {
                     Wat het kost
                 </Typography>
                 <Typography variant="subtitle1" className={classes.lead}>
-                    Wat je eenmalig betaalt, wat je los kunt nemen en de pakketten per maand. Alle
-                    bedragen zijn exclusief btw.
+                    Wat je eenmalig betaalt, wat je per maand betaalt en wat je extra kunt kiezen.
+                    Alle bedragen zijn exclusief btw.
                 </Typography>
                 <Box className={classes.pockets}>
                     <Pocket

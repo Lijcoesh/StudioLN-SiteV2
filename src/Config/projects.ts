@@ -37,7 +37,7 @@ export const projects: Project[] = [
         slug: 'stef-van-zanten',
         name: 'Stef van Zanten',
         summary: 'Portfolio van een maker van video, muziek, audio en graphics.',
-        made: 'Een donkere site in Stefs eigen kleuren, waarop video en audio op de site zelf afspelen en mailen vanaf elke pagina één klik is.',
+        made: 'Een donkere site in Stef zijn eigen kleuren, waarop video en audio op de site zelf afspelen en mailen vanaf elke pagina één klik is.',
         domain: 'stefvanzanten.nl',
         image: stefVanZantenHome,
         imageAlt:

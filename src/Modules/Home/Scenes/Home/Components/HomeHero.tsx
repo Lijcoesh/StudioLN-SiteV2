@@ -78,7 +78,7 @@ export default function HomeHero() {
                                 </Box>
                             </Typography>
                             <Typography variant="subtitle1" className={classes.lead}>
-                                Een website op maat voor jouw zaak. En de rest regel ik ook:
+                                Een website op maat voor jouw zaak. De rest regel ik ook:
                                 hosting, domein en zakelijke e-mail.
                             </Typography>
                         </Box>

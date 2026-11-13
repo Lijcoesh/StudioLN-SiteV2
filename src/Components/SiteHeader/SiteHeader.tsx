@@ -1,6 +1,4 @@
-import CloseOutlined from '@mui/icons-material/CloseOutlined';
-import MenuOutlined from '@mui/icons-material/MenuOutlined';
-import { Box, Button, Drawer, Link, List, ListItem } from '@mui/material';
+import { Box, Drawer, Link, List, ListItem } from '@mui/material';
 import { useState } from 'react';
 import { NavLink } from 'react-router';
 import { makeStyles } from 'tss-react/mui';
@@ -13,6 +11,8 @@ import Wordmark from 'src/Components/Wordmark/Wordmark';
 import { email, emailHref, phoneDisplay, phoneHref } from 'src/Config/contact';
 import { mainNavigation, paths } from 'src/Config/navigation';
 import { headerHeight, headerHeightCompact } from 'src/Theme/sizes';
+
+import MenuLabel from './MenuLabel';
 
 // Contact staat in de balk los achter een naad; in de lade gewoon in de rij.
 const pageLinks = mainNavigation.filter(item => item.to !== paths.contact);
@@ -85,14 +85,6 @@ const useStyles = makeStyles()(theme => ({
     },
     menuButton: {
         display: 'none',
-        color: onNavy,
-        borderColor: stitchOnNavy,
-        borderWidth: 2,
-        gap: theme.spacing(1),
-        '&:hover': {
-            borderWidth: 2,
-            borderColor: onNavy,
-        },
         [theme.breakpoints.down('md')]: {
             display: 'inline-flex',
         },
@@ -194,16 +186,13 @@ export default function SiteHeader() {
                             </ListItem>
                         </List>
                     </Box>
-                    <Button
-                        variant="outlined"
+                    <MenuLabel
+                        action="open"
                         className={classes.menuButton}
                         onClick={() => setMenuOpen(true)}
-                        aria-expanded={menuOpen}
-                        aria-controls="site-menu"
-                        startIcon={<MenuOutlined />}
-                    >
-                        Menu
-                    </Button>
+                        expanded={menuOpen}
+                        controls="site-menu"
+                    />
                 </Box>
                 <Drawer
                     id="site-menu"
@@ -215,14 +204,7 @@ export default function SiteHeader() {
                     <CanvasField className={classes.drawerInner}>
                         <Box className={classes.drawerTop}>
                             <Wordmark variant="onDark" />
-                            <Button
-                                variant="outlined"
-                                className={classes.menuButton}
-                                onClick={closeMenu}
-                                startIcon={<CloseOutlined />}
-                            >
-                                Sluiten
-                            </Button>
+                            <MenuLabel action="close" onClick={closeMenu} />
                         </Box>
                         <Box component="nav" aria-label="Hoofdmenu">
                             <List className={classes.drawerList}>

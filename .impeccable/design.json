@@ -492,12 +492,12 @@
       "css": ".ds-head { position: relative; height: 96px; display: flex; align-items: center; padding: 0 48px 12px; background: #132B4F; box-shadow: 0 10px 24px rgba(14,34,64,0.16), 0 2px 4px rgba(14,34,64,0.12); box-sizing: border-box; } .ds-yoke { position: absolute; left: 0; right: 0; bottom: 6px; border-top: 2px dashed #7F93B3; } .ds-yoke-2 { bottom: 14px; } .ds-nav { display: flex; gap: 8px; } .ds-nav a { display: inline-flex; align-items: center; min-height: 48px; padding-inline: 12px; font-size: 1.0625rem; font-weight: 700; color: #FAF4EE; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 3px; text-underline-offset: 0.45em; transition: text-decoration-color 160ms ease-out; } .ds-nav a:hover { text-decoration-color: #7F93B3; } .ds-nav a[aria-current='page'] { text-decoration-color: #C4531A; } .ds-nav a:focus-visible { outline: 3px solid #FAF4EE; outline-offset: 3px; }"
     },
     {
-      "name": "Omlijnde knop op canvas",
+      "name": "Menulabel op canvas",
       "kind": "button",
-      "refersTo": "button-outlined-on-navy",
-      "description": "Menu openen/sluiten op mobiel; de enige knopvorm.",
-      "html": "<div style=\"background:#132B4F;padding:24px\"><button class=\"ds-btn-outline\">Menu</button></div>",
-      "css": ".ds-btn-outline { min-height: 48px; padding: 10px 20px; border: 2px solid #7F93B3; border-radius: 2px; background: transparent; color: #FAF4EE; font: 700 1.0625rem 'Atkinson Hyperlegible Next Variable', system-ui, sans-serif; cursor: pointer; } .ds-btn-outline:hover { border-color: #FAF4EE; } .ds-btn-outline:focus-visible { outline: 3px solid #FAF4EE; outline-offset: 3px; }"
+      "refersTo": "menu-label",
+      "description": "Menu openen/sluiten op mobiel: klein geweven crème label met omgevouwen, gestikte korte kanten, los op het canvas met de zware schaduw, licht scheef; de enige knop.",
+      "html": "<div style=\"background:#132B4F;padding:24px\"><button class=\"ds-menu-label\"><svg width=\"22\" height=\"18\" viewBox=\"0 0 22 18\" aria-hidden=\"true\"><g stroke=\"#132B4F\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-dasharray=\"4 5\"><line x1=\"2\" y1=\"3\" x2=\"20\" y2=\"3\"/><line x1=\"2\" y1=\"9\" x2=\"20\" y2=\"9\" stroke-dashoffset=\"3\"/><line x1=\"2\" y1=\"15\" x2=\"20\" y2=\"15\" stroke-dashoffset=\"1.5\"/></g></svg>Menu</button></div>",
+      "css": ".ds-menu-label { position: relative; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 26px; border: 0; background: #FAF4EE; color: #132B4F; font: 400 1.1875rem/1 'Bree Serif', Georgia, serif; box-shadow: 0 10px 24px rgba(14,34,64,0.45), 0 2px 4px rgba(14,34,64,0.35); transform: rotate(-2deg); transition: transform 220ms cubic-bezier(0.16,1,0.3,1); cursor: pointer; } .ds-menu-label::before, .ds-menu-label::after { content: ''; position: absolute; top: 0; bottom: 0; width: 9px; background: #E9DDD0; } .ds-menu-label::before { left: 0; border-right: 2px dashed #8C7A6C; } .ds-menu-label::after { right: 0; border-left: 2px dashed #8C7A6C; } .ds-menu-label:hover { transform: rotate(-0.5deg); } .ds-menu-label:focus-visible { outline: 3px solid #FAF4EE; outline-offset: 3px; }"
     }
   ],
   "narrative": {

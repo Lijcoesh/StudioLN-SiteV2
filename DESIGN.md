@@ -150,10 +150,10 @@ components:
     textColor: "{colors.text}"
     padding: "40px 40px 24px"
     width: "460px"
-  button-outlined-on-navy:
-    textColor: "{colors.on-navy}"
-    rounded: "{rounded.garment}"
-    padding: "10px 20px"
+  menu-label:
+    backgroundColor: "{colors.label}"
+    textColor: "{colors.navy}"
+    padding: "0 26px"
     height: "48px"
 ---
 
@@ -274,7 +274,7 @@ De site is vlak. Diepte bestaat alleen waar een los stuk stof of karton op een a
 - **Zacht** (`box-shadow: 0 1px 2px rgba(14,34,64,0.12)`): gemapt op MUI-elevation 1-4; Paper staat standaard op 0, dus in de huidige build niet zichtbaar.
 
 ### Named Rules
-**The Stof-op-stof Rule.** Een schaduw betekent dat een los stuk stof of karton op een ander ligt: de labels, de maattabel, het hangkaartje en de vaste header die over de pagina schuift. Op canvas de zware variant, op een licht vlak de lichte; de header draagt altijd de lichte. Geen schaduw op vastgestikte lappen, banden en zakken, vlakken, knoppen, de contactbaan of de contactlap. Op Projecten ligt elke projectstrook los op het perzik vlak en het screenshot als los afdrukje op de lap: beide de lichte variant. Op Werkwijze liggen het afdrukje van de sjabloonsite en het lijstje op labelstof los op het perzik vlak: ook de lichte variant.
+**The Stof-op-stof Rule.** Een schaduw betekent dat een los stuk stof of karton op een ander ligt: de labels (ook het menulabel), de maattabel, het hangkaartje en de vaste header die over de pagina schuift. Op canvas de zware variant, op een licht vlak de lichte; de header draagt altijd de lichte. Geen schaduw op vastgestikte lappen, banden en zakken, vlakken, knoppen, de contactbaan of de contactlap. Op Projecten ligt elke projectstrook los op het perzik vlak en het screenshot als los afdrukje op de lap: beide de lichte variant. Op Werkwijze liggen het afdrukje van de sjabloonsite en het lijstje op labelstof los op het perzik vlak: ook de lichte variant.
 
 ## Shapes
 
@@ -346,10 +346,10 @@ Een met de hand gelegde lus van oranje draad (werkjas-oranje, 3px, ronde uiteind
 Tekstlinks zijn altijd onderstreept (2px, offset 0,22em) in werkjas-oranje en vet; bij hover zakt de streep naar 0,32em. Ze verwijzen door naar pagina's en dragen geen knopvorm.
 
 ### Navigation
-Header op canvas, vast bovenaan tijdens het scrollen (boven de inhoud, met de lichte stof-op-stof-schaduw), 96px hoog (80px onder md). De onderrand is de pasnaad: twee naden in stitch-on-navy over de volle schermbreedte, 6px uit elkaar en 6px boven de onderkant, op elke pagina. Woordmerk links, links rechts in Bree Serif 400 op 1,1875rem, minimaal 48px hoog, in mistblauw (on-navy-muted) zodat ze als één rustige rij lezen; bij hover en op de actieve pagina worden ze on-navy. Contact staat los achteraan, na een korte verticale naad (24px, stitch-on-navy), in dezelfde stijl: geen knop, geen oranje vlak. De eerste link is Home, ook al linkt het woordmerk al naar de homepage: de doelgroep herkent een woordmerk niet als knop. Home is alleen actief op de homepage zelf. Hover: streep van 3px in draadkleur op marineblauw; actieve pagina: oranje streep. Onder md een omlijnde Menu-knop (2px rand in draadkleur, 2px hoeken) die een canvaslade van rechts opent met Bree Serif-links op 2rem, gescheiden door naden, en onderaan bellen en mailen.
+Header op canvas, vast bovenaan tijdens het scrollen (boven de inhoud, met de lichte stof-op-stof-schaduw), 96px hoog (80px onder md). De onderrand is de pasnaad: twee naden in stitch-on-navy over de volle schermbreedte, 6px uit elkaar en 6px boven de onderkant, op elke pagina. Woordmerk links, links rechts in Bree Serif 400 op 1,1875rem, minimaal 48px hoog, in mistblauw (on-navy-muted) zodat ze als één rustige rij lezen; bij hover en op de actieve pagina worden ze on-navy. Contact staat los achteraan, na een korte verticale naad (24px, stitch-on-navy), in dezelfde stijl: geen knop, geen oranje vlak. De eerste link is Home, ook al linkt het woordmerk al naar de homepage: de doelgroep herkent een woordmerk niet als knop. Home is alleen actief op de homepage zelf. Hover: streep van 3px in draadkleur op marineblauw; actieve pagina: oranje streep. Onder md het menulabel (zie Buttons) dat een canvaslade van rechts opent met Bree Serif-links op 2rem, gescheiden door naden, en onderaan bellen en mailen.
 
 ### Buttons
-Alleen de omlijnde knop op canvas (menu openen/sluiten): geen elevatie, 2px hoeken, minimaal 48px hoog. Er bestaat geen gevulde knop; acties lopen via de contactbaan en de contactlap.
+De enige knop is het menulabel op canvas (menu openen en sluiten, `MenuLabel`): een klein geweven label van dezelfde geribde crème stof als het hero-label (label-rib, 4×6px), korte kanten 9px omgevouwen (label-fold) met een naad erdoor in stitch-on-light, recht en zonder afgeronde hoeken. Het ligt los op het canvas, dus met de zware stof-op-stof-schaduw, en hangt -2° scheef; bij hover trekt het naar -0,5° (220ms, cubic-bezier(0.16, 1, 0.3, 1)), niet bij prefers-reduced-motion. Tekst "Menu" of "Sluiten" in Bree Serif op 1,1875rem in navy, met ervoor een teken van garen in navy: drie rijen rijgsteek (2,5px, steek 4/5, per rij iets verschoven) om te openen, een kruis om te sluiten. Minimaal 48px hoog. Het crème op marineblauw maakt hem op telefoon direct vindbaar. Er bestaat geen gevulde of omlijnde knop; acties lopen via de contactbaan en de contactlap.
 
 ### Focus
 Ring van 3px in werkjas-oranje met 3px afstand; op canvas in on-navy.
